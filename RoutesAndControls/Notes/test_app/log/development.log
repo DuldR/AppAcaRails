@@ -1,0 +1,149 @@
+  [1m[35m (401.5ms)[0m  [1m[35mCREATE DATABASE "test_app_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (325.1ms)[0m  [1m[35mCREATE DATABASE "test_app_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2020-07-14 09:46:51 -0500
+Processing by Rails::WelcomeController#index as */*
+  Rendering /home/garrett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/garrett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.3/lib/rails/templates/rails/welcome/index.html.erb (1.4ms)
+Completed 200 OK in 14ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/silly" for 127.0.0.1 at 2020-07-14 09:48:01 -0500
+
+ActionController::RoutingError - uninitialized constant SillyController:
+
+Started GET "/silly" for 127.0.0.1 at 2020-07-14 09:55:15 -0500
+
+AbstractController::ActionNotFound - The action 'fun' could not be found for SillyController:
+
+Started GET "/silly" for 127.0.0.1 at 2020-07-14 09:56:03 -0500
+Processing by SillyController#fun as */*
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::MissingTemplate - Missing template silly/fun, application/fun with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/garrett/Documents/AppAcaRails/RoutesAndControls/Notes/test_app/app/views"
+:
+  app/controllers/silly_controller.rb:4:in `fun'
+
+Started GET "/silly" for 127.0.0.1 at 2020-07-14 09:57:12 -0500
+
+SyntaxError - syntax error, unexpected tSTRING_BEG, expecting keyword_end
+        render :plain "Hello"
+                      ^:
+  app/controllers/silly_controller.rb:4:in `'
+
+Started GET "/silly" for 127.0.0.1 at 2020-07-14 09:57:21 -0500
+Processing by SillyController#fun as */*
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/silly" for 127.0.0.1 at 2020-07-14 10:02:35 -0500
+Processing by SillyController#fun as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/silly?message=hi" for 127.0.0.1 at 2020-07-14 10:03:14 -0500
+Processing by SillyController#fun as */*
+  Parameters: {"message"=>"hi"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/silly?message=hi" for 127.0.0.1 at 2020-07-14 10:16:18 -0500
+Processing by SillyController#fun as */*
+  Parameters: {"message"=>"hi"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/silly?message=hi" for 127.0.0.1 at 2020-07-14 10:16:39 -0500
+Processing by SillyController#fun as */*
+  Parameters: {"message"=>"hi"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/silly" for 127.0.0.1 at 2020-07-14 10:48:35 -0500
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  post 'silly' to: 'silly#time'
+               ^~:
+  config/routes.rb:7:in `'
+
+Started POST "/silly" for 127.0.0.1 at 2020-07-14 10:48:59 -0500
+Processing by SillyController#time as */*
+HTTP Origin header (moz-extension://ada846f0-a0fe-4ca4-847f-184eed95a7f7) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/silly" for 127.0.0.1 at 2020-07-14 10:53:12 -0500
+Processing by SillyController#time as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/silly" for 127.0.0.1 at 2020-07-14 10:53:59 -0500
+Processing by SillyController#time as */*
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/silly" for 127.0.0.1 at 2020-07-14 10:54:27 -0500
+Processing by SillyController#time as */*
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/silly" for 127.0.0.1 at 2020-07-14 10:54:38 -0500
+Processing by SillyController#time as */*
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/silly" for 127.0.0.1 at 2020-07-14 10:55:08 -0500
+Processing by SillyController#time as */*
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/silly" for 127.0.0.1 at 2020-07-14 10:55:14 -0500
+Processing by SillyController#time as */*
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/silly" for 127.0.0.1 at 2020-07-14 10:55:35 -0500
+Processing by SillyController#time as */*
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/silly" for 127.0.0.1 at 2020-07-14 10:55:37 -0500
+Processing by SillyController#time as */*
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/silly" for 127.0.0.1 at 2020-07-14 10:55:49 -0500
+Processing by SillyController#time as */*
+  Parameters: {"age"=>"50"}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/silly?message=hi" for 127.0.0.1 at 2020-07-14 10:56:49 -0500
+Processing by SillyController#time as */*
+  Parameters: {"age"=>"50", "message"=>"hi"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/silly/20" for 127.0.0.1 at 2020-07-14 10:59:26 -0500
+Processing by SillyController#super as */*
+  Parameters: {"age"=>"50", "id"=>"20"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/superheroes" for 127.0.0.1 at 2020-07-14 11:24:17 -0500
+
+ActionController::RoutingError - uninitialized constant SuperheroesController:
+
