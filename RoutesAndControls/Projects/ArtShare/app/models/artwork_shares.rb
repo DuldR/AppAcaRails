@@ -1,0 +1,4 @@
+class ArtworkShare < ApplicationRecord
+
+
+end
