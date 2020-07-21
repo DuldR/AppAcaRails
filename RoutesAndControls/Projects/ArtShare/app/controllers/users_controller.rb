@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
 
     def index
-        render json: params
+        render json: User.all
     end
 
     def create
@@ -13,9 +13,14 @@ class UsersController < ApplicationController
         if user.save
             render json: user
         else
-            render json: user.error.full_messages, status: :unprocessable
+            render json: user.errors.full_messages, status: :unprocessable_entity
         end
     end
+
+    def destroy
+        User.destroy(params[:id])
+    end
+
 
 
     private

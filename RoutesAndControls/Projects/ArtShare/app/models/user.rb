@@ -15,17 +15,19 @@ class User < ApplicationRecord
         :pieces,
         class_name: "Artwork",
         foreign_key: :artist_id,
-        primary_key: :id
+        primary_key: :id,
+        dependent: :destroy
     )
 
     has_many(
         :user_shares,
         class_name: 'ArtworkShare',
         foreign_key: :artwork_id,
-        primary_key: :id
+        primary_key: :id,
+        dependent: :destroy
     )
     
-    has_many :shared_artworks, through: :user_shares, source: :artwork
+    has_many :shared_artworks, through: :user_shares, source: :artwork, dependent: :destroy
 
 
 end
