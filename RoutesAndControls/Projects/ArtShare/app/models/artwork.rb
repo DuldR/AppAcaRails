@@ -13,6 +13,7 @@ class Artwork < ApplicationRecord
     validates :title, presence: true
     validates :title, uniqueness: { scope: :artist_id, message: "You can not have duplicate names of your pieces." }
     validates :artist_id, presence: true
+    validates :image_url, presence: true
     
 
 
