@@ -1654,3 +1654,152 @@ Processing by UsersController#index as */*
 Completed 200 OK in 27ms (Views: 6.0ms | ActiveRecord: 5.0ms)
 
 
+Started POST "/users" for 127.0.0.1 at 2020-07-21 12:07:14 -0500
+Processing by UsersController#create as */*
+HTTP Origin header (moz-extension://ada846f0-a0fe-4ca4-847f-184eed95a7f7) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/users" for 127.0.0.1 at 2020-07-21 12:09:04 -0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:23:in `user_params'
+  app/controllers/users_controller.rb:11:in `create'
+
+Started GET "/users" for 127.0.0.1 at 2020-07-21 12:09:27 -0500
+Processing by UsersController#index as */*
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:23:in `user_params'
+  app/controllers/users_controller.rb:7:in `index'
+
+Started POST "/users" for 127.0.0.1 at 2020-07-21 12:09:47 -0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 16ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:23:in `user_params'
+  app/controllers/users_controller.rb:11:in `create'
+
+Started GET "/users" for 127.0.0.1 at 2020-07-21 12:11:02 -0500
+Processing by UsersController#index as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-07-21 12:11:22 -0500
+Processing by UsersController#create as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-07-21 12:11:31 -0500
+Processing by UsersController#create as */*
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-07-21 12:11:59 -0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:25:in `user_params'
+  app/controllers/users_controller.rb:12:in `create'
+
+Started POST "/users" for 127.0.0.1 at 2020-07-21 12:12:32 -0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:12:in `create'
+
+Started POST "/users" for 127.0.0.1 at 2020-07-21 12:13:29 -0500
+Processing by UsersController#create as */*
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 3.3ms)
+
+
+
+ActiveModel::ForbiddenAttributesError - ActiveModel::ForbiddenAttributesError:
+  app/controllers/users_controller.rb:12:in `create'
+
+Started POST "/users" for 127.0.0.1 at 2020-07-21 12:14:12 -0500
+Processing by UsersController#create as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActiveModel::ForbiddenAttributesError - ActiveModel::ForbiddenAttributesError:
+  app/controllers/users_controller.rb:12:in `create'
+
+Started POST "/users" for 127.0.0.1 at 2020-07-21 12:14:23 -0500
+Processing by UsersController#create as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-07-21 12:14:36 -0500
+Processing by UsersController#create as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-07-21 12:14:39 -0500
+Processing by UsersController#index as */*
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-07-21 12:15:00 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"\"Big Dick mcgee\""}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-07-21 12:15:17 -0500
+Processing by UsersController#index as */*
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-07-21 12:15:26 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"\"Big Dick mcgee\""}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-07-21 12:15:36 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"Big Dick Mcgee"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-07-21 12:15:44 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"Big Dick Mcgee"}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-07-21 12:16:00 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"Big Dick Mcgee"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Big Dick Mcgee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "Big Dick Mcgee"], ["created_at", "2020-07-21 17:16:00.696426"], ["updated_at", "2020-07-21 17:16:00.696426"]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:13
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 5.3ms)
+
+
