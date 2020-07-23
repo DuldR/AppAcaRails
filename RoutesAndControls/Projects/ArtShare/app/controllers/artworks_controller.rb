@@ -6,7 +6,16 @@ class ArtworksController < ApplicationController
         # user = User.find(params[:id])
 
         user = User.find(params[:user_id])
-        render json: user
+
+        respond_to do |format|
+            format.json { render :json => 
+            { :user => user.pieces,
+                :shared => user.shared_received
+            }
+        } 
+        end
+     
+
     end
 
     def create

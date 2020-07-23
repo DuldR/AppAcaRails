@@ -26,8 +26,18 @@ class User < ApplicationRecord
         primary_key: :id,
         dependent: :destroy
     )
+
+    has_many(
+        :share_receive,
+        class_name: 'ArtworkShare',
+        foreign_key: :viewer_id,
+        primary_key: :id,
+        dependent: :destroy
+    )
     
     has_many :shared_artworks, through: :user_shares, source: :artwork, dependent: :destroy
+    has_many :shared_received, through: :share_receive, source: :artwork, dependent: :destroy
+    
 
 
 end
