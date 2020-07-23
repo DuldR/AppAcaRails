@@ -3,7 +3,10 @@ class ArtworksController < ApplicationController
     skip_before_action :verify_authenticity_token
 
     def index
-        render json: Artwork.all
+        # user = User.find(params[:id])
+
+        user = User.find(params[:user_id])
+        render json: user
     end
 
     def create
