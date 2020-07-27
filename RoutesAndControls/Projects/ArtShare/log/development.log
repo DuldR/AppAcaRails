@@ -3749,3 +3749,110 @@ Processing by CommentsController#index as */*
 Completed 200 OK in 9ms (Views: 4.0ms | ActiveRecord: 1.9ms)
 
 
+Started GET "/comments?comments[user_id]=1" for ::1 at 2020-07-27 13:36:09 -0500
+Processing by CommentsController#index as */*
+  Parameters: {"comments"=>{"user_id"=>"1"}}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/comments_controller.rb:30
+Completed 200 OK in 11ms (Views: 4.4ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/comments" for ::1 at 2020-07-27 13:36:13 -0500
+Processing by CommentsController#index as */*
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: comments:
+  app/controllers/comments_controller.rb:38:in `comment_params'
+  app/controllers/comments_controller.rb:18:in `index'
+
+Started GET "/comments?comments[artwork_id]=1" for ::1 at 2020-07-27 13:37:34 -0500
+Processing by CommentsController#index as */*
+  Parameters: {"comments"=>{"artwork_id"=>"1"}}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."artwork_id" = $1[0m  [["artwork_id", 1]]
+  ↳ app/controllers/comments_controller.rb:30
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/comments?comments[artwork_id]=1" for ::1 at 2020-07-27 13:38:52 -0500
+Processing by CommentsController#index as */*
+  Parameters: {"comments"=>{"artwork_id"=>"1"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/comments" for ::1 at 2020-07-27 13:38:57 -0500
+Processing by CommentsController#index as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: comments:
+  app/controllers/comments_controller.rb:38:in `comment_params'
+  app/controllers/comments_controller.rb:30:in `index'
+
+Started GET "/comments" for ::1 at 2020-07-27 13:43:51 -0500
+Processing by CommentsController#index as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: comments:
+  app/controllers/comments_controller.rb:40:in `comment_params'
+  app/controllers/comments_controller.rb:26:in `index'
+
+Started GET "/comments" for ::1 at 2020-07-27 13:43:57 -0500
+Processing by CommentsController#index as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: comments:
+  app/controllers/comments_controller.rb:40:in `comment_params'
+  app/controllers/comments_controller.rb:26:in `index'
+
+Started GET "/comments" for ::1 at 2020-07-27 13:44:41 -0500
+Processing by CommentsController#index as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: comments:
+  app/controllers/comments_controller.rb:42:in `comment_params'
+  app/controllers/comments_controller.rb:33:in `index'
+
+Started GET "/comments" for ::1 at 2020-07-27 13:48:25 -0500
+
+SyntaxError - syntax error, unexpected tLABEL
+...           render json: status: :bad_request
+...                        ^~~~~~~:
+  app/controllers/comments_controller.rb:34:in `'
+
+Started GET "/comments" for ::1 at 2020-07-27 13:48:37 -0500
+Processing by CommentsController#index as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: comments:
+  app/controllers/comments_controller.rb:44:in `comment_params'
+  app/controllers/comments_controller.rb:33:in `index'
+
+Started GET "/comments" for ::1 at 2020-07-27 13:50:26 -0500
+Processing by CommentsController#index as */*
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined method `show_errors' for class `CommentsController':
+
+Started GET "/comments" for ::1 at 2020-07-27 13:51:02 -0500
+Processing by CommentsController#index as */*
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/comments" for ::1 at 2020-07-27 13:51:19 -0500
+Processing by CommentsController#index as */*
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
