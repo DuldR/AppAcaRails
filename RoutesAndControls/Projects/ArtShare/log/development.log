@@ -3856,3 +3856,80 @@ Processing by CommentsController#index as */*
 Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/comments" for ::1 at 2020-07-27 13:52:10 -0500
+Processing by CommentsController#index as */*
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/comments?comments[user_id]=1" for ::1 at 2020-07-27 13:52:14 -0500
+Processing by CommentsController#index as */*
+  Parameters: {"comments"=>{"user_id"=>"1"}}
+No template found for CommentsController#index, rendering head :no_content
+Completed 204 No Content in 20ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/comments?comments[artwork_id]=1" for ::1 at 2020-07-27 13:52:42 -0500
+Processing by CommentsController#index as */*
+  Parameters: {"comments"=>{"artwork_id"=>"1"}}
+No template found for CommentsController#index, rendering head :no_content
+Completed 204 No Content in 17ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/comments?comments[artwork_id]=1" for ::1 at 2020-07-27 13:53:19 -0500
+Processing by CommentsController#index as */*
+  Parameters: {"comments"=>{"artwork_id"=>"1"}}
+No template found for CommentsController#index, rendering head :no_content
+Completed 204 No Content in 29ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/comments?comments[artwork_id]=1" for ::1 at 2020-07-27 13:53:26 -0500
+Processing by CommentsController#index as */*
+  Parameters: {"comments"=>{"artwork_id"=>"1"}}
+No template found for CommentsController#index, rendering head :no_content
+Completed 204 No Content in 15ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/comments?comments[user_id]=1&comments[artwork_id]=1" for ::1 at 2020-07-27 13:53:30 -0500
+Processing by CommentsController#index as */*
+  Parameters: {"comments"=>{"user_id"=>"1", "artwork_id"=>"1"}}
+No template found for CommentsController#index, rendering head :no_content
+Completed 204 No Content in 16ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/comments?comments[user_id]=1" for ::1 at 2020-07-27 13:53:32 -0500
+Processing by CommentsController#index as */*
+  Parameters: {"comments"=>{"user_id"=>"1"}}
+No template found for CommentsController#index, rendering head :no_content
+Completed 204 No Content in 20ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/comments?comments[user_id]=1" for ::1 at 2020-07-27 13:53:42 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/garrett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by CommentsController#index as */*
+  Parameters: {"comments"=>{"user_id"=>"1"}}
+No template found for CommentsController#index, rendering head :no_content
+Completed 204 No Content in 23ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/comments?comments[user_id]=1" for ::1 at 2020-07-27 13:54:03 -0500
+Processing by CommentsController#index as */*
+  Parameters: {"comments"=>{"user_id"=>"1"}}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/comments_controller.rb:25
+Completed 200 OK in 10ms (Views: 4.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/comments?comments[artwork_id]=1" for ::1 at 2020-07-27 13:54:09 -0500
+Processing by CommentsController#index as */*
+  Parameters: {"comments"=>{"artwork_id"=>"1"}}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."artwork_id" = $1[0m  [["artwork_id", 1]]
+  ↳ app/controllers/comments_controller.rb:25
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/comments" for ::1 at 2020-07-27 13:54:12 -0500
+Processing by CommentsController#index as */*
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
