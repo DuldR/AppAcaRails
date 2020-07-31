@@ -18,5 +18,19 @@ class Cat < ApplicationRecord
     validates :name, presence: true
 
 
+    def age
+        today = Date.today
+        birthday = self.birth_date
+
+        age = (today.mjd - birthday.mjd) / 365
+
+        if age < 1
+            return "about 1"
+        else
+            return "about #{age}"
+        end
+
+    end
+
 
 end
