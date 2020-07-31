@@ -1,0 +1,22 @@
+# == Schema Information
+#
+# Table name: cats
+#
+#  id          :bigint           not null, primary key
+#  birth_date  :date             not null
+#  color       :string           not null
+#  name        :string           not null
+#  sex         :string(1)        not null
+#  description :text
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+class Cat < ApplicationRecord
+    validates :birth_date, presence: true
+    validates :color, presence: true, inclusion: { in: %w(Blue Red Plaid), message: "%{value} is not a valid color"}
+    validates :sex, presence: true, inclusion: { in: %w(F M A) }
+    validates :name, presence: true
+
+
+
+end
