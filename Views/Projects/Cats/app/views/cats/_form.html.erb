@@ -1,18 +1,3 @@
-<section>
-    <h1 style="margin-left: auto; margin-right: auto; display: inline"> It's the cats alright.</h1>
-
-    <br>
-    <br>
-
-
-    <nav style="margin-left: auto; margin-right: auto">
-        <%= link_to 'Index',  cats_url %>
-    </nav>
-
-    <br>
-</section>
-
-
 <% if action == :edit %>
     <% action_url = cat_url(cat) %>
 <% else %>
