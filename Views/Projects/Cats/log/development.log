@@ -2464,3 +2464,130 @@ Processing by CatsController#new as HTML
 Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/cats/new" for 127.0.0.1 at 2020-08-03 12:45:32 -0500
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (0.3ms)
+  Rendered cats/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2020-08-03 12:51:45 -0500
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (0.4ms)
+  Rendered cats/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cats" for 127.0.0.1 at 2020-08-03 12:51:52 -0500
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"hghj"}}
+No template found for CatsController#create, rendering head :no_content
+Completed 204 No Content in 20ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/cats" for 127.0.0.1 at 2020-08-03 12:53:42 -0500
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"Butthoel"}}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: book:
+  app/controllers/cats_controller.rb:40:in `cat_params'
+  app/controllers/cats_controller.rb:19:in `create'
+
+Started POST "/__better_errors/3d51725865d81ab4/variables" for 127.0.0.1 at 2020-08-03 12:53:42 -0500
+Started POST "/__better_errors/3d51725865d81ab4/eval" for 127.0.0.1 at 2020-08-03 12:54:24 -0500
+Started POST "/cats" for 127.0.0.1 at 2020-08-03 12:54:42 -0500
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"Butthoel"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:21
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cats_controller.rb:21
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (0.3ms)
+  Rendered cats/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 3.1ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/cats" for 127.0.0.1 at 2020-08-03 12:55:04 -0500
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"Butthoel"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cats_controller.rb:21
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (0.3ms)
+  Rendered cats/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cats" for 127.0.0.1 at 2020-08-03 13:00:58 -0500
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"Butthoel"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:21
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cats_controller.rb:21
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (0.3ms)
+  Rendered cats/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/cats" for 127.0.0.1 at 2020-08-03 13:01:08 -0500
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"Butthoel", "birth_date"=>"2020-05-05"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:21
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cats_controller.rb:21
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (0.5ms)
+  Rendered cats/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cats" for 127.0.0.1 at 2020-08-03 13:01:47 -0500
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"Butthoel", "birth_date"=>"2020-05-05"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:21
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cats_controller.rb:21
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (0.8ms)
+  Rendered cats/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cats" for 127.0.0.1 at 2020-08-03 13:02:08 -0500
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"Butthoel", "birth_date"=>"2020-05-05"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cats_controller.rb:21
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (0.5ms)
+  Rendered cats/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cats" for 127.0.0.1 at 2020-08-03 13:02:31 -0500
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"Butthoel", "birth_date"=>"2020-05-05"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cats_controller.rb:21
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (0.5ms)
+  Rendered cats/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 13ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+
+

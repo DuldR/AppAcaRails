@@ -1,11 +1,54 @@
+<section>
+    <h1 style="margin-left: auto; margin-right: auto; display: inline"> It's the cats alright.</h1>
+
+    <br>
+    <br>
+
+
+    <nav style="margin-left: auto; margin-right: auto">
+        <%= link_to 'Index',  cats_url %>
+    </nav>
+
+    <br>
+</section>
+
+
 <% if action == :edit %>
     <% action_url = cat_url(cat) %>
 <% else %>
     <% action_url = cats_url %>
 <% end %>
 
+<section>
+    <form action="<%= action_url %>" method = "post">
 
-<form>
-    <label for="name">Name</label>
-    <input id="name" type="text" name="cat[name]" value="<%= cat.name %>">
-</form>
+        <label for="name">Name</label>
+        <input id="name" type="text" name="cat[name]" value="<%= cat.name %>">
+
+        <br>
+
+        <label for="birth_date">Date of Birth</label>
+        <input id="birth_date" type="date" name="cat[birth_date]" value="<%= cat.birth_date %>">
+
+        <br>
+
+        <label for="name">Name</label>
+        <input id="name" type="text" name="cat[name]" value="<%= cat.name %>">
+
+        <br>
+
+        <label for="name">Name</label>
+        <input id="name" type="text" name="cat[name]" value="<%= cat.name %>">
+
+        <br>
+
+        <label for="name">Name</label>
+        <input id="name" type="text" name="cat[name]" value="<%= cat.name %>">
+
+
+
+        <input type="submit" value="<%= action == :edit ? 'update book' : 'add book'%>">
+
+    </form>
+
+</section>
