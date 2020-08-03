@@ -1,11 +1,56 @@
-<h1> It's the cats alright.</h1>
+<section>
+    <h1 style="margin-left: auto; margin-right: auto; display: inline"> It's the cats alright.</h1>
 
-<h3> Name: <%= @cat.name %></h3>
-<h3> Age: <%= @cat.age %>
-<h3> Sex: <%= @cat.sex %> </h3>
-<h3> Color: <%= @cat.color %></h3>
+    <br>
+    <br>
 
 
-<p>
-    <%= @cat.description %>
-</p>
+    <nav style="margin-left: auto; margin-right: auto">
+        <%= link_to 'Index',  cats_url %>
+    </nav>
+</section>
+
+<section>
+
+    <br>
+    <br>
+
+    <table style="margin-left: auto; margin-right: auto">
+        <thead>
+
+            <tr>
+                <th colspan="2"><%= @cat.name %> </th>
+            </tr>
+
+            <tbody>
+                <tr>
+                    <td>Age:</td>
+                    <td><%= @cat.age %> </td>
+                </tr>
+
+                <tr>
+                    <td>Sex:</td>
+                    <td><%= @cat.sex %> </td>
+                </tr>
+
+                <tr>
+                    <td>Color: </td>
+                    <td><%= @cat.color %></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Desctriptiopn: </td>
+                    <td><%= @cat.description %>
+
+                </tr>
+
+            </tbody>
+
+
+        </thead>
+
+    </table>
+
+</section>
