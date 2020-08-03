@@ -8,6 +8,7 @@
             <div>
                 <ul>
                     <%= render cat %>
+                    <%= link_to 'The Cat', cat_url(:id => cat.id)%>
                 </ul>
             </div>
         <% end %>
