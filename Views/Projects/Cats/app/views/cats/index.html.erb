@@ -1,6 +1,15 @@
 <h1> It's the cats alright.</h1>
 
 
-<ul>
-    <%= render @cats %>
-</ul>
+
+<body>
+    <section>
+        <% @cats.each do |cat| %>
+            <div>
+                <ul>
+                <%= render cat %>
+                </ul>
+            </div>
+        <% end %>
+    </section>
+</body>
