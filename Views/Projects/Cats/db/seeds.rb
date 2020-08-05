@@ -13,8 +13,8 @@ Cat.create!(birth_date: "2011/01/01", color: "Blue", name: "Moron", sex: "F", de
 Cat.create!(birth_date: "2012/01/01", color: "Red", name: "Clown", sex: "M", description: "Ket's FDdsf")
 
 
-CatRentalRequest.create!(cat_id: 1, start_date: "2020/01/01", end_date: "2020/01/02", status: "PENDING")
-CatRentalRequest.create!(cat_id: 2, start_date: "2020/04/01", end_date: "2020/01/02", status: "PENDING")
-CatRentalRequest.create!(cat_id: 3, start_date: "2020/03/01", end_date: "2020/01/02", status: "PENDING")
-CatRentalRequest.create!(cat_id: 4, start_date: "2020/06/01", end_date: "2020/01/02", status: "PENDING")
-CatRentalRequest.create!(cat_id: 1, start_date: "2020/07/01", end_date: "2020/01/02", status: "APPROVED")
+CatRentalRequest.create!(cat_id: 1, start_date: "2020/01/02", end_date: "2020/01/03", status: "PENDING")
+CatRentalRequest.create!(cat_id: 2, start_date: "2020/04/01", end_date: "2020/04/06", status: "PENDING")
+CatRentalRequest.create!(cat_id: 3, start_date: "2020/03/01", end_date: "2020/03/01", status: "PENDING")
+CatRentalRequest.create!(cat_id: 4, start_date: "2020/06/01", end_date: "2020/06/05", status: "PENDING")
+CatRentalRequest.create!(cat_id: 1, start_date: "2020/07/01", end_date: "2020/07/08", status: "APPROVED")

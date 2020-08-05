@@ -22,6 +22,16 @@ class CatRentalRequest < ApplicationRecord
         primary_key: :id
     )
 
+    def overlapping_requests
+        start = self.start_date
+        ed = self.end_date
+        req = CatRentalRequest
+        .where("start_date BETWEEN ? AND ? OR end_date BETWEEN ? AND ?", start, ed, start, ed)
+        .where("cat_id = ?", self.cat_id)
+
+        req.all
+    end
+
 
 
 end
