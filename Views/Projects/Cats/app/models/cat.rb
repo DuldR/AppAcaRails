@@ -17,6 +17,13 @@ class Cat < ApplicationRecord
     validates :sex, presence: true, inclusion: { in: %w(F M A) }
     validates :name, presence: true
 
+    has_many(
+        :requests,
+        class_name: "CatRentalRequest",
+        foreign_key: :cat_id,
+        primary_key: :id,
+        dependent: :destroy
+    )
 
     def age
         today = Date.today
