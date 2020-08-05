@@ -39,11 +39,11 @@
         <label for="sex">Sex</label>
 
             <div>
-                <input type="radio" id="sex" name="cat[sex]" value="F" <%= cat.sex ? checked = false : checked = true %>>
+                <input type="radio" id="sex" name="cat[sex]" value="F" <%= cat.sex == "F" ? "checked" : "" %>>
                 <label for="female">F</label>
-                <input type="radio" id="sex" name="cat[sex]" value="M">
+                <input type="radio" id="sex" name="cat[sex]" value="M" <%= cat.sex == "M" ? "checked" : "" %> >
                 <label for="male">M</label>
-                <input type="radio" id="sex" name="cat[sex]" value="A">
+                <input type="radio" id="sex" name="cat[sex]" value="A" <%= cat.sex == "A" ? "checked" : "" %>>
                 <label for="andro">A</label>
             <div>
 
