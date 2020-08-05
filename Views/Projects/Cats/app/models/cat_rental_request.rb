@@ -13,6 +13,9 @@ class CatRentalRequest < ApplicationRecord
     validates :start_date, presence: true
     validates :end_date, presence: true
     validates :status, presence: true, inclusion: { in: %w(PENDING DENIED APPROVED) }
+    validate :no_overlaps
+
+    
 
 
     belongs_to(
@@ -29,7 +32,19 @@ class CatRentalRequest < ApplicationRecord
         .where("start_date BETWEEN ? AND ? OR end_date BETWEEN ? AND ?", start, ed, start, ed)
         .where("cat_id = ?", self.cat_id)
 
-        req.all
+        req
+    end
+
+    def overlapping_approved_requests
+        overlapping_requests.find_by(status: "APPROVED")
+    end
+
+    private
+
+    def no_overlaps
+        unless self.overlapping_approved_requests == nil
+            self.errors[:start_date] << "You must choose a date that is open"
+        end
     end
 
 

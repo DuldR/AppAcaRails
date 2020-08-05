@@ -4911,3 +4911,179 @@ Migrating to AddIndextoRequests (20200805183206)
   ↳ db/seeds.rb:20
   [1m[36mCatRentalRequest Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cat_rental_requests" WHERE (start_date BETWEEN '2020-04-02' AND '2020-06-02' OR end_date BETWEEN '2020-04-02' AND '2020-06-02') AND (cat_id = 2) LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mCatRentalRequest Load (1.1ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE (start_date BETWEEN '2020-04-02' AND '2020-06-02' OR end_date BETWEEN '2020-04-02' AND '2020-06-02') AND (cat_id = 2)[0m
+  [1m[36mCatRentalRequest Load (1.1ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE (start_date BETWEEN '2020-04-06' AND '2020-06-02' OR end_date BETWEEN '2020-04-06' AND '2020-06-02') AND (cat_id = 2)[0m
+  [1m[36mCatRentalRequest Load (1.0ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE (start_date BETWEEN '2020-04-07' AND '2020-06-02' OR end_date BETWEEN '2020-04-07' AND '2020-06-02') AND (cat_id = 2)[0m
+  [1m[36mCatRentalRequest Load (1.1ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE (start_date BETWEEN '2020-04-02' AND '2020-06-02' OR end_date BETWEEN '2020-04-02' AND '2020-06-02') AND (cat_id = 2)[0m
+  [1m[36mCatRentalRequest Load (0.8ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" WHERE (start_date BETWEEN '2020-04-02' AND '2020-06-02' OR end_date BETWEEN '2020-04-02' AND '2020-06-02') AND (cat_id = 2) AND "cat_rental_requests"."status" = $1 LIMIT $2[0m  [["status", "PENDING"], ["LIMIT", 1]]
+  [1m[36mCatRentalRequest Load (1.2ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE (start_date BETWEEN '2020-04-02' AND '2020-06-02' OR end_date BETWEEN '2020-04-02' AND '2020-06-02') AND (cat_id = 2)[0m
+  [1m[36mCatRentalRequest Load (0.9ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" WHERE (start_date BETWEEN '2020-04-02' AND '2020-06-02' OR end_date BETWEEN '2020-04-02' AND '2020-06-02') AND (cat_id = 2) AND "cat_rental_requests"."status" = $1 LIMIT $2[0m  [["status", "APPROVED"], ["LIMIT", 1]]
+  [1m[36mCatRentalRequest Load (1.1ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" WHERE (start_date BETWEEN '2020-04-02' AND '2020-06-02' OR end_date BETWEEN '2020-04-02' AND '2020-06-02') AND (cat_id = 2) AND "cat_rental_requests"."status" = $1 LIMIT $2[0m  [["status", "APPROVED"], ["LIMIT", 1]]
+  [1m[36mCatRentalRequest Load (0.9ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" WHERE (start_date BETWEEN '2020-04-02' AND '2020-06-02' OR end_date BETWEEN '2020-04-02' AND '2020-06-02') AND (cat_id = 2) AND "cat_rental_requests"."status" = $1 LIMIT $2[0m  [["status", "APPROVED"], ["LIMIT", 1]]
+  [1m[36mCatRentalRequest Load (1.0ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" WHERE (start_date BETWEEN '2020-04-02' AND '2020-06-02' OR end_date BETWEEN '2020-04-02' AND '2020-06-02') AND (cat_id = 2) AND "cat_rental_requests"."status" = $1 LIMIT $2[0m  [["status", "APPROVED"], ["LIMIT", 1]]
+  [1m[36mCatRentalRequest Load (1.0ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" WHERE (start_date BETWEEN '2020-04-02' AND '2020-06-02' OR end_date BETWEEN '2020-04-02' AND '2020-06-02') AND (cat_id = 2) AND "cat_rental_requests"."status" = $1 LIMIT $2[0m  [["status", "APPROVED"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCatRentalRequest Create (0.4ms)[0m  [1m[32mINSERT INTO "cat_rental_requests" ("cat_id", "start_date", "end_date") VALUES ($1, $2, $3) RETURNING "id"[0m  [["cat_id", 2], ["start_date", "2020-04-02"], ["end_date", "2020-06-02"]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCatRentalRequest Create (0.8ms)[0m  [1m[32mINSERT INTO "cat_rental_requests" ("cat_id", "start_date", "end_date") VALUES ($1, $2, $3) RETURNING "id"[0m  [["cat_id", 1], ["start_date", "2020-07-02"], ["end_date", "2020-08-02"]]
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "Cats_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "Cats_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (9.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "cat_rental_requests" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (26.4ms)[0m  [1m[35mCREATE TABLE "cat_rental_requests" ("id" bigserial primary key, "cat_id" integer NOT NULL, "start_date" date NOT NULL, "end_date" date NOT NULL, "status" character varying DEFAULT 'PENDING' NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE  INDEX  "index_cat_rental_requests_on_cat_id" ON "cat_rental_requests"  ("cat_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  ↳ db/schema.rb:26
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying(1) NOT NULL, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:26
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (3.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "cat_rental_requests" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (18.8ms)[0m  [1m[35mCREATE TABLE "cat_rental_requests" ("id" bigserial primary key, "cat_id" integer NOT NULL, "start_date" date NOT NULL, "end_date" date NOT NULL, "status" character varying DEFAULT 'PENDING' NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (21.9ms)[0m  [1m[35mCREATE  INDEX  "index_cat_rental_requests_on_cat_id" ON "cat_rental_requests"  ("cat_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  ↳ db/schema.rb:26
+  [1m[35m (11.7ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying(1) NOT NULL, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:26
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2020-08-05 20:16:16.595900"], ["key", "environment"]]
+  ↳ db/schema.rb:13
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-08-05 20:16:16.600580"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2020-01-01"], ["color", "Blue"], ["name", "Idiot"], ["sex", "F"], ["description", "Idiot baby"], ["created_at", "2020-08-05 20:16:16.629696"], ["updated_at", "2020-08-05 20:16:16.629696"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (9.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCat Create (0.2ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1999-01-01"], ["color", "Red"], ["name", "Dumb"], ["sex", "M"], ["description", "BIG BOOTS"], ["created_at", "2020-08-05 20:16:16.641235"], ["updated_at", "2020-08-05 20:16:16.641235"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (9.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCat Create (0.2ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2010-01-01"], ["color", "Red"], ["name", "Stupid"], ["sex", "M"], ["description", "CLOWN ASS"], ["created_at", "2020-08-05 20:16:16.652212"], ["updated_at", "2020-08-05 20:16:16.652212"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.2ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2011-01-01"], ["color", "Blue"], ["name", "Moron"], ["sex", "F"], ["description", "Smoke WEED"], ["created_at", "2020-08-05 20:16:16.655381"], ["updated_at", "2020-08-05 20:16:16.655381"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mCat Create (0.3ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2012-01-01"], ["color", "Red"], ["name", "Clown"], ["sex", "M"], ["description", "Ket's FDdsf"], ["created_at", "2020-08-05 20:16:16.658485"], ["updated_at", "2020-08-05 20:16:16.658485"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mCatRentalRequest Load (0.5ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" WHERE (start_date BETWEEN '2020-01-02' AND '2020-01-03' OR end_date BETWEEN '2020-01-02' AND '2020-01-03') AND (cat_id = 1) AND "cat_rental_requests"."status" = $1 LIMIT $2[0m  [["status", "APPROVED"], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:39
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mCatRentalRequest Create (0.4ms)[0m  [1m[32mINSERT INTO "cat_rental_requests" ("cat_id", "start_date", "end_date") VALUES ($1, $2, $3) RETURNING "id"[0m  [["cat_id", 1], ["start_date", "2020-01-02"], ["end_date", "2020-01-03"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mCatRentalRequest Load (1.3ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" WHERE (start_date BETWEEN '2020-04-01' AND '2020-04-06' OR end_date BETWEEN '2020-04-01' AND '2020-04-06') AND (cat_id = 2) AND "cat_rental_requests"."status" = $1 LIMIT $2[0m  [["status", "APPROVED"], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:39
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mCatRentalRequest Create (0.3ms)[0m  [1m[32mINSERT INTO "cat_rental_requests" ("cat_id", "start_date", "end_date") VALUES ($1, $2, $3) RETURNING "id"[0m  [["cat_id", 2], ["start_date", "2020-04-01"], ["end_date", "2020-04-06"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mCatRentalRequest Load (0.3ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" WHERE (start_date BETWEEN '2020-03-01' AND '2020-03-01' OR end_date BETWEEN '2020-03-01' AND '2020-03-01') AND (cat_id = 3) AND "cat_rental_requests"."status" = $1 LIMIT $2[0m  [["status", "APPROVED"], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:39
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mCatRentalRequest Create (0.3ms)[0m  [1m[32mINSERT INTO "cat_rental_requests" ("cat_id", "start_date", "end_date") VALUES ($1, $2, $3) RETURNING "id"[0m  [["cat_id", 3], ["start_date", "2020-03-01"], ["end_date", "2020-03-01"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCatRentalRequest Load (0.4ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" WHERE (start_date BETWEEN '2020-06-01' AND '2020-06-05' OR end_date BETWEEN '2020-06-01' AND '2020-06-05') AND (cat_id = 4) AND "cat_rental_requests"."status" = $1 LIMIT $2[0m  [["status", "APPROVED"], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:39
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mCatRentalRequest Create (0.2ms)[0m  [1m[32mINSERT INTO "cat_rental_requests" ("cat_id", "start_date", "end_date") VALUES ($1, $2, $3) RETURNING "id"[0m  [["cat_id", 4], ["start_date", "2020-06-01"], ["end_date", "2020-06-05"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mCatRentalRequest Load (0.3ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" WHERE (start_date BETWEEN '2020-07-01' AND '2020-07-08' OR end_date BETWEEN '2020-07-01' AND '2020-07-08') AND (cat_id = 1) AND "cat_rental_requests"."status" = $1 LIMIT $2[0m  [["status", "APPROVED"], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:39
+  [1m[36mCat Load (0.1ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mCatRentalRequest Create (0.2ms)[0m  [1m[32mINSERT INTO "cat_rental_requests" ("cat_id", "start_date", "end_date", "status") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["cat_id", 1], ["start_date", "2020-07-01"], ["end_date", "2020-07-08"], ["status", "APPROVED"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCatRentalRequest Load (2.0ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" WHERE (start_date BETWEEN '2020-07-02' AND '2020-08-02' OR end_date BETWEEN '2020-07-02' AND '2020-08-02') AND (cat_id = 1) AND "cat_rental_requests"."status" = $1 LIMIT $2[0m  [["status", "APPROVED"], ["LIMIT", 1]]
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
