@@ -7,6 +7,14 @@
 <section style="width: 33%;">
     <form action="<%= action_url %>" method = "post">
 
+        <% if action == :edit %>
+            <input type="hidden" name="_method" value="PATCH">
+        <% end %>
+
+
+
+
+
         <label for="name">Name</label>
         <input id="name" type="text" name="cat[name]" value="<%= cat.name %>">
 
@@ -29,7 +37,15 @@
         <br>
 
         <label for="sex">Sex</label>
-        <input id="sex" type="text" name="cat[sex]" value="<%= cat.sex %>">
+
+            <div>
+                <input type="radio" id="sex" name="cat[sex]" value="F" <%= cat.sex ? checked = false : checked = true %>>
+                <label for="female">F</label>
+                <input type="radio" id="sex" name="cat[sex]" value="M">
+                <label for="male">M</label>
+                <input type="radio" id="sex" name="cat[sex]" value="A">
+                <label for="andro">A</label>
+            <div>
 
         <br>
 
