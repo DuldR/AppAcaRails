@@ -4,7 +4,7 @@
     <% action_url = cats_url %>
 <% end %>
 
-<section>
+<section style="width: 33%;">
     <form action="<%= action_url %>" method = "post">
 
         <label for="name">Name</label>
@@ -18,7 +18,13 @@
         <br>
 
         <label for="color">Color</label>
-        <input id="color" type="text" name="cat[color]" value="<%= cat.color %>">
+        <select id="color" name="cat[color]">
+            <option disabled <%= cat.color ? "" : "selected"%>>-- Please Select--</option>
+            <option value="Red" <% cat.color == "Red" ? "selected" : ""%> >Red </option>
+            <option value="Blue" <% cat.color == "Blue" ? "selected" : ""%> >Blue </option>
+            <option value="Plaid" <% cat.color == "Plaid" ? "selected" : ""%> >Plaid </option>
+
+        </select>
 
         <br>
 
@@ -28,8 +34,7 @@
         <br>
 
         <label for="description">Description</label>
-        <input id="description" type="text" name="cat[description]" value="<%= cat.description %>">
-
+        <textarea name="cat[description]"><%= cat.description %></textarea>
 
 
         <input type="submit" value="<%= action == :edit ? 'update cat' : 'add cat'%>">
