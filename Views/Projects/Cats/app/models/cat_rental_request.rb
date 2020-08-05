@@ -15,8 +15,6 @@ class CatRentalRequest < ApplicationRecord
     validates :status, presence: true, inclusion: { in: %w(PENDING DENIED APPROVED) }
     validate :no_overlaps
 
-    
-
 
     belongs_to(
         :cat,

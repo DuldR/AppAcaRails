@@ -1,2 +1,14 @@
-<h1> It's the Requests!.</h1>
+<h1> It's the Rentals!.</h1>
 
+
+<body>
+    <section>
+        <% @rentals.each do |cat_rental_request| %>
+            <div>
+                <ul>
+                    <%= render cat_rental_request %>
+                </ul>
+            </div>
+        <% end %>
+    </section>
+</body>
