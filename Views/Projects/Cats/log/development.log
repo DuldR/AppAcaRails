@@ -5087,3 +5087,572 @@ Migrating to AddIndextoRequests (20200805183206)
   [1m[36mCatRentalRequest Load (2.0ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" WHERE (start_date BETWEEN '2020-07-02' AND '2020-08-02' OR end_date BETWEEN '2020-07-02' AND '2020-08-02') AND (cat_id = 1) AND "cat_rental_requests"."status" = $1 LIMIT $2[0m  [["status", "APPROVED"], ["LIMIT", 1]]
   [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-05 15:24:37 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/garrett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  Rendered cats/_header.html.erb (0.5ms)
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:7
+  Rendered cats/_cat.html.erb (0.3ms)
+  Rendered cats/_cat.html.erb (0.0ms)
+  Rendered cats/_cat.html.erb (0.0ms)
+  Rendered cats/_cat.html.erb (0.1ms)
+  Rendered cats/_cat.html.erb (0.0ms)
+  Rendered cats/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 144ms (Views: 134.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-08-05 15:25:55 -0500
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.1ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/_header.html.erb (168.7ms)
+  Rendered cats/index.html.erb within layouts/application (169.4ms)
+Completed 500 Internal Server Error in 171ms (ActiveRecord: 0.4ms)
+
+
+
+ActionView::Template::Error - undefined local variable or method `new_catrentalreques_url' for #<#<Class:0x0000562293924d00>:0x00007f1abc011bb0>
+Did you mean?  new_catrentalrequest_url
+               new_catrentalrequest_path
+               edit_catrentalrequest_url:
+  app/views/cats/_header.html.erb:6:in `view template'
+  app/views/cats/index.html.erb:3:in `_app_views_cats_index_html_erb__3992022791603921324_69876400030840'
+  app/controllers/cats_controller.rb:5:in `index'
+
+Started POST "/__better_errors/1ba6f5dbf0925cf3/variables" for 127.0.0.1 at 2020-08-05 15:25:56 -0500
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/garrett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Started GET "/cats" for 127.0.0.1 at 2020-08-05 15:26:01 -0500
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  Rendered cats/_header.html.erb (0.7ms)
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:7
+  Rendered cats/_cat.html.erb (0.6ms)
+  Rendered cats/_cat.html.erb (0.0ms)
+  Rendered cats/_cat.html.erb (0.0ms)
+  Rendered cats/_cat.html.erb (0.0ms)
+  Rendered cats/_cat.html.erb (0.0ms)
+  Rendered cats/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/catrentalrequests/new" for 127.0.0.1 at 2020-08-05 15:26:04 -0500
+
+ActionController::RoutingError - uninitialized constant CatrentalrequestsController:
+
+Started POST "/__better_errors/274ab00d4cf6b81f/variables" for 127.0.0.1 at 2020-08-05 15:26:04 -0500
+Started GET "/cats" for 127.0.0.1 at 2020-08-05 15:26:27 -0500
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  Rendered cats/_header.html.erb (0.8ms)
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:7
+  Rendered cats/_cat.html.erb (0.4ms)
+  Rendered cats/_cat.html.erb (0.1ms)
+  Rendered cats/_cat.html.erb (0.0ms)
+  Rendered cats/_cat.html.erb (0.0ms)
+  Rendered cats/_cat.html.erb (0.0ms)
+  Rendered cats/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 34ms (Views: 25.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/catrentalrequests/new" for 127.0.0.1 at 2020-08-05 15:26:28 -0500
+
+ActionController::RoutingError - uninitialized constant CatrentalrequestsController:
+
+Started POST "/__better_errors/21010faddcc28200/variables" for 127.0.0.1 at 2020-08-05 15:26:28 -0500
+Started GET "/catrentalrequests/" for 127.0.0.1 at 2020-08-05 15:26:56 -0500
+
+ActionController::RoutingError - uninitialized constant CatrentalrequestsController:
+
+Started POST "/__better_errors/53bfec51a05c474e/variables" for 127.0.0.1 at 2020-08-05 15:26:56 -0500
+Started GET "/catrentalrequests/" for 127.0.0.1 at 2020-08-05 15:28:10 -0500
+
+ActionController::RoutingError - uninitialized constant CatrentalrequestsController:
+
+Started POST "/__better_errors/2aa534944312440d/variables" for 127.0.0.1 at 2020-08-05 15:28:10 -0500
+Started GET "/catrentalrequests/new" for 127.0.0.1 at 2020-08-05 15:28:16 -0500
+
+ActionController::RoutingError - uninitialized constant CatrentalrequestsController:
+
+Started POST "/__better_errors/77ebe2e1e1e7a85c/variables" for 127.0.0.1 at 2020-08-05 15:28:16 -0500
+Started GET "/catrentalrequests/new" for 127.0.0.1 at 2020-08-05 15:29:41 -0500
+
+ActionController::RoutingError - uninitialized constant CatrentalrequestsController:
+
+Started POST "/__better_errors/4ebad64e05669d1d/variables" for 127.0.0.1 at 2020-08-05 15:29:41 -0500
+Started GET "/catrentalrequests/new" for 127.0.0.1 at 2020-08-05 15:29:44 -0500
+
+ActionController::RoutingError - uninitialized constant CatrentalrequestsController:
+
+Started POST "/__better_errors/fd98cfd72af9c51a/variables" for 127.0.0.1 at 2020-08-05 15:29:44 -0500
+Started GET "/catrentalrequests/" for 127.0.0.1 at 2020-08-05 15:29:48 -0500
+
+ActionController::RoutingError - uninitialized constant CatrentalrequestsController:
+
+Started POST "/__better_errors/3982bf96ca1849c2/variables" for 127.0.0.1 at 2020-08-05 15:29:48 -0500
+Started GET "/catrentalrequests/" for 127.0.0.1 at 2020-08-05 15:30:10 -0500
+
+ActionController::RoutingError - uninitialized constant CatrentalrequestsController:
+
+Started POST "/__better_errors/27d59761cf9e5c6f/variables" for 127.0.0.1 at 2020-08-05 15:30:10 -0500
+Started GET "/catrentalrequests/" for 127.0.0.1 at 2020-08-05 15:30:25 -0500
+
+ActionController::RoutingError - uninitialized constant CatrentalrequestsController:
+
+Started POST "/__better_errors/c4b9e2dd6ce5f762/variables" for 127.0.0.1 at 2020-08-05 15:30:25 -0500
+Started GET "/catrentalrequests/" for 127.0.0.1 at 2020-08-05 15:31:24 -0500
+
+LoadError - Unable to autoload constant CatrentalrequestsController, expected /home/garrett/Documents/AppAcaRails/Views/Projects/Cats/app/controllers/catrentalrequests_controller.rb to define it:
+
+Started POST "/__better_errors/fc7f8a763e9662bf/variables" for 127.0.0.1 at 2020-08-05 15:31:24 -0500
+Started GET "/catrentalrequests/" for 127.0.0.1 at 2020-08-05 15:32:22 -0500
+
+LoadError - Unable to autoload constant CatrentalrequestsController, expected /home/garrett/Documents/AppAcaRails/Views/Projects/Cats/app/controllers/catrentalrequests_controller.rb to define it:
+
+Started POST "/__better_errors/ce75f27beb8aaf64/variables" for 127.0.0.1 at 2020-08-05 15:32:22 -0500
+Started GET "/catrentalrequests/" for 127.0.0.1 at 2020-08-05 15:32:38 -0500
+
+LoadError - Unable to autoload constant CatrentalrequestsController, expected /home/garrett/Documents/AppAcaRails/Views/Projects/Cats/app/controllers/catrentalrequests_controller.rb to define it:
+
+Started POST "/__better_errors/8a679b848eb7c5ce/variables" for 127.0.0.1 at 2020-08-05 15:32:38 -0500
+Started GET "/cats" for 127.0.0.1 at 2020-08-05 15:32:42 -0500
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  Rendered cats/_header.html.erb (0.3ms)
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:7
+  Rendered cats/_cat.html.erb (0.2ms)
+  Rendered cats/_cat.html.erb (0.0ms)
+  Rendered cats/_cat.html.erb (0.0ms)
+  Rendered cats/_cat.html.erb (0.0ms)
+  Rendered cats/_cat.html.erb (0.0ms)
+  Rendered cats/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 15ms (Views: 10.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/catrentalrequests/new" for 127.0.0.1 at 2020-08-05 15:32:44 -0500
+
+LoadError - Unable to autoload constant CatrentalrequestsController, expected /home/garrett/Documents/AppAcaRails/Views/Projects/Cats/app/controllers/catrentalrequests_controller.rb to define it:
+
+Started POST "/__better_errors/a2977571c6ba25c6/variables" for 127.0.0.1 at 2020-08-05 15:32:44 -0500
+Started GET "/catrentalrequests/" for 127.0.0.1 at 2020-08-05 15:33:52 -0500
+
+LoadError - Unable to autoload constant CatrentalrequestsController, expected /home/garrett/Documents/AppAcaRails/Views/Projects/Cats/app/controllers/catrentalrequests_controller.rb to define it:
+
+Started POST "/__better_errors/10ed6a26dfbf52aa/variables" for 127.0.0.1 at 2020-08-05 15:33:52 -0500
+Started GET "/catrentalrequests/" for 127.0.0.1 at 2020-08-05 15:36:33 -0500
+
+ActionController::RoutingError - uninitialized constant CatrentalrequestsController:
+
+Started POST "/__better_errors/0c3f87a3bea02c07/variables" for 127.0.0.1 at 2020-08-05 15:36:33 -0500
+Started GET "/catrentalrequests/" for 127.0.0.1 at 2020-08-05 15:41:03 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/garrett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActionController::RoutingError - uninitialized constant CatrentalrequestsController:
+
+Started POST "/__better_errors/88583142cfddce28/variables" for 127.0.0.1 at 2020-08-05 15:41:03 -0500
+Started GET "/catrentalrequests/" for 127.0.0.1 at 2020-08-05 15:41:04 -0500
+
+ActionController::RoutingError - uninitialized constant CatrentalrequestsController:
+
+Started POST "/__better_errors/0dbd98d348f2ddc5/variables" for 127.0.0.1 at 2020-08-05 15:41:04 -0500
+Started GET "/catrentalrequests/" for 127.0.0.1 at 2020-08-05 15:41:28 -0500
+
+ActionController::RoutingError - uninitialized constant CatrentalrequestsController:
+
+Started POST "/__better_errors/0906d704a3d2ea66/variables" for 127.0.0.1 at 2020-08-05 15:41:28 -0500
+Started GET "/catrentalrequests/" for 127.0.0.1 at 2020-08-05 15:41:51 -0500
+
+ActionController::RoutingError - uninitialized constant CatrentalrequestsController:
+
+Started POST "/__better_errors/1d41bd12aa44f30f/variables" for 127.0.0.1 at 2020-08-05 15:41:51 -0500
+Started GET "/catrentalrequests/new" for 127.0.0.1 at 2020-08-05 15:41:54 -0500
+
+ActionController::RoutingError - uninitialized constant CatrentalrequestsController:
+
+Started POST "/__better_errors/e35ddab60c8c1c43/variables" for 127.0.0.1 at 2020-08-05 15:41:54 -0500
+Started GET "/catrentalrequests/new" for 127.0.0.1 at 2020-08-05 15:42:16 -0500
+
+ActionController::RoutingError - uninitialized constant CatrentalrequestsController:
+
+Started POST "/__better_errors/8a848f8c65b9fd0f/variables" for 127.0.0.1 at 2020-08-05 15:42:16 -0500
+Started GET "/catrentalrequests/" for 127.0.0.1 at 2020-08-05 15:42:18 -0500
+
+ActionController::RoutingError - uninitialized constant CatrentalrequestsController:
+
+Started POST "/__better_errors/5a997129ff600498/variables" for 127.0.0.1 at 2020-08-05 15:42:18 -0500
+Started GET "/catrentalrequests/" for 127.0.0.1 at 2020-08-05 15:43:05 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/catrentalrequests"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/catrentalrequests/" for 127.0.0.1 at 2020-08-05 15:43:29 -0500
+
+ActionController::RoutingError - uninitialized constant CatrentalrequestsController:
+
+Started POST "/__better_errors/fdb219eae25c509a/variables" for 127.0.0.1 at 2020-08-05 15:43:29 -0500
+Started GET "/catrentalrequests/" for 127.0.0.1 at 2020-08-05 15:43:37 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/catrentalrequests"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/cat_rental_requests" for 127.0.0.1 at 2020-08-05 15:43:43 -0500
+Processing by CatRentalRequestsController#index as HTML
+  Rendering cat_rental_requests/index.html.erb within layouts/application
+  Rendered cat_rental_requests/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::Template::Error - undefined method `each' for nil:NilClass:
+  app/views/cat_rental_requests/index.html.erb:6:in `view template'
+  app/controllers/cat_rental_requests_controller.rb:5:in `index'
+
+Started POST "/__better_errors/af7b6827f0e78a16/variables" for 127.0.0.1 at 2020-08-05 15:43:43 -0500
+  [1m[36mCatRentalRequest Load (0.2ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/garrett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Started GET "/cat_rental_requests" for 127.0.0.1 at 2020-08-05 15:44:03 -0500
+Processing by CatRentalRequestsController#index as HTML
+  Rendering cat_rental_requests/index.html.erb within layouts/application
+  Rendered cat_rental_requests/index.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::Template::Error - undefined method `each' for nil:NilClass:
+  app/views/cat_rental_requests/index.html.erb:6:in `view template'
+  app/controllers/cat_rental_requests_controller.rb:5:in `index'
+
+Started POST "/__better_errors/5c53435612859498/variables" for 127.0.0.1 at 2020-08-05 15:44:03 -0500
+  [1m[36mCatRentalRequest Load (0.1ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/garrett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Started GET "/cat_rental_requests" for 127.0.0.1 at 2020-08-05 15:44:31 -0500
+Processing by CatRentalRequestsController#index as HTML
+  Rendering cat_rental_requests/index.html.erb within layouts/application
+  Rendered cat_rental_requests/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 119ms (Views: 118.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cat_rental_requests" for 127.0.0.1 at 2020-08-05 15:44:44 -0500
+Processing by CatRentalRequestsController#index as HTML
+  Rendering cat_rental_requests/index.html.erb within layouts/application
+  Rendered cat_rental_requests/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cat_rental_requests" for 127.0.0.1 at 2020-08-05 15:44:50 -0500
+Processing by CatRentalRequestsController#index as HTML
+  Rendering cat_rental_requests/index.html.erb within layouts/application
+  Rendered cat_rental_requests/index.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::Template::Error - undefined method `each' for nil:NilClass:
+  app/views/cat_rental_requests/index.html.erb:6:in `view template'
+  app/controllers/cat_rental_requests_controller.rb:5:in `index'
+
+Started POST "/__better_errors/1e8be49df5167039/variables" for 127.0.0.1 at 2020-08-05 15:44:50 -0500
+  [1m[36mCatRentalRequest Load (0.1ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/garrett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCatRentalRequest Load (0.2ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests"[0m
+Started GET "/cat_rental_requests" for 127.0.0.1 at 2020-08-05 15:46:22 -0500
+Processing by CatRentalRequestsController#index as HTML
+  Rendering cat_rental_requests/index.html.erb within layouts/application
+  Rendered cat_rental_requests/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::Template::Error - 'nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.:
+  app/views/cat_rental_requests/index.html.erb:6:in `view template'
+  app/controllers/cat_rental_requests_controller.rb:5:in `index'
+
+Started POST "/__better_errors/8f0ef3546ed0b591/variables" for 127.0.0.1 at 2020-08-05 15:46:22 -0500
+  [1m[36mCatRentalRequest Load (0.1ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/garrett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Started GET "/cat_rental_requests" for 127.0.0.1 at 2020-08-05 15:46:52 -0500
+Processing by CatRentalRequestsController#index as HTML
+  [1m[36mCatRentalRequest Load (0.3ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests"[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:5
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 3.3ms)
+
+
+
+ActionView::MissingTemplate - Missing partial cat_rental_requests/_cat_rental_request with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/garrett/Documents/AppAcaRails/Views/Projects/Cats/app/views"
+:
+  app/controllers/cat_rental_requests_controller.rb:5:in `index'
+
+Started POST "/__better_errors/53718f157bf1fe6f/variables" for 127.0.0.1 at 2020-08-05 15:46:52 -0500
+Started GET "/cat_rental_requests" for 127.0.0.1 at 2020-08-05 15:47:02 -0500
+Processing by CatRentalRequestsController#index as HTML
+  [1m[36mCatRentalRequest Load (0.4ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests"[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:5
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms)
+
+
+
+ActionView::MissingTemplate - Missing partial cat_rental_requests/_cat_rental_request with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/garrett/Documents/AppAcaRails/Views/Projects/Cats/app/views"
+:
+  app/controllers/cat_rental_requests_controller.rb:5:in `index'
+
+Started POST "/__better_errors/3c102fc4dbabd8ae/variables" for 127.0.0.1 at 2020-08-05 15:47:02 -0500
+Started GET "/cat_rental_requests" for 127.0.0.1 at 2020-08-05 15:47:06 -0500
+Processing by CatRentalRequestsController#index as HTML
+  Rendering cat_rental_requests/index.html.erb within layouts/application
+  Rendered cat_rental_requests/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::Template::Error - 'nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.:
+  app/views/cat_rental_requests/index.html.erb:6:in `view template'
+  app/controllers/cat_rental_requests_controller.rb:5:in `index'
+
+Started POST "/__better_errors/004736bdf13a9599/variables" for 127.0.0.1 at 2020-08-05 15:47:06 -0500
+  [1m[36mCatRentalRequest Load (0.1ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/garrett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Started GET "/cat_rental_requests" for 127.0.0.1 at 2020-08-05 15:47:37 -0500
+Processing by CatRentalRequestsController#index as HTML
+  Rendering cat_rental_requests/index.html.erb within layouts/application
+  Rendered cat_rental_requests/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::Template::Error - 'nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.:
+  app/views/cat_rental_requests/index.html.erb:6:in `view template'
+  app/controllers/cat_rental_requests_controller.rb:5:in `index'
+
+Started POST "/__better_errors/a7ecbca7f5fff7de/variables" for 127.0.0.1 at 2020-08-05 15:47:37 -0500
+  [1m[36mCatRentalRequest Load (0.2ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/garrett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Started GET "/cat_rental_requests" for 127.0.0.1 at 2020-08-05 15:48:18 -0500
+Processing by CatRentalRequestsController#index as HTML
+  Rendering cat_rental_requests/index.html.erb within layouts/application
+  Rendered cat_rental_requests/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::Template::Error - 'nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.:
+  app/views/cat_rental_requests/index.html.erb:6:in `view template'
+  app/controllers/cat_rental_requests_controller.rb:5:in `index'
+
+Started POST "/__better_errors/776e372e2e6400b3/variables" for 127.0.0.1 at 2020-08-05 15:48:18 -0500
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/garrett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Started GET "/cat_rental_requests" for 127.0.0.1 at 2020-08-05 15:48:32 -0500
+Processing by CatRentalRequestsController#index as HTML
+  Rendering cat_rental_requests/index.html.erb within layouts/application
+  Rendered cat_rental_requests/index.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::Template::Error - undefined method `each' for nil:NilClass:
+  app/views/cat_rental_requests/index.html.erb:6:in `view template'
+  app/controllers/cat_rental_requests_controller.rb:5:in `index'
+
+Started POST "/__better_errors/e86f83957f4156c8/variables" for 127.0.0.1 at 2020-08-05 15:48:33 -0500
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/garrett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Started GET "/cat/" for 127.0.0.1 at 2020-08-05 15:48:57 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/cat"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/cats" for 127.0.0.1 at 2020-08-05 15:48:59 -0500
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/_header.html.erb (226.1ms)
+  Rendered cats/index.html.erb within layouts/application (227.3ms)
+Completed 500 Internal Server Error in 230ms (ActiveRecord: 0.7ms)
+
+
+
+ActionView::Template::Error - undefined local variable or method `new_catrentalrequest_url' for #<#<Class:0x00007f2ce997e060>:0x00007f2ce99648b8>
+Did you mean?  new_cat_rental_request_url
+               new_cat_rental_request_path:
+  app/views/cats/_header.html.erb:6:in `view template'
+  app/views/cats/index.html.erb:3:in `_app_views_cats_index_html_erb__1924166371964305616_69915437067700'
+  app/controllers/cats_controller.rb:5:in `index'
+
+Started POST "/__better_errors/2566af298582b50f/variables" for 127.0.0.1 at 2020-08-05 15:49:00 -0500
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/garrett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Started GET "/cats" for 127.0.0.1 at 2020-08-05 15:50:12 -0500
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  Rendered cats/_header.html.erb (0.6ms)
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:7
+  Rendered cats/_cat.html.erb (0.4ms)
+  Rendered cats/_cat.html.erb (0.1ms)
+  Rendered cats/_cat.html.erb (0.0ms)
+  Rendered cats/_cat.html.erb (0.0ms)
+  Rendered cats/_cat.html.erb (0.0ms)
+  Rendered cats/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cat_rental_requests/new" for 127.0.0.1 at 2020-08-05 15:50:13 -0500
+Processing by CatRentalRequestsController#new as HTML
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 3.6ms)
+
+
+
+ActionView::MissingTemplate - Missing template cat_rental_requests/new, application/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/garrett/Documents/AppAcaRails/Views/Projects/Cats/app/views"
+:
+  app/controllers/cat_rental_requests_controller.rb:11:in `new'
+
+Started POST "/__better_errors/ed3e681c1c6cf3dd/variables" for 127.0.0.1 at 2020-08-05 15:50:13 -0500
+Started GET "/cat_rental_requests/new" for 127.0.0.1 at 2020-08-05 15:50:43 -0500
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered cat_rental_requests/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 22ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
