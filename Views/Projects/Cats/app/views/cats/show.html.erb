@@ -50,8 +50,12 @@
     </table>
 
     <% @rentals.each do |rental| %>
-        <%= rental.start_date %>
-        <%= rental.end_date %>
+        <div>
+            <%= rental.start_date %>
+            <%= rental.end_date %>
+            <form>
+            </form>
+        <div>
     <% end %>
 
 </section>

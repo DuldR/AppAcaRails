@@ -37,6 +37,10 @@ class CatRentalRequest < ApplicationRecord
         self.update(status: "DENIED")
     end
 
+    def pending?
+        return self.status == "PENDING"
+    end
+
     def overlapping_requests
         start = self.start_date
         ed = self.end_date
@@ -62,6 +66,8 @@ class CatRentalRequest < ApplicationRecord
         .order(created_at: :desc)
     end
 
+
+    private
 
     def no_overlaps
         unless overlapping_approved_requests.empty?
