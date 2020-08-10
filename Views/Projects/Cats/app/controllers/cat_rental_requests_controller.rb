@@ -23,14 +23,14 @@ class CatRentalRequestsController < ApplicationController
         @rental = CatRentalRequest.find_by(id: params[:id])
         @rental.approve!
 
-        redirect_to cats_url
+        redirect_to cat_url(@rental.cat_id)
     end
 
     def deny
         @rental = CatRentalRequest.find_by(id: params[:id])
         @rental.deny!
 
-        redirect_to cats_url
+        redirect_to cat_url(@rental.cat_id)
     end
 
 
