@@ -22,7 +22,7 @@ class CatsController < ApplicationController
         if @cat.save
             redirect_to cat_url(@cat)
         else
-            
+
             render :new
         end
 
@@ -31,7 +31,6 @@ class CatsController < ApplicationController
     def new
         @cat = Cat.new
         render :new
-
     end
 
     def edit
@@ -47,11 +46,7 @@ class CatsController < ApplicationController
         else
             render :edit
         end
-    
-
-
     end
-
 
 
     private

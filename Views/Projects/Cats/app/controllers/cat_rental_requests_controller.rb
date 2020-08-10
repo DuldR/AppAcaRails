@@ -17,7 +17,17 @@ class CatRentalRequestsController < ApplicationController
         end
     end
 
-    
+
+    def approve
+        render json: rent_params
+    end
+
+    def deny
+        render json: rent_params
+    end
+
+
+
 
 
     private

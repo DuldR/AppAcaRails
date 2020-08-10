@@ -37,7 +37,7 @@
 
                 <tr>
 
-                    <td>Desctriptiopn: </td>
+                    <td>Desctription: </td>
                     <td><%= @cat.description %>
 
                 </tr>
@@ -49,12 +49,26 @@
 
     </table>
 
+    <br>
+
     <% @rentals.each do |rental| %>
         <div>
             <%= rental.start_date %>
             <%= rental.end_date %>
-            <form>
-            </form>
+
+            <% if rental.pending? %>
+
+                <form action="<%= approve_cat_rental_request_url %>" method="post">
+                    <input type="radio" id="approve" name=cat_rental_request[status] value="APPROVED" formaction="<%= approve_cat_rental_request_url %>">
+                    <label for="approve">Approve</label>
+                    <input type="radio" id="approve" name=cat_rental_request[status] value="DENIED" formaction="<%= deny_cat_rental_request_url %>"">
+                    <label for="deny">Deny</label>
+
+
+                    <input type="submit" value="SEND IT">
+                </form>
+    
+            <% end %>
         <div>
     <% end %>
 
