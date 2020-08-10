@@ -23,6 +23,14 @@ class CatRentalRequest < ApplicationRecord
         primary_key: :id
     )
 
+    def approve!
+        overlapping_pending_requests.each do |req|
+            req.update(status: "DENIED")
+        end
+        
+        self.update(status: "APPROVED")
+    end
+
     def overlapping_requests
         start = self.start_date
         ed = self.end_date
@@ -33,9 +41,20 @@ class CatRentalRequest < ApplicationRecord
         req
     end
 
+    def overlapping_pending_requests
+        s = ["APPROVED", "PENDING", "DENIED"]
+        overlapping_requests
+        .where("status = ?", s[1])
+        .where.not("id = ?", self.id)
+        .order(created_at: :desc)
+    end
+
     def overlapping_approved_requests
         s = ["APPROVED", "PENDING", "DENIED"]
-        overlapping_requests.where("status = ?", s[0])
+        overlapping_requests
+        .where("status = ?", s[0])
+        .where.not("id = ?", self.id)
+        .order(created_at: :desc)
     end
 
     private
