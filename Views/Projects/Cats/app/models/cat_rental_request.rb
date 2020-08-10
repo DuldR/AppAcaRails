@@ -13,7 +13,7 @@ class CatRentalRequest < ApplicationRecord
     validates :start_date, presence: true
     validates :end_date, presence: true
     validates :status, presence: true, inclusion: { in: %w(PENDING DENIED APPROVED) }
-   
+    validate :no_overlaps
 
 
     belongs_to(
@@ -24,11 +24,17 @@ class CatRentalRequest < ApplicationRecord
     )
 
     def approve!
-        overlapping_pending_requests.each do |req|
-            req.update(status: "DENIED")
+        self.transaction do
+            overlapping_pending_requests.each do |req|
+                req.update(status: "DENIED")
+            end
+            
+            self.update(status: "APPROVED")
         end
-        
-        self.update(status: "APPROVED")
+    end
+
+    def deny!
+        self.update(status: "DENIED")
     end
 
     def overlapping_requests
@@ -53,15 +59,13 @@ class CatRentalRequest < ApplicationRecord
         s = ["APPROVED", "PENDING", "DENIED"]
         overlapping_requests
         .where("status = ?", s[0])
-        .where.not("id = ?", self.id)
         .order(created_at: :desc)
     end
 
-    private
 
     def no_overlaps
-        unless self.overlapping_approved_requests.empty?
-            self.errors[:start_date] << "You must choose a date that is open"
+        unless overlapping_approved_requests.empty?
+            errors[:base] << "Need a new date"
         end
     end
 
