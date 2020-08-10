@@ -55,21 +55,21 @@
         <div>
             <%= rental.start_date %>
             <%= rental.end_date %>
+        </div>
 
-            <% if rental.pending? %>
+        <br>
 
-                <form action="<%= approve_cat_rental_request_url(rental) %>" method="post">
-                    <input type="radio" id="approve" name="cat_rental_request[status]" value="APPROVED">
+        <%if rental.pending? %>
+                <form method="post">
+                    <button type="submit" id="approve" formaction="<%= approve_cat_rental_request_url(rental) %>" name="cat_rental_request[status]" value="APPROVED">
                     <label for="approve">Approve</label>
-                    <input type="radio" id="deny" formaction="<%= deny_cat_rental_request_url(rental) %>" name="cat_rental_request[status]" value="DENIED">
+                    </button>
+                    <button type="submit" id="deny" formaction="<%= deny_cat_rental_request_url(rental) %>" name="cat_rental_request[status]" value="DENIED">
                     <label for="deny">Deny</label>
-
-
-                    <input type="submit" value="SEND IT">
+                    </button>
                 </form>
-    
-            <% end %>
-        <div>
+        <% end %>
+        
     <% end %>
 
 </section>
