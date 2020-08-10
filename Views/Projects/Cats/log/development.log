@@ -6335,3 +6335,252 @@ Processing by CatRentalRequestsController#index as HTML
 Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 2.0ms)
 
 
+Started GET "/cat_rental_requests/" for 127.0.0.1 at 2020-08-09 22:00:28 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/garrett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by CatRentalRequestsController#index as HTML
+  Rendering cat_rental_requests/index.html.erb within layouts/application
+  [1m[36mCatRentalRequest Load (0.9ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests"[0m
+  ↳ app/views/cat_rental_requests/index.html.erb:6
+  Rendered cat_rental_requests/_cat_rental_request.html.erb (0.2ms)
+  Rendered cat_rental_requests/_cat_rental_request.html.erb (0.0ms)
+  Rendered cat_rental_requests/_cat_rental_request.html.erb (0.0ms)
+  Rendered cat_rental_requests/_cat_rental_request.html.erb (0.0ms)
+  Rendered cat_rental_requests/_cat_rental_request.html.erb (0.0ms)
+  Rendered cat_rental_requests/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 130ms (Views: 119.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/cat_rental_requests/new" for 127.0.0.1 at 2020-08-09 22:02:41 -0500
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered cat_rental_requests/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cat_rental_requests/" for 127.0.0.1 at 2020-08-09 22:03:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/cat_rental_requests"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/cat_rental_requests/new" for 127.0.0.1 at 2020-08-09 22:03:12 -0500
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered cat_rental_requests/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cat_rental_requests/new" for 127.0.0.1 at 2020-08-09 22:06:01 -0500
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered cat_rental_requests/_form.html.erb (0.1ms)
+  Rendered cat_rental_requests/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 3.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/cat_rental_requests/new" for 127.0.0.1 at 2020-08-09 22:11:11 -0500
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered cat_rental_requests/_form.html.erb (1.3ms)
+  Rendered cat_rental_requests/new.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected ==
+...eze;@output_buffer.append=(  == "F" ? "checked" : "" );@outp...
+...                             ^~
+/home/garrett/Documents/AppAcaRails/Views/Projects/Cats/app/views/cat_rental_requests/_form.html.erb:28: syntax error, unexpected ==
+...eze;@output_buffer.append=(  == "M" ? "checked" : "" );@outp...
+...                             ^~
+/home/garrett/Documents/AppAcaRails/Views/Projects/Cats/app/views/cat_rental_requests/_form.html.erb:30: syntax error, unexpected ==
+...eze;@output_buffer.append=(  == "A" ? "checked" : "" );@outp...
+...                             ^~:
+  app/views/cat_rental_requests/_form.html.erb:26:in `'
+  app/views/cat_rental_requests/new.html.erb:3:in `_app_views_cat_rental_requests_new_html_erb__2497670830667046416_70277190566240'
+  app/controllers/cat_rental_requests_controller.rb:5:in `new'
+
+Started POST "/__better_errors/f8919d7da9000c5c/variables" for 127.0.0.1 at 2020-08-09 22:11:12 -0500
+Started GET "/cat_rental_requests/new" for 127.0.0.1 at 2020-08-09 22:11:29 -0500
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered cat_rental_requests/_form.html.erb (224.0ms)
+  Rendered cat_rental_requests/new.html.erb within layouts/application (224.9ms)
+Completed 500 Internal Server Error in 227ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::Template::Error - undefined local variable or method `action_url' for #<#<Class:0x00007fd55d50bd58>:0x00007fd55d049b58>
+Did you mean?  audio_url:
+  app/views/cat_rental_requests/_form.html.erb:4:in `view template'
+  app/views/cat_rental_requests/new.html.erb:3:in `_app_views_cat_rental_requests_new_html_erb__2497670830667046416_70277242477620'
+  app/controllers/cat_rental_requests_controller.rb:5:in `new'
+
+Started POST "/__better_errors/c5456b4d3c27b90e/variables" for 127.0.0.1 at 2020-08-09 22:11:29 -0500
+Started GET "/cat_rental_requests/new" for 127.0.0.1 at 2020-08-09 22:11:39 -0500
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered cat_rental_requests/_form.html.erb (0.3ms)
+  Rendered cat_rental_requests/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cat_rental_requests/new" for 127.0.0.1 at 2020-08-09 22:11:42 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/cat_rental_requests/new"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/cat_rental_requests/new" for 127.0.0.1 at 2020-08-09 22:15:59 -0500
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered cat_rental_requests/_form.html.erb (0.3ms)
+  Rendered cat_rental_requests/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 11ms (Views: 3.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/cat_rental_requests/new" for 127.0.0.1 at 2020-08-09 22:17:10 -0500
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered cat_rental_requests/_form.html.erb (0.8ms)
+  Rendered cat_rental_requests/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cat_rental_requests/new" for 127.0.0.1 at 2020-08-09 22:17:52 -0500
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered cat_rental_requests/_form.html.erb (172.8ms)
+  Rendered cat_rental_requests/new.html.erb within layouts/application (173.5ms)
+Completed 500 Internal Server Error in 175ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::Template::Error - undefined local variable or method `action_url' for #<#<Class:0x00007fd560377a20>:0x00007fd54c308648>
+Did you mean?  audio_url:
+  app/views/cat_rental_requests/_form.html.erb:4:in `view template'
+  app/views/cat_rental_requests/new.html.erb:3:in `_app_views_cat_rental_requests_new_html_erb__2497670830667046416_70277209159320'
+  app/controllers/cat_rental_requests_controller.rb:5:in `new'
+
+Started POST "/__better_errors/bd7b1a915182fb9e/variables" for 127.0.0.1 at 2020-08-09 22:17:52 -0500
+Started GET "/cat_rental_requests/new" for 127.0.0.1 at 2020-08-09 22:17:59 -0500
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered cat_rental_requests/_form.html.erb (0.5ms)
+  Rendered cat_rental_requests/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cat_rental_requests/new" for 127.0.0.1 at 2020-08-09 22:18:24 -0500
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered cat_rental_requests/_form.html.erb (0.3ms)
+  Rendered cat_rental_requests/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cat_rental_requests/new" for 127.0.0.1 at 2020-08-09 22:18:25 -0500
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered cat_rental_requests/_form.html.erb (0.4ms)
+  Rendered cat_rental_requests/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cat_rental_requests" for 127.0.0.1 at 2020-08-09 22:18:26 -0500
+Processing by CatRentalRequestsController#create as HTML
+  Parameters: {"cat"=>{"name"=>""}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: cat_rental_request:
+  app/controllers/cat_rental_requests_controller.rb:22:in `rent_params'
+  app/controllers/cat_rental_requests_controller.rb:10:in `create'
+
+Started POST "/__better_errors/d20864c2ce579c75/variables" for 127.0.0.1 at 2020-08-09 22:18:26 -0500
+Started GET "/cat_rental_requests/new" for 127.0.0.1 at 2020-08-09 22:19:59 -0500
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered cat_rental_requests/_form.html.erb (0.2ms)
+  Rendered cat_rental_requests/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cat_rental_requests/new" for 127.0.0.1 at 2020-08-09 22:20:28 -0500
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered cat_rental_requests/_form.html.erb (0.4ms)
+  Rendered cat_rental_requests/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cat_rental_requests/new" for 127.0.0.1 at 2020-08-09 22:22:11 -0500
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered cat_rental_requests/_form.html.erb (0.3ms)
+  Rendered cat_rental_requests/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cat_rental_requests/new" for 127.0.0.1 at 2020-08-09 22:24:25 -0500
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/_form.html.erb:11
+  Rendered cat_rental_requests/_form.html.erb (6.2ms)
+  Rendered cat_rental_requests/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 19ms (Views: 7.3ms | ActiveRecord: 3.8ms)
+
+
