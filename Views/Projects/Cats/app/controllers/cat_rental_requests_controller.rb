@@ -19,11 +19,18 @@ class CatRentalRequestsController < ApplicationController
 
 
     def approve
-        render json: rent_params
+
+        @rental = CatRentalRequest.find_by(id: params[:id])
+        @rental.approve!
+
+        redirect_to cats_url
     end
 
     def deny
-        render json: rent_params
+        @rental = CatRentalRequest.find_by(id: params[:id])
+        @rental.deny!
+
+        redirect_to cats_url
     end
 
 
