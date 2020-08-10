@@ -17,6 +17,8 @@ class CatRentalRequestsController < ApplicationController
         end
     end
 
+    
+
 
     private
 
