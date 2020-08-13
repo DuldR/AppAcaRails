@@ -154,3 +154,30 @@ Migrating to CreateUsers (20200813022906)
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Weiner"], ["password_digest", "DDdsfsdgdf"], ["session_token", "PoTSDDk6bZcsVbRtpPo7XQ"], ["created_at", "2020-08-13 17:27:16.248123"], ["updated_at", "2020-08-13 17:27:16.248123"]]
   [1m[35m (11.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "butts"], ["password_digest", "Okokokoko"], ["session_token", "aD0sX3_jqOkuV9aAgAJebg"], ["created_at", "2020-08-13 17:30:34.457837"], ["updated_at", "2020-08-13 17:30:34.457837"]]
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "OK"], ["password_digest", "$2a$12$1VDY.lSs/5AvdZpLdAqfiOiIYzm4l.1EBSJRH1x7JOjp2P2Z/oM2W"], ["session_token", "-8t02TjtMaDK9TBF04YS_A"], ["created_at", "2020-08-13 17:39:02.783517"], ["updated_at", "2020-08-13 17:39:02.783517"]]
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "OK"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("password_digest", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["password_digest", "$2a$12$6M1LCW4KsIsxdKLAsvJKe.hk6FzsUi.eKdsXhT30yrtod4LG.F1AG"], ["created_at", "2020-08-13 17:50:27.770806"], ["updated_at", "2020-08-13 17:50:27.770806"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "OK"], ["password_digest", "$2a$12$tIRlgjmXatM71fPnqnFHZ.XDTE8CCJpkNz/wuAICLEt7UKts1tpyS"], ["created_at", "2020-08-13 17:50:27.770806"], ["updated_at", "2020-08-13 17:50:27.770806"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "OK"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "OK"], ["password_digest", "$2a$12$toYTDUn0hTmf/ukTIrPEJOChtcgoNQE690iUcpehmFwn4pOzys2F2"], ["session_token", "CnofdlugkFdVhpVZc9DhDQ"], ["created_at", "2020-08-13 17:52:54.287159"], ["updated_at", "2020-08-13 17:52:54.287159"]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "OK"], ["LIMIT", 1]]
