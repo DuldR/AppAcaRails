@@ -5,12 +5,20 @@ class User < ApplicationRecord
 
     before_validation :ensure_session_token
 
+    def self.find_by_credentials(username, pass)
+        self.where("username = ? AND password_digest = ?", username, pass)
+
+    end
+
+    def self.generate_session_token
+        SecureRandom::urlsafe_base64
+    end
 
     protected
 
     def ensure_session_token
 
-        self.session_token ||= SecureRandom.hex(8)
+        self.session_token ||= User.generate_session_token
 
     end
 end
