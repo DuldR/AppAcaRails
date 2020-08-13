@@ -6,14 +6,13 @@ class SessionsController < ApplicationController
     end
 
     def create
-        @user = User.new(session_params)
+        user = User.find_by_credentials(params[:session][:username], params[:session][:password])
 
-        render json: @user
-        # if @user.save
-        #     redirect_to cats_url
-        # else
-        #     render :new
-        # end
+        if user.nil?
+            render json: "Wrong."
+        else
+            render json: "Welcome back #{user.username}"
+        end
 
     end
 
