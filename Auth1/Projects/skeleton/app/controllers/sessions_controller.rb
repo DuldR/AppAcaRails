@@ -1,7 +1,11 @@
 class SessionsController < ApplicationController
 
     def new
-        render :new
+        if !current_user.nil?
+            redirect_to cats_url
+        else
+            render :new
+        end
 
     end
 
@@ -10,7 +14,7 @@ class SessionsController < ApplicationController
         user.reset_session_token!
 
         if user.nil?
-            redirect_to new_sessions_url
+            redirect_to new_session_url
         else
             login!(user)
             redirect_to cats_url
@@ -19,6 +23,8 @@ class SessionsController < ApplicationController
     end
 
     def destroy
+        logout!
+        redirect_to new_session_url
 
     end
 

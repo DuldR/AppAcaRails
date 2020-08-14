@@ -9,7 +9,30 @@
   </head>
 
   <body>
-    <h1>Current user: <%= current_user %></h1>
+    <nav>
+      <% if !current_user.nil? %>
+        <ul>
+          <li>Logged in as: <%= current_user.username %></li>
+          <li>
+            <form action="<%= session_url%>" method="POST">
+              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+              <input type="hidden" value="delete" name="_method">
+              <input type="submit" value="Logout">
+            </form>
+          </li>
+        </ul>
+
+      <% else %>
+        <ul>
+          <li>
+            <%= link_to "Login", new_session_url %>
+          </li>
+        </ul>
+      <% end %>
+
+      <%= link_to "Cats", cats_url %>
+      <%= link_to "New Cat", new_cat_url%>
+    </nav>
     <%= yield %>
   </body>
 </html>
