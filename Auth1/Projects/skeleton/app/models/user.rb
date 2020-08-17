@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :bigint           not null, primary key
+#  username        :string           not null
+#  password_digest :string           not null
+#  session_token   :string           not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
 class User < ApplicationRecord
 
     attr_reader :password
@@ -8,6 +19,8 @@ class User < ApplicationRecord
     validates :password, presence: { message: "Password can't be blank" }, :length => { minimum: 6 }, allow_nil: true
 
     before_validation :ensure_session_token
+
+    has_many :cats, class_name: :Cat, foreign_key: :user_id, primary_key: :id
 
     after_initialize do |user|
         ensure_session_token
