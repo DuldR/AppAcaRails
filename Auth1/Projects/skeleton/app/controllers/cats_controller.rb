@@ -1,4 +1,7 @@
 class CatsController < ApplicationController
+  before_action :check_user, only: [:edit, :update]
+
+
   def index
     @cats = Cat.all
     render :index
@@ -26,8 +29,6 @@ class CatsController < ApplicationController
   end
 
   def edit
-    # before_action :check_user
-
     @cat = current_user.cats.where("id = ?", params[:id]).first
   end
 
@@ -42,14 +43,16 @@ class CatsController < ApplicationController
   end
 
   def check_user
-    @cat = Cat.new(cat_params)
-    if current_user.cats.include?(@cat)
-      @cat
-    else
-      redirect_to cat_url(@cat)
+    if current_user.cats.where("id = ?", params[:id]).empty?
+      redirect_to cat_url(params[:id])
     end
-
   end
+
+  def huh
+
+    redirect_to cats_url
+  end
+
 
   private
 
@@ -57,12 +60,6 @@ class CatsController < ApplicationController
     params.require(:cat).permit(:age, :birth_date, :color, :description, :name, :sex, :user_id)
   end
 
-  def check_user
-    if current_user.cats.where("id = ?", params[:id]).empty?
-      redirect_to cats_url
-    end
-
-  end
 
 
 end
