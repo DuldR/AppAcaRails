@@ -42,22 +42,19 @@ class CatsController < ApplicationController
     end
   end
 
-  def check_user
-    if current_user.cats.where("id = ?", params[:id]).empty?
-      redirect_to cat_url(params[:id])
-    end
-  end
 
-  def huh
-
-    redirect_to cats_url
-  end
-
+  
 
   private
 
   def cat_params
     params.require(:cat).permit(:age, :birth_date, :color, :description, :name, :sex, :user_id)
+  end
+
+  def check_user
+    if current_user.cats.where("id = ?", params[:id]).empty?
+      redirect_to cat_url(params[:id])
+    end
   end
 
 
