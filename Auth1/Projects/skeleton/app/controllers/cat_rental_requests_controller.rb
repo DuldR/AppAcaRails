@@ -28,6 +28,9 @@ class CatRentalRequestsController < ApplicationController
   private
 
   def owner?
+    if current_user.cats.rental_requests.where("cat_id = ?", params[:id]).empty?
+      redirect_to cat_url(params[:id])
+    end
 
   end
 
