@@ -26,8 +26,9 @@ class CatsController < ApplicationController
   end
 
   def edit
-    @cat = Cat.find(params[:id])
-    render :edit
+    # before_action :check_user
+
+    @cat = current_user.cats.where("id = ?", params[:id]).first
   end
 
   def update
@@ -40,9 +41,28 @@ class CatsController < ApplicationController
     end
   end
 
+  def check_user
+    @cat = Cat.new(cat_params)
+    if current_user.cats.include?(@cat)
+      @cat
+    else
+      redirect_to cat_url(@cat)
+    end
+
+  end
+
   private
 
   def cat_params
-    params.require(:cat).permit(:age, :birth_date, :color, :description, :name, :sex)
+    params.require(:cat).permit(:age, :birth_date, :color, :description, :name, :sex, :user_id)
   end
+
+  def check_user
+    if current_user.cats.where("id = ?", params[:id]).empty?
+      redirect_to cats_url
+    end
+
+  end
+
+
 end
