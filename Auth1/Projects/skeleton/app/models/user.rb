@@ -21,6 +21,8 @@ class User < ApplicationRecord
     before_validation :ensure_session_token
 
     has_many :cats, class_name: :Cat, foreign_key: :user_id, primary_key: :id
+    has_many :requests, class_name: :CatRentalRequest, foreign_key: :user_id, primary_key: :id
+    
 
     after_initialize do |user|
         ensure_session_token

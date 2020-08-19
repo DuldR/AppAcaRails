@@ -16,10 +16,13 @@ class CatRentalRequest < ApplicationRecord
 
   validates :cat_id, :end_date, :start_date, :status, presence: true
   validates :status, inclusion: STATUS_STATES
+  validates :user_id, presence: true
   validate :start_must_come_before_end
   validate :does_not_overlap_approved_request
+  
 
   belongs_to :cat
+  belongs_to :user
 
   after_initialize :assign_pending_status
 
