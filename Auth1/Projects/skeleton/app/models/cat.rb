@@ -28,9 +28,7 @@ class Cat < ApplicationRecord
   # Remember, has_many is just a method where the first argument is
   # the name of the association, and the second argument is an options
   # hash.
-  has_many :rental_requests,
-    class_name: :CatRentalRequest,
-    dependent: :destroy
+  has_many :rental_requests, class_name: :CatRentalRequest, primary_key: :id, foreign_key: :cat_id, dependent: :destroy
   
   has_one :owner, class_name: :User, foreign_key: :id, primary_key: :user_id
 

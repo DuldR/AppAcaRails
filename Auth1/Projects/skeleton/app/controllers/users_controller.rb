@@ -9,6 +9,7 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         @user.password = user_params[:password]
         if @user.save!
+            login!(@user)
             redirect_to cats_url
         else
             flash.now[:errors] = @user.errors.full_messages

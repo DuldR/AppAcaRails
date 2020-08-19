@@ -8,6 +8,7 @@ class CatRentalRequestsController < ApplicationController
 
   def create
     @rental_request = CatRentalRequest.new(cat_rental_request_params)
+    @rental_request.user_id = current_user.id
     if @rental_request.save
       redirect_to cat_url(@rental_request.cat)
     else
@@ -28,7 +29,7 @@ class CatRentalRequestsController < ApplicationController
   private
 
   def owner?
-    if current_user.cats.rental_requests.where("cat_id = ?", params[:id]).empty?
+    if current_user.cats.where("id = ?", params[:id]).empty?
       redirect_to cat_url(params[:id])
     end
 
