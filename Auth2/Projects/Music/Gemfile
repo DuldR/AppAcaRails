@@ -53,6 +53,7 @@ group :development do
   gem 'pry-rails'
   gem 'annotate'
   gem 'letter_opener'
+  gem 'bcrypt'
 end
 
 group :test do

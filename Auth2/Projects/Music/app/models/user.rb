@@ -10,6 +10,10 @@
 #  updated_at      :datetime         not null
 #
 class User < ApplicationRecord
+
+    validates :email, :password_digest, :session_token, presence: true
+    validates :email, uniqueness: true
+
     before_validation :ensure_session_token
 
     def self.generate_session_token
@@ -22,10 +26,13 @@ class User < ApplicationRecord
     end
 
     def password=(pass)
-
+        @password = BCrypt::Password.create(pass)
+        self.password_digest = @password
     end
 
     def is_password?(password)
+        check = BCrypt::Password.new(password_digest)
+        check.is_password?(password)
 
     end
 
