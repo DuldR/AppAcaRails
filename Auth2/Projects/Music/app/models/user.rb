@@ -11,12 +11,32 @@
 #
 class User < ApplicationRecord
 
+    attr_reader :password
+
     validates :email, :password_digest, :session_token, presence: true
     validates :email, uniqueness: true
     validates :password, presence: { message: "Password can't be blank" }, :length => { minimum: 6 }, allow_nil: true
 
 
     before_validation :ensure_session_token
+
+    after_initialize do |user|
+        ensure_session_token
+    end
+
+    def self.find_by_credentials(email, password)
+        user = User.find_by(email: email)
+
+        if user.nil?
+            nil
+        end
+
+        if user.is_password?(password)
+            user
+        else
+            nil
+        end
+    end
 
     def self.generate_session_token
         SecureRandom::urlsafe_base64
