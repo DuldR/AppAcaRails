@@ -28,13 +28,13 @@ class User < ApplicationRecord
         user = User.find_by(email: email)
 
         if user.nil?
-            nil
+            return nil
         end
 
         if user.is_password?(password)
-            user
+            return user
         else
-            nil
+            return nil
         end
     end
 
