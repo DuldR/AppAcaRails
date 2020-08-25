@@ -5,21 +5,21 @@ class ApplicationController < ActionController::Base
 
     def login!(user)
         @current_user = user
-        fail
         session[:session_token] = user.session_token
 
     end
 
     def logged_in?
-
+        return false if session[:session_token].nil?
     end
 
     def logout
-
+        current_user.try(:reset_session_token!)
+        session[:session_token] = nil
     end
 
     def current_user
-        return nil if @current_user = nil
+        return nil if session[:session_token].nil?
         @current_user ||= User.find_by(session_token: params[:session_token])
     end
 end
