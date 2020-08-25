@@ -4,6 +4,7 @@ class UsersController < ApplicationController
         @user.password = user_params[:password]
 
         if @user.save!
+            login!(@user)
             render :new
         else
             render :json => { :errors => @user.errors.full_messages }
