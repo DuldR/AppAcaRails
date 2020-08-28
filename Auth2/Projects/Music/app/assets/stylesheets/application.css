@@ -36,7 +36,6 @@
       font-size: 30px;
   }
 
-
   nav {
       width: 15%;
       display: flex;
@@ -45,8 +44,8 @@
       font-weight: bold;
   }
 
-  body {
-      width: 100%;
+  html, body {
+      overflow: auto;
       background-color: lightskyblue;
 
   }
@@ -71,7 +70,7 @@
   }
 
 
-  form {
+  header form {
       width: 15%; 
       float: right;
       justify-items: center;
