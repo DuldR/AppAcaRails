@@ -9,7 +9,17 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <header>Botify</header>
+  <header>
+  
+    <h1>Botify</h1>
+
+    <h4>Logged in as: <%= current_user.email %></h4>
+    <form action="<%= session_url %>" method="POST">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <input type="hidden" value="delete" name="_method">
+            <input type="submit" value="Logout">
+    </form>
+  </header>
 
   <br>
 
@@ -23,14 +33,12 @@
 
       <% else %>
 
-        <div style="float: right;">
           <%= current_user.email %>
           <form action="<%= session_url %>" method="POST">
             <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
             <input type="hidden" value="delete" name="_method">
             <input type="submit" value="Logout">
           </form>
-        <div>
       <% end %>
   </nav>
 
