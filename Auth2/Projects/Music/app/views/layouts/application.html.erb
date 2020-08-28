@@ -36,7 +36,7 @@
 
       <h4> Logged in as: <%= current_user.email %> </h4>
 
-      <form action="<%= session_url %>" method="POST">
+      <form staction="<%= session_url %>" method="POST">
         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
         <input type="hidden" value="delete" name="_method">
         <input type="submit" value="Logout">
