@@ -38,14 +38,10 @@
 
 
   nav {
-      width: 100%;
-      height: 60px;
+      width: 15%;
       display: flex;
-      justify-content: space-between;
       align-items: center;
       box-sizing: border-box;
-      padding: 0 20px;
-      color: black;
       font-weight: bold;
   }
 
@@ -81,4 +77,12 @@
       justify-items: center;
       margin: auto;
       text-align: center;
+  }
+
+  ul li {
+      font-weight: bold;
+      margin: auto;
+      padding: 10px;
+      background-color: lightseagreen;
+      border-radius: 20px;
   }
