@@ -11,12 +11,24 @@
 
   <header>Botify</header>
   <nav> The Links 
-    <ul>
-      <li>
-      </li>
-      <li> <%= link_to "New User", new_user_url %> </li>
-      <li> <%= link_to "Login", new_session_url %></li>
-    </ul>
+      <% if current_user.nil? %>
+        <ul>
+          <li><%= link_to "Home", homes_url %></li>
+          <li><%= link_to "New User", new_user_url %></li>
+          <li><%= link_to "Login", new_session_url %></li>
+        </ul>
+
+      <% else %>
+
+        <div style="float: right;">
+          <%= current_user.email %>
+          <form action="<%= session_url %>" method="POST">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <input type="hidden" value="delete" name="_method">
+            <input type="submit" value="Logout">
+          </form>
+        <div>
+      <% end %>
   </nav>
 
   <body>
