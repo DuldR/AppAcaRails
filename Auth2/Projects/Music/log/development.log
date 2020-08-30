@@ -6198,3 +6198,238 @@ Processing by BandsController#index as HTML
 Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/bands/1" for 127.0.0.1 at 2020-08-29 21:46:29 -0500
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (0.1ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:27
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 7.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/bands/1/edit" for 127.0.0.1 at 2020-08-29 21:46:31 -0500
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 406 Not Acceptable in 15ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UnknownFormat - BandsController#edit is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.:
+
+Started POST "/__better_errors/14559b2223e36f25/variables" for 127.0.0.1 at 2020-08-29 21:46:31 -0500
+Started GET "/bands/1" for 127.0.0.1 at 2020-08-29 21:46:36 -0500
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:27
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bands/1" for 127.0.0.1 at 2020-08-29 21:49:25 -0500
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (0.1ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:29
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 7.6ms | ActiveRecord: 2.9ms)
+
+
+Started PATCH "/bands/1?band[name]=Butts" for ::1 at 2020-08-29 21:52:38 -0500
+Processing by BandsController#update as */*
+  Parameters: {"comment"=>{"user_id"=>"1"}, "band"=>{"name"=>"Butts"}, "id"=>"1"}
+HTTP Origin header (chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started PATCH "/bands/1?band[name]=Butts" for ::1 at 2020-08-29 21:54:27 -0500
+Processing by BandsController#update as */*
+  Parameters: {"comment"=>{"user_id"=>"1"}, "band"=>{"name"=>"Butts"}, "id"=>"1"}
+HTTP Origin header (chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started PATCH "/bands/1?band[name]=Butts" for ::1 at 2020-08-29 21:56:38 -0500
+Processing by BandsController#update as */*
+  Parameters: {"comment"=>{"user_id"=>"1"}, "band"=>{"name"=>"Butts"}, "id"=>"1"}
+HTTP Origin header (chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started PATCH "/bands/1?band[name]=Butts" for ::1 at 2020-08-29 21:56:39 -0500
+Processing by BandsController#update as */*
+  Parameters: {"comment"=>{"user_id"=>"1"}, "band"=>{"name"=>"Butts"}, "id"=>"1"}
+HTTP Origin header (chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started PATCH "/bands/1?band[name]=Butts" for ::1 at 2020-08-29 21:56:43 -0500
+Processing by BandsController#update as */*
+  Parameters: {"comment"=>{"user_id"=>"1"}, "band"=>{"name"=>"Butts"}, "id"=>"1"}
+HTTP Origin header (chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started PATCH "/bands/1?band[name]=Butts" for ::1 at 2020-08-29 21:58:43 -0500
+Processing by BandsController#update as */*
+  Parameters: {"comment"=>{"user_id"=>"1"}, "band"=>{"name"=>"Butts"}, "id"=>"1"}
+HTTP Origin header (chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started PATCH "/bands/1?band[name]=Butts" for ::1 at 2020-08-29 21:58:44 -0500
+Processing by BandsController#update as */*
+  Parameters: {"comment"=>{"user_id"=>"1"}, "band"=>{"name"=>"Butts"}, "id"=>"1"}
+HTTP Origin header (chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started PATCH "/bands/1?band[name]=Butts" for ::1 at 2020-08-29 21:58:45 -0500
+Processing by BandsController#update as */*
+  Parameters: {"comment"=>{"user_id"=>"1"}, "band"=>{"name"=>"Butts"}, "id"=>"1"}
+HTTP Origin header (chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started PATCH "/bands/1?band[name]=Butts" for ::1 at 2020-08-29 21:58:45 -0500
+Processing by BandsController#update as */*
+  Parameters: {"comment"=>{"user_id"=>"1"}, "band"=>{"name"=>"Butts"}, "id"=>"1"}
+HTTP Origin header (chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started PATCH "/bands/1?band[name]=Butts" for ::1 at 2020-08-29 21:58:45 -0500
+Processing by BandsController#update as */*
+  Parameters: {"comment"=>{"user_id"=>"1"}, "band"=>{"name"=>"Butts"}, "id"=>"1"}
+HTTP Origin header (chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started PATCH "/bands/1?band[name]=Butts" for ::1 at 2020-08-29 21:58:45 -0500
+Processing by BandsController#update as */*
+  Parameters: {"comment"=>{"user_id"=>"1"}, "band"=>{"name"=>"Butts"}, "id"=>"1"}
+HTTP Origin header (chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started PATCH "/bands/1?band[name]=Butts" for ::1 at 2020-08-29 21:58:45 -0500
+Processing by BandsController#update as */*
+  Parameters: {"comment"=>{"user_id"=>"1"}, "band"=>{"name"=>"Butts"}, "id"=>"1"}
+HTTP Origin header (chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started PATCH "/bands/1?band[name]=Butts" for ::1 at 2020-08-29 21:58:45 -0500
+Processing by BandsController#update as */*
+  Parameters: {"comment"=>{"user_id"=>"1"}, "band"=>{"name"=>"Butts"}, "id"=>"1"}
+HTTP Origin header (chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started PATCH "/bands/1?band[name]=Butts" for ::1 at 2020-08-29 21:58:46 -0500
+Processing by BandsController#update as */*
+  Parameters: {"comment"=>{"user_id"=>"1"}, "band"=>{"name"=>"Butts"}, "id"=>"1"}
+HTTP Origin header (chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started GET "/bands/1/edit" for 127.0.0.1 at 2020-08-29 21:59:48 -0500
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:10
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bands/1/edit" for 127.0.0.1 at 2020-08-29 22:00:40 -0500
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:10
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bands/1/edit" for 127.0.0.1 at 2020-08-29 22:01:26 -0500
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:10
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/bands/1/edit" for 127.0.0.1 at 2020-08-29 22:01:31 -0500
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:10
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bands/1?authenticity_token=7zQAYg6A7muuX6bAbNORf7RyTBDkMfQRDjq%2BoG%2BfsMjYavWG28%2F0HECuZ1FKbZazMFfYSuudIhydiqSrv%2BM2Sw%3D%3D&authenticity_token=7zQAYg6A7muuX6bAbNORf7RyTBDkMfQRDjq%2BoG%2BfsMjYavWG28%2F0HECuZ1FKbZazMFfYSuudIhydiqSrv%2BM2Sw%3D%3D&band%5Bname%5D=CoolGuy%3F" for 127.0.0.1 at 2020-08-29 22:01:38 -0500
+Processing by BandsController#show as HTML
+  Parameters: {"authenticity_token"=>"7zQAYg6A7muuX6bAbNORf7RyTBDkMfQRDjq+oG+fsMjYavWG28/0HECuZ1FKbZazMFfYSuudIhydiqSrv+M2Sw==", "band"=>{"name"=>"CoolGuy?"}, "id"=>"1"}
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:29
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.2ms)
+
+
