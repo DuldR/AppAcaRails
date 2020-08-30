@@ -47,6 +47,7 @@
   html, body {
       overflow: auto;
       background-color: lightskyblue;
+      height: 100%;
 
   }
 
