@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
         if current_user.nil?
             render :new
         else
-            redirect_to homes_url
+            redirect_to bands_url
         end
 
     end
@@ -16,10 +16,10 @@ class SessionsController < ApplicationController
 
         if user.nil?
             flash.alert = "User not found"
-            redirect_to homes_url
+            redirect_to bands_url
         else
             login!(user)
-            redirect_to homes_url
+            redirect_to bands_url
         end
 
 
@@ -27,7 +27,7 @@ class SessionsController < ApplicationController
 
     def destroy
         logout!
-        redirect_to homes_url
+        redirect_to bands_url
     end
 
     def sessions_params
