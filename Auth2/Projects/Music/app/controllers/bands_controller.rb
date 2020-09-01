@@ -19,12 +19,9 @@ class BandsController < ApplicationController
     end
 
     def update
-        # @band = Band.find(params[:id])
-        # @band.update(name: params[:name])
-
-        # @band.save!
-
-        render params[:name]
+        @band = Band.find(params[:id])
+        @band.update(band_params)
+        @band.save!
     end
 
     def destroy
@@ -40,7 +37,7 @@ class BandsController < ApplicationController
 
     end
 
-    def user_params
-        params.require(:bands).permit(:name)
+    def band_params
+        params.require(:band).permit(:name)
     end
 end
