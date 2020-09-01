@@ -20,8 +20,13 @@ class BandsController < ApplicationController
 
     def update
         @band = Band.find(params[:id])
-        @band.update(band_params)
-        @band.save!
+
+        if @band.update_attributes(band_params)
+            redirect_to band_url(@band)
+        else
+            flash.alert = "Enter a usable name clown."
+            redirect_to edit_band_url(@band)
+        end
     end
 
     def destroy

@@ -8521,3 +8521,402 @@ Processing by BandsController#index as HTML
 Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/bands/4" for ::1 at 2020-09-01 16:49:19 -0500
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:38
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "t7xyFbIxqcKlocnN69kL2A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+Completed 200 OK in 48ms (Views: 40.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/bands/4/edit" for ::1 at 2020-09-01 16:49:20 -0500
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:10
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "t7xyFbIxqcKlocnN69kL2A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+Completed 200 OK in 44ms (Views: 41.0ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/bands/4" for ::1 at 2020-09-01 16:49:21 -0500
+Processing by BandsController#update as HTML
+  Parameters: {"authenticity_token"=>"RLjXON+w/vybEVKxTudHeD3GWfhvk04uXOtNQOPOQ/swP6dV8dIqX7I1kQoQventXo5PLOwKxytJOvzAkUvqLw==", "band"=>{"name"=>"a"}, "id"=>"4"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:23
+  [1m[36mBand Update (1.8ms)[0m  [1m[33mUPDATE "bands" SET "name" = $1, "updated_at" = $2 WHERE "bands"."id" = $3[0m  [["name", "a"], ["updated_at", "2020-09-01 21:49:21.814628"], ["id", 4]]
+  ↳ app/controllers/bands_controller.rb:23
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bands_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bands_controller.rb:25
+Redirected to http://localhost:3000/bands
+Completed 302 Found in 11ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/bands" for ::1 at 2020-09-01 16:49:21 -0500
+Processing by BandsController#index as HTML
+  Rendering bands/index.html.erb within layouts/application
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/bands/index.html.erb:1
+  Rendered bands/index.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "t7xyFbIxqcKlocnN69kL2A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/bands/5" for ::1 at 2020-09-01 16:49:23 -0500
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:38
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "t7xyFbIxqcKlocnN69kL2A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/bands/5/edit" for ::1 at 2020-09-01 16:49:24 -0500
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:10
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "t7xyFbIxqcKlocnN69kL2A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+Completed 200 OK in 49ms (Views: 47.0ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/bands/5" for ::1 at 2020-09-01 16:49:27 -0500
+Processing by BandsController#update as HTML
+  Parameters: {"authenticity_token"=>"loMSNnc0Ul42dUCKERZnY2mYFcvpIMFcyW8c93Kwqh7iBGJbWVaG/R9RgzFPTMn2CtADH2q5SFncvq13ADUDyg==", "band"=>{"name"=>""}, "id"=>"5"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bands_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:25
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bands_controller.rb:25
+Completed 422 Unprocessable Entity in 7ms (ActiveRecord: 1.2ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Name can't be blank:
+  app/controllers/bands_controller.rb:25:in `update'
+
+Started POST "/__better_errors/2c0ee4125922278f/variables" for ::1 at 2020-09-01 16:49:27 -0500
+Started GET "/bands/5/edit" for ::1 at 2020-09-01 16:50:47 -0500
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:10
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "t7xyFbIxqcKlocnN69kL2A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+Completed 200 OK in 60ms (Views: 46.1ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/bands" for ::1 at 2020-09-01 16:50:49 -0500
+Processing by BandsController#index as HTML
+  Rendering bands/index.html.erb within layouts/application
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/bands/index.html.erb:1
+  Rendered bands/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "t7xyFbIxqcKlocnN69kL2A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/bands/5" for ::1 at 2020-09-01 16:50:50 -0500
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:37
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "t7xyFbIxqcKlocnN69kL2A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bands/5/edit" for ::1 at 2020-09-01 16:50:51 -0500
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:10
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "t7xyFbIxqcKlocnN69kL2A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+Completed 200 OK in 37ms (Views: 35.8ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/bands/5" for ::1 at 2020-09-01 16:50:54 -0500
+Processing by BandsController#update as HTML
+  Parameters: {"authenticity_token"=>"6PRe018iZ6QPLMNRhJjBTagJAIPZEJz31F/fIumBg/uccy6+cUCzByYIAOrawm/Yy0EWV1qJFfLBjm6imwQqLw==", "band"=>{"name"=>""}, "id"=>"5"}
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:24
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bands_controller.rb:24
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "t7xyFbIxqcKlocnN69kL2A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+Completed 200 OK in 40ms (Views: 35.7ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/bands/5" for ::1 at 2020-09-01 16:50:56 -0500
+Processing by BandsController#update as HTML
+  Parameters: {"authenticity_token"=>"524Ro6IYCPB90INX7GW2mPMmbO/Wyqr1pUJKoqJKZ+GT6WHOjHrcU1T0QOyyPxgNkG56O1VTI/Cwk/si0M/ONQ==", "band"=>{"name"=>""}, "id"=>"5"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:24
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bands_controller.rb:24
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "t7xyFbIxqcKlocnN69kL2A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+Completed 200 OK in 39ms (Views: 34.8ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/bands/5" for ::1 at 2020-09-01 16:51:17 -0500
+Processing by BandsController#update as HTML
+  Parameters: {"authenticity_token"=>"n8i7dHr1d7ifpyPhQGPBKLvLPaqWQP+q8fmVubcl0eDrT8sZVJejG7aD4FoeOW+92IMrfhXZdq/kKCQ5xaB4NA==", "band"=>{"name"=>""}, "id"=>"5"}
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bands_controller.rb:24
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "t7xyFbIxqcKlocnN69kL2A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+Completed 200 OK in 56ms (Views: 39.4ms | ActiveRecord: 6.3ms)
+
+
+Started PATCH "/bands/5" for ::1 at 2020-09-01 16:51:18 -0500
+Processing by BandsController#update as HTML
+  Parameters: {"authenticity_token"=>"ZifRy+XZjJeO1Si2bgjrADIrkH2mbad7ZjIijHsyup8SoKGmy7tYNKfx6w0wUkWVUWOGqSX0Ln5z45MMCbcTSw==", "band"=>{"name"=>""}, "id"=>"5"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:24
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bands_controller.rb:24
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "t7xyFbIxqcKlocnN69kL2A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+Completed 200 OK in 45ms (Views: 38.3ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/bands/5" for ::1 at 2020-09-01 16:51:18 -0500
+Processing by BandsController#update as HTML
+  Parameters: {"authenticity_token"=>"G0hrMMpMvqIsYWQiBe1G0cGLkSWW2/p5mEdiVL+H6Zlvzxtd5C5qAQVFp5lbt+hEosOH8RVCc3yNltPUzQJATQ==", "band"=>{"name"=>""}, "id"=>"5"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:24
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bands_controller.rb:24
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "t7xyFbIxqcKlocnN69kL2A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+Completed 200 OK in 58ms (Views: 51.5ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/bands/5" for ::1 at 2020-09-01 16:51:19 -0500
+Processing by BandsController#update as HTML
+  Parameters: {"authenticity_token"=>"WZXTkBLw5FPp33SThsxcW0cJGEDgIBRMtcuCrSUWAhEtEqP9PJIw8MD7tyjYlvLOJEEOlGO5nUmgGjMtV5OrxQ==", "band"=>{"name"=>""}, "id"=>"5"}
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:24
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bands_controller.rb:24
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "t7xyFbIxqcKlocnN69kL2A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+Completed 200 OK in 44ms (Views: 38.3ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/bands/5" for ::1 at 2020-09-01 16:51:19 -0500
+Processing by BandsController#update as HTML
+  Parameters: {"authenticity_token"=>"mQ5E7poDJVYE2efFTO42to5KcilqaMRpQHmx8/KY7MntiTSDtGHx9S39JH4StJgj7QJk/enxTWxVqABzgB1FHQ==", "band"=>{"name"=>""}, "id"=>"5"}
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:24
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bands_controller.rb:24
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "t7xyFbIxqcKlocnN69kL2A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+Completed 200 OK in 51ms (Views: 44.3ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/bands/5" for ::1 at 2020-09-01 16:51:19 -0500
+Processing by BandsController#update as HTML
+  Parameters: {"authenticity_token"=>"g/s7+E4+9d2Fk9MKaH6Q3OXoRB9940ik8UQfgos1luL3fEuVYFwhfqy3ELE2JD5JhqBSy/56waHkla4C+bA/Ng==", "band"=>{"name"=>""}, "id"=>"5"}
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:24
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bands_controller.rb:24
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "t7xyFbIxqcKlocnN69kL2A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+Completed 200 OK in 63ms (Views: 54.3ms | ActiveRecord: 1.4ms)
+
+
+Started PATCH "/bands/5" for ::1 at 2020-09-01 16:51:31 -0500
+Processing by BandsController#update as HTML
+  Parameters: {"authenticity_token"=>"y1udQta2Hu+GoaJ9B/iXaOfHm6FAasGyGQwXRxAk06W/3O0v+NTKTK+FYcZZojn9hI+NdcPzSLcM3abHYqF6cQ==", "band"=>{"name"=>""}, "id"=>"5"}
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bands_controller.rb:24
+Redirected to http://localhost:3000/bands/5/edit
+Completed 302 Found in 12ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/bands/5/edit" for ::1 at 2020-09-01 16:51:31 -0500
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:10
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "t7xyFbIxqcKlocnN69kL2A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+Completed 200 OK in 48ms (Views: 43.7ms | ActiveRecord: 3.3ms)
+
+
+Started PATCH "/bands/5" for ::1 at 2020-09-01 16:51:35 -0500
+Processing by BandsController#update as HTML
+  Parameters: {"authenticity_token"=>"BzgNyXBKcNfljYHxiM0C2xqPAeR54cEm5+1jL8n7Hihzv32kXiikdMypQkrWl6xOeccXMPp4SCPyPNKvu363/A==", "band"=>{"name"=>""}, "id"=>"5"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:24
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bands_controller.rb:24
+Redirected to http://localhost:3000/bands/5/edit
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/bands/5/edit" for ::1 at 2020-09-01 16:51:35 -0500
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:10
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "t7xyFbIxqcKlocnN69kL2A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/bands/5" for ::1 at 2020-09-01 16:51:37 -0500
+Processing by BandsController#update as HTML
+  Parameters: {"authenticity_token"=>"hxTkCdortj7aYQtA4eH5VPy/kd9OqCMmhgOFCoQ1NUDzk5Rk9ElinfNFyPu/u1fBn/eHC80xqiOT0jSK9rCclA==", "band"=>{"name"=>""}, "id"=>"5"}
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:24
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bands_controller.rb:24
+Redirected to http://localhost:3000/bands/5/edit
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/bands/5/edit" for ::1 at 2020-09-01 16:51:37 -0500
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBand Load (0.7ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:10
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "t7xyFbIxqcKlocnN69kL2A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+Completed 200 OK in 36ms (Views: 33.8ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/bands/5" for ::1 at 2020-09-01 16:51:39 -0500
+Processing by BandsController#update as HTML
+  Parameters: {"authenticity_token"=>"AyxqK58VB765xCMmcniSAStJR/Q7nKBAoQ2ueviO5153qxpGsXfTHZDg4J0sIjyUSAFRILgFKUW03B/6igtOig==", "band"=>{"name"=>"d"}, "id"=>"5"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:24
+  [1m[36mBand Update (1.5ms)[0m  [1m[33mUPDATE "bands" SET "name" = $1, "updated_at" = $2 WHERE "bands"."id" = $3[0m  [["name", "d"], ["updated_at", "2020-09-01 21:51:39.690826"], ["id", 5]]
+  ↳ app/controllers/bands_controller.rb:24
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bands_controller.rb:24
+Redirected to http://localhost:3000/bands/5
+Completed 302 Found in 9ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/bands/5" for ::1 at 2020-09-01 16:51:39 -0500
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:37
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "t7xyFbIxqcKlocnN69kL2A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bands/5/edit" for ::1 at 2020-09-01 16:51:40 -0500
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:10
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "t7xyFbIxqcKlocnN69kL2A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bands" for ::1 at 2020-09-01 16:51:42 -0500
+Processing by BandsController#index as HTML
+  Rendering bands/index.html.erb within layouts/application
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/bands/index.html.erb:1
+  Rendered bands/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "t7xyFbIxqcKlocnN69kL2A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+Completed 200 OK in 37ms (Views: 36.3ms | ActiveRecord: 0.6ms)
+
+
