@@ -1,7 +1,13 @@
-<%  @bands.each do |band| %>
+ 
+ <nav>
+    <a href="<%= new_band_url %>">Add Band</a>
+ </nav>
+<section>    
+    <%  @bands.each do |band| %>
 
-    <ul>
-        <li> <%= link_to band.name, band_url(band) %> </li>
-    </ul>
+        <ul>
+            <li> <%= link_to band.name, band_url(band) %> </li>
+        </ul>
 
-<% end %>
+    <% end %>
+</section>

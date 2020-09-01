@@ -39,6 +39,9 @@ class BandsController < ApplicationController
     end
 
     def create
+        @band = Band.new(band_params)
+        @band.save!
+        redirect_to bands_url
 
     end
 
