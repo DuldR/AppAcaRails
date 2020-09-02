@@ -9,6 +9,7 @@
 Band.create!(name: "CoolGuys")
 Band.create!(name: "TheCoolerGuys")
 Band.create!(name: "CoolestGuys")
-Band.create!(name: "NaniShiteruNo?")
-Band.create!(name: "TEME")
-Band.create!(name: "ORA")
+
+Album.create(title: "We are the CoolGuys", year: 1969, band_id: 1, studio: false)
+Album.create(title: "We are the CoolerGuys", year: 1420, band_id: 2, studio: true)
+Album.create(title: "We are the CoolestGuys", year: 2020, band_id: 3, studio: true)
