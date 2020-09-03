@@ -7,9 +7,11 @@
 
         <label for="band">Choose a Band:</label>
         <select name="bands" id="bands">
+
+            <option value="">--Please Choose A Band--</option>
             <% @bands.each do |band| %>
 
-            <option value="<%= band.name %>"><%= band.name %></option>
+            <option value="<%= band.name %>" <%= band.name == @band.name ? "selected" : "" %> > <%= band.name %> </option>
 
             <% end %>
         </select>
