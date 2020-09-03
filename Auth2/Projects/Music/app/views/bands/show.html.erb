@@ -4,6 +4,20 @@
         <%= @band.name %>
     </h3>
 
+    <h5>
+
+        <% @albums.each do |album| %>
+            <div>
+                <%= link_to album.title, album_url(album) %>
+            </div>
+        <% end %>
+    </h5>
+
+    <!-- These can be rewritten with link to -->
+    <a href="<%= new_band_album_url(@band) %>">Add Album</a>
     <a href="<%= edit_band_url(@band) %>">Edit <%= @band.name %></a>
+
+    <%= link_to "Back to Bands", bands_url %>
+
 
 </section>

@@ -13,6 +13,7 @@
 class Album < ApplicationRecord
     validates :studio, inclusion: { in: [true, false] }
     validates :title, :year, presence: true
+    validates :title, uniqueness: true
 
     belongs_to :band
 
