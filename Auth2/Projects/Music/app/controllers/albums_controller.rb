@@ -6,6 +6,8 @@ class AlbumsController < ApplicationController
     end
 
     def edit
+        @album = Album.find(params[:id])
+        render :edit
     end
 
     def new
@@ -15,16 +17,19 @@ class AlbumsController < ApplicationController
     end
 
     def destroy
+        @album = Album.find(params[:id])
+        @album.destroy
+        redirect_to band_url(@album.band_id)
     end
 
     def update
         @album = Album.find(params[:id])
 
-        if @album.update_attributes(band_params)
-            redirect_to band_url(@band)
+        if @album.update_attributes(album_params)
+            redirect_to album_url(@album)
         else
             flash.alert = "Enter a usable name clown."
-            redirect_to edit_band_url(@band)
+            redirect_to edit_album_url(@album)
         end
     end
 
