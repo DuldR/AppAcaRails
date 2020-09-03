@@ -9,7 +9,8 @@ class AlbumsController < ApplicationController
     end
 
     def new
-        render :index
+        @bands = Band.all
+        render :new
     end
 
     def destroy
