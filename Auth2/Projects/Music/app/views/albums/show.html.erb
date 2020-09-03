@@ -2,6 +2,10 @@
 <section>
     <h3 style="display: flex; justify-content: center; background-color: red;">
         <%= @album.title %>
+        <br>
+        <%= @album.year %>
+        <br>
+        <%= @album.studio == false ? "Live Album" : "Studio Album" %>
     </h3>
 </section>
 
