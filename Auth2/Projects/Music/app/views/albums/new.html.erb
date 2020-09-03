@@ -6,15 +6,36 @@
         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
         <label for="band">Choose a Band:</label>
-        <select name="bands" id="bands">
+        <select name="album[band_id]" id="bands">
 
             <option value="">--Please Choose A Band--</option>
             <% @bands.each do |band| %>
 
-            <option value="<%= band.name %>" <%= band.name == @band.name ? "selected" : "" %> > <%= band.name %> </option>
+            <option value="<%= band.id %>" <%= band.name == @band.name ? "selected" : "" %> > <%= band.name %> </option>
 
             <% end %>
         </select>
+
+        <br>
+
+        <label for="title">Enter Your The Title of The Album:</label>
+        <input type="text" name="album[title]" id="title">
+
+
+        <br>
+
+        <label for="title">Enter Your The Year of The Album:</label>
+        <input type="text" name="album[year]" id="year">
+
+        <br>
+
+        <div>
+            <label for="Studio Album?">Live or Studio?</label>
+            <label for="live">Live</label>
+            <input type="radio" id="live" value="false" name="album[studio]">
+            <label for="studio">Studio</label>
+            <input type="radio" id="studio" value="true" name="album[studio]">
+        </div>
 
 
 
