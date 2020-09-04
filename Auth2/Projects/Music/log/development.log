@@ -12528,3 +12528,139 @@ Processing by BandsController#show as HTML
 Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.3ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2205626353588408695)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTracks (20200904195005)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (24.3ms)[0m  [1m[35mCREATE TABLE "tracks" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "title" character varying NOT NULL, "ord" integer NOT NULL, "lyrics" text, "bonus" boolean DEFAULT FALSE NOT NULL)[0m
+  ↳ db/migrate/20200904195005_create_tracks.rb:3
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE  INDEX  "index_tracks_on_title" ON "tracks"  ("title")[0m
+  ↳ db/migrate/20200904195005_create_tracks.rb:11
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200904195005"]]
+  ↳ bin/rails:9
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2205626353588408695)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/garrett/.rbenv/versions/2.5.1/bin/annotate:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/garrett/.rbenv/versions/2.5.1/bin/annotate:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2205626353588408695)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddAlbumIdToTracks (20200904195350)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2205626353588408695)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2205626353588408695)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddAlbumIdToTracks (20200904195350)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "tracks" ADD "album_id" integer NOT NULL[0m
+  ↳ db/migrate/20200904195350_add_album_id_to_tracks.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200904195350"]]
+  ↳ bin/rails:9
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2205626353588408695)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/garrett/.rbenv/versions/2.5.1/bin/annotate:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2205626353588408695)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddUniqOnAlbum (20200904195552)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_tracks_on_title_and_album_id" ON "tracks"  ("title", "album_id")[0m
+  ↳ db/migrate/20200904195552_add_uniq_on_album.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200904195552"]]
+  ↳ bin/rails:9
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2205626353588408695)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/garrett/.rbenv/versions/2.5.1/bin/annotate:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2205626353588408695)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddUniqOnOrd (20200904195737)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (12.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_tracks_on_ord_and_album_id" ON "tracks"  ("ord", "album_id")[0m
+  ↳ db/migrate/20200904195737_add_uniq_on_ord.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200904195737"]]
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2205626353588408695)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/garrett/.rbenv/versions/2.5.1/bin/annotate:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTrack Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "tracks" WHERE "tracks"."title" = $1 AND "tracks"."album_id" = $2 LIMIT $3[0m  [["title", "test"], ["album_id", 1], ["LIMIT", 1]]
+  [1m[36mTrack Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "tracks" WHERE "tracks"."ord" = $1 AND "tracks"."album_id" = $2 LIMIT $3[0m  [["ord", 1], ["album_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTrack Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "tracks" WHERE "tracks"."title" = $1 AND "tracks"."album_id" = $2 LIMIT $3[0m  [["title", "test"], ["album_id", 1], ["LIMIT", 1]]
+  [1m[36mTrack Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "tracks" WHERE "tracks"."ord" = $1 AND "tracks"."album_id" = $2 LIMIT $3[0m  [["ord", 1], ["album_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTrack Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "tracks" WHERE "tracks"."title" = $1 AND "tracks"."album_id" = $2 LIMIT $3[0m  [["title", "test"], ["album_id", 1], ["LIMIT", 1]]
+  [1m[36mTrack Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "tracks" WHERE "tracks"."ord" = $1 AND "tracks"."album_id" = $2 LIMIT $3[0m  [["ord", 1], ["album_id", 1], ["LIMIT", 1]]
+  [1m[36mTrack Create (1.7ms)[0m  [1m[32mINSERT INTO "tracks" ("created_at", "updated_at", "title", "ord", "album_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2020-09-04 20:10:40.173686"], ["updated_at", "2020-09-04 20:10:40.173686"], ["title", "test"], ["ord", 1], ["album_id", 1]]
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTrack Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "tracks" WHERE "tracks"."title" = $1 AND "tracks"."album_id" = $2 LIMIT $3[0m  [["title", "test"], ["album_id", 1], ["LIMIT", 1]]
+  [1m[36mTrack Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "tracks" WHERE "tracks"."ord" = $1 AND "tracks"."album_id" = $2 LIMIT $3[0m  [["ord", 2], ["album_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTrack Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "tracks" WHERE "tracks"."title" = $1 AND "tracks"."album_id" = $2 LIMIT $3[0m  [["title", "test1"], ["album_id", 1], ["LIMIT", 1]]
+  [1m[36mTrack Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "tracks" WHERE "tracks"."ord" = $1 AND "tracks"."album_id" = $2 LIMIT $3[0m  [["ord", 1], ["album_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
