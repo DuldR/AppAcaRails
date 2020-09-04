@@ -13,3 +13,7 @@ Band.create!(name: "CoolestGuys")
 Album.create(title: "We are the CoolGuys", year: 1969, band_id: 1, studio: false)
 Album.create(title: "We are the CoolerGuys", year: 1420, band_id: 2, studio: true)
 Album.create(title: "We are the CoolestGuys", year: 2020, band_id: 3, studio: true)
+
+Track.create(title: "Track 1", ord: 1, album_id: 1)
+Track.create(title: "Track 2", ord: 2, album_id: 1)
+Track.create(title: "Track 3", ord: 3, album_id: 1, bonus: true)
