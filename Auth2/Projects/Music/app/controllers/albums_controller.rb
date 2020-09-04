@@ -1,9 +1,5 @@
 class AlbumsController < ApplicationController
 
-    def index
-        @albums = Album.all
-        render :index
-    end
 
     def edit
         @album = Album.find(params[:id])
