@@ -8,11 +8,12 @@
         <%= @album.studio == false ? "Live Album" : "Studio Album" %>
     </h3>
 
-    <h4 style="display: flex; justify-content: center; width:100%;">
+    <h4 style="display: flex; justify-content: center; width:100%; background-color: yellow;">
 
         <% @tracks.each do |track| %>
+            
             Track #: <%= track.ord %>
-            Track Title: <%= track.title %>
+             <%= link_to track.title, track_url(track) %>
             <%= track.bonus == true ? "Bonus Track" : "" %>
             <br>
         <% end %>
