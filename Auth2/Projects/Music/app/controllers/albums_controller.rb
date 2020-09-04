@@ -3,7 +3,7 @@ class AlbumsController < ApplicationController
 
     def edit
         @album = Album.find(params[:id])
-        @bands = Bands.all
+        @bands = Band.all
         render :edit
     end
 
@@ -32,6 +32,7 @@ class AlbumsController < ApplicationController
 
     def show
         @album = Album.find(params[:id])
+        @tracks = @album.tracks
         render :show
     end
 

@@ -1,0 +1,50 @@
+<h5> Let's Edit This Track!</h5>
+
+<section> 
+    <form action="<%= track_url(@track) %>" method="post">
+
+        <input type="hidden" name="_method" value="patch">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+
+        <label for="album">Choose an Album:</label>
+        <select name="track[album_id]" id="albums">
+
+            <option value="">--Please Choose An Album--</option>
+            <% @albums.each do |album| %>
+
+            <option value="<%= album.id %>" <%= album.id == @track.album_id ? "selected" : "" %> > <%= album.name %> </option>
+
+            <% end %>
+        </select>
+
+        <br>
+        
+        <label for="name">Edit the Title:</label>
+        <input type="text" name="album[title]" id="title" value="<%= @album.title %>">
+
+        <br>
+        <label for="name">Edit the Year:</label>
+        <input type="text" name="album[year]" id="title" value="<%= @album.year %>">
+
+        <br>
+
+        <div>
+            <label for="Studio Album?">Live or Studio?</label>
+            <label for="live">Live</label>
+            <input type="radio" id="live" value="false" name="album[studio]">
+            <label for="studio">Studio</label>
+            <input type="radio" id="studio" value="true" name="album[studio]">
+        </div>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <form action="<%= album_url(@album) %>" method="post">
+
+        <input type="hidden" name="_method" value="delete">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="submit" value="Delete?">
+    </form>
+
+</section>
