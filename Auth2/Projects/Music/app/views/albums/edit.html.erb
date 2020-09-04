@@ -15,6 +15,19 @@
 
         <br>
 
+       <label for="band">Choose a Band:</label>
+        <select name="album[band_id]" id="bands">
+
+            <option value="">--Please Choose A Band--</option>
+            <% @bands.each do |band| %>
+
+            <option value="<%= band.id %>" <%= band.name == @band.name ? "selected" : "" %> > <%= band.name %> </option>
+
+            <% end %>
+        </select>
+
+        <br>
+
         <div>
             <label for="Studio Album?">Live or Studio?</label>
             <label for="live">Live</label>

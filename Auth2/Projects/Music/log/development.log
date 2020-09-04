@@ -13394,3 +13394,23 @@ Processing by AlbumsController#show as HTML
 Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/albums/1/edit" for 127.0.0.1 at 2020-09-04 15:47:06 -0500
+Processing by AlbumsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:5
+  Rendering albums/edit.html.erb within layouts/application
+  Rendered albums/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 10.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/albums/1/edit" for 127.0.0.1 at 2020-09-04 15:47:24 -0500
+Processing by AlbumsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:5
+  Rendering albums/edit.html.erb within layouts/application
+  Rendered albums/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+
+
