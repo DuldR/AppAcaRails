@@ -1,6 +1,7 @@
 class AlbumsController < ApplicationController
 
-
+    before_action :require_login
+    
     def edit
         @album = Album.find(params[:id])
         @bands = Band.all
