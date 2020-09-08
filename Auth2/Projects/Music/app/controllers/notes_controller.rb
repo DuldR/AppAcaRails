@@ -17,6 +17,11 @@ class NotesController < ApplicationController
     end
 
     def destroy
+
+        if @note.user_id != current_user.id
+            render text: "FORBIDDEN EXODIA"
+        end
+        
         @note = Note.find(params[:id])
         @note.destroy
 
