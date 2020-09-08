@@ -1,6 +1,9 @@
 
 <section>
 
-    <%= note.body %>
-    <%= note.user.email %>
+    <% @notes.each do |note| %>
+        <%= note.body %>
+        <%= note.user.email %>
+        <br>
+    <% end %>
 </section>
