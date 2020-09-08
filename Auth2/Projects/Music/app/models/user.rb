@@ -20,6 +20,8 @@ class User < ApplicationRecord
 
     before_validation :ensure_session_token
 
+    has_many :notes
+
     after_initialize do |user|
         ensure_session_token
     end

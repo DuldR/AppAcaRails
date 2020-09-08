@@ -16,5 +16,6 @@ class Track < ApplicationRecord
     validates :title, uniqueness: { scope: :album_id }
     validates :ord, uniqueness: { scope: :album_id }
 
+    has_many :notes
     belongs_to :album
 end
