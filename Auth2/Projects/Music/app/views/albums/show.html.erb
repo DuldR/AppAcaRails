@@ -21,6 +21,13 @@
     </h4>
 </section>
 
+    <form action="<%= album_url(@album) %>" method="post">
+
+        <input type="hidden" name="_method" value="delete">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="submit" value="Delete?">
+    </form>
+
 <br>
 
 <section>
