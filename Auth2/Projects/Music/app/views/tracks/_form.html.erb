@@ -1,0 +1,53 @@
+<% action_url = track.persisted? ? track_url(track) : tracks_url %>
+<% http_method = track.persisted? ? "PATCH" : "POST" %>
+<% button_text = track.persisted? ? "Update Track!" : "Create Track!" %>
+
+<section> 
+    <form action="<%= action_url %>" method="post">
+
+        <input type="hidden" name="_method" value=<%= http_method %>>
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+
+        <label for="track">Choose an Album:</label>
+        <select name="track[track_id]" id="tracks">
+
+            <option value="">--Please Choose An Album--</option>
+            <% @albums.each do |album| %>
+
+            <option value="<%= album.id %>" <%= album.id == @track.album_id ? "selected" : "" %> > <%= album.title %> </option>
+
+            <% end %>
+        </select>
+
+        <br>
+
+        <label for="title">Enter The Title of The Track:</label>
+        <input type="text" name="track[title]" id="title" value=<%= @track.title %>>
+
+
+        <br>
+
+        <label for="title">Enter The Order of The Track:</label>
+        <input type="text" name="track[ord]" id="ord" value=<%= @track.ord %>>
+
+        <br>
+
+        <div>
+            <label for="bonus">Bonus Track?</label>
+            <label for="bonus">Bonus</label>
+            <input type="radio" id="bonus" value="true" name="track[bonus]">
+            <label for="studio">Regular</label>
+            <input type="radio" id="regular" value="false" name="track[bonus]">
+        </div>
+
+        <br>
+
+        <label for="title">Enter The Lyrics(Optional):</label>
+        <textarea name="track[lyrics]" id="lyrics"><%= @track.lyrics %></textarea>
+
+
+        <input type="submit" value=<%= button_text %>>
+    </form>
+
+</section>

@@ -1,7 +1,9 @@
 class TracksController < ApplicationController
 
     helper_method :require_login
+
     def new
+        @track = Track.new
         @albums = Album.all
         @album = Album.find(params[:album_id])
         render :new
