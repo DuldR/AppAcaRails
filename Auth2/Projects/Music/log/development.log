@@ -25590,3 +25590,43 @@ Processing by AlbumsController#edit as HTML
 Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 1.1ms)
 
 
+Started DELETE "/session" for 127.0.0.1 at 2020-09-08 16:22:44 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tJ4+802Hc/Gpoh5b9iGp2QIoUjxNSOVYr/kx5PKxotYY4NKIlTBLhwUXUauXzCypDU3GQ0jsgrfZGPEB3tXLpQ=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "xWY8Yn7edw2DOxfm22Gwiw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:49
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "1"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:49
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "-0YPqkCAGlOF1MlIrmdqGQ"], ["updated_at", "2020-09-08 21:22:44.722024"], ["id", 3]]
+  ↳ app/models/user.rb:49
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:49
+Redirected to http://localhost:3000/bands
+Completed 302 Found in 7ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/bands" for 127.0.0.1 at 2020-09-08 16:22:44 -0500
+Processing by BandsController#index as HTML
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2020-09-08 16:22:44 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (0.3ms)
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-09-08 16:22:45 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.8ms)
+  Rendered users/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
