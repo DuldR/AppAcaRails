@@ -5,5 +5,12 @@
         <%= note.body %>
         <%= note.user.email %>
         <br>
+        <% if note.user_id == current_user.id %>
+            <form action="<%= note_url(note) %>" method="post">
+                <input type="hidden" name="_method" value="delete">
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                <input type="submit" value="Delete?">
+            </form>
+        <% end %>
     <% end %>
 </section>
