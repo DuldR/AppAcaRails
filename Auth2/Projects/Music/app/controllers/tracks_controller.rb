@@ -1,8 +1,6 @@
 class TracksController < ApplicationController
 
-    before_action :require_login
-
-    
+    helper_method :require_login
     def new
         @albums = Album.all
         @album = Album.find(params[:album_id])
@@ -43,7 +41,7 @@ class TracksController < ApplicationController
 
     def show
         @track = Track.find(params[:id])
-
+        @notes = @track.notes
         render :show
 
 

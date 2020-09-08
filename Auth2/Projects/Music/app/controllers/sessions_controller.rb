@@ -21,8 +21,6 @@ class SessionsController < ApplicationController
             login!(user)
             redirect_to bands_url
         end
-
-
     end
 
     def destroy
