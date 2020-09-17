@@ -432,3 +432,263 @@ Migrating to CreateCapies (20200917165527)
   ↳ bin/rails:9
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE "TestingApp_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE "TestingApp_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (11.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "attendances" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (38.6ms)[0m  [1m[35mCREATE TABLE "attendances" ("id" bigserial primary key, "capy_id" integer, "party_id" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (15.4ms)[0m  [1m[35mCREATE  INDEX  "index_attendances_on_capy_id" ON "attendances"  ("capy_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_attendances_on_party_id_and_capy_id" ON "attendances"  ("party_id", "capy_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (4.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "capies" CASCADE[0m
+  ↳ db/schema.rb:27
+  [1m[35m (15.1ms)[0m  [1m[35mCREATE TABLE "capies" ("id" bigserial primary key, "name" character varying NOT NULL, "color" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:27
+  [1m[35m (11.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "capys" CASCADE[0m
+  ↳ db/schema.rb:34
+  [1m[35m (13.1ms)[0m  [1m[35mCREATE TABLE "capys" ("id" bigserial primary key, "name" character varying NOT NULL, "color" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:34
+  [1m[35m (3.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "parties" CASCADE[0m
+  ↳ db/schema.rb:41
+  [1m[35m (12.3ms)[0m  [1m[35mCREATE TABLE "parties" ("id" bigserial primary key, "capy_id" integer NOT NULL, "occasion" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:41
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE  INDEX  "index_parties_on_capy_id" ON "parties"  ("capy_id")[0m
+  ↳ db/schema.rb:41
+  [1m[35m (2.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "test_models" CASCADE[0m
+  ↳ db/schema.rb:49
+  [1m[35m (24.9ms)[0m  [1m[35mCREATE TABLE "test_models" ("id" bigserial primary key, "name" character varying NOT NULL, "color" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:49
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (4.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "attendances" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (13.8ms)[0m  [1m[35mCREATE TABLE "attendances" ("id" bigserial primary key, "capy_id" integer, "party_id" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE  INDEX  "index_attendances_on_capy_id" ON "attendances"  ("capy_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_attendances_on_party_id_and_capy_id" ON "attendances"  ("party_id", "capy_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (12.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "capies" CASCADE[0m
+  ↳ db/schema.rb:27
+  [1m[35m (23.0ms)[0m  [1m[35mCREATE TABLE "capies" ("id" bigserial primary key, "name" character varying NOT NULL, "color" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:27
+  [1m[35m (3.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "capys" CASCADE[0m
+  ↳ db/schema.rb:34
+  [1m[35m (19.8ms)[0m  [1m[35mCREATE TABLE "capys" ("id" bigserial primary key, "name" character varying NOT NULL, "color" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:34
+  [1m[35m (2.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "parties" CASCADE[0m
+  ↳ db/schema.rb:41
+  [1m[35m (33.1ms)[0m  [1m[35mCREATE TABLE "parties" ("id" bigserial primary key, "capy_id" integer NOT NULL, "occasion" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:41
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE  INDEX  "index_parties_on_capy_id" ON "parties"  ("capy_id")[0m
+  ↳ db/schema.rb:41
+  [1m[35m (3.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "test_models" CASCADE[0m
+  ↳ db/schema.rb:49
+  [1m[35m (19.9ms)[0m  [1m[35mCREATE TABLE "test_models" ("id" bigserial primary key, "name" character varying NOT NULL, "color" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:49
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2020-09-17 17:16:03.210358"], ["key", "environment"]]
+  ↳ db/schema.rb:13
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-09-17 17:16:03.218016"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (209.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "TestingApp_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (114.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "TestingApp_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (319.2ms)[0m  [1m[35mCREATE DATABASE "TestingApp_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (319.3ms)[0m  [1m[35mCREATE DATABASE "TestingApp_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "attendances" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (21.7ms)[0m  [1m[35mCREATE TABLE "attendances" ("id" bigserial primary key, "capy_id" integer, "party_id" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE  INDEX  "index_attendances_on_capy_id" ON "attendances"  ("capy_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_attendances_on_party_id_and_capy_id" ON "attendances"  ("party_id", "capy_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "capies" CASCADE[0m
+  ↳ db/schema.rb:27
+  [1m[35m (19.8ms)[0m  [1m[35mCREATE TABLE "capies" ("id" bigserial primary key, "name" character varying NOT NULL, "color" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "capys" CASCADE[0m
+  ↳ db/schema.rb:34
+  [1m[35m (13.0ms)[0m  [1m[35mCREATE TABLE "capys" ("id" bigserial primary key, "name" character varying NOT NULL, "color" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "parties" CASCADE[0m
+  ↳ db/schema.rb:41
+  [1m[35m (27.0ms)[0m  [1m[35mCREATE TABLE "parties" ("id" bigserial primary key, "capy_id" integer NOT NULL, "occasion" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:41
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE  INDEX  "index_parties_on_capy_id" ON "parties"  ("capy_id")[0m
+  ↳ db/schema.rb:41
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "test_models" CASCADE[0m
+  ↳ db/schema.rb:49
+  [1m[35m (19.7ms)[0m  [1m[35mCREATE TABLE "test_models" ("id" bigserial primary key, "name" character varying NOT NULL, "color" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:49
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200917165527)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200917164608),
+(20200917165226),
+(20200917033753),
+(20200917165112);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (13.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-17 17:16:43.866137"], ["updated_at", "2020-09-17 17:16:43.866137"]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "attendances" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (15.6ms)[0m  [1m[35mCREATE TABLE "attendances" ("id" bigserial primary key, "capy_id" integer, "party_id" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE  INDEX  "index_attendances_on_capy_id" ON "attendances"  ("capy_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_attendances_on_party_id_and_capy_id" ON "attendances"  ("party_id", "capy_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "capies" CASCADE[0m
+  ↳ db/schema.rb:27
+  [1m[35m (17.9ms)[0m  [1m[35mCREATE TABLE "capies" ("id" bigserial primary key, "name" character varying NOT NULL, "color" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "capys" CASCADE[0m
+  ↳ db/schema.rb:34
+  [1m[35m (18.3ms)[0m  [1m[35mCREATE TABLE "capys" ("id" bigserial primary key, "name" character varying NOT NULL, "color" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:34
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "parties" CASCADE[0m
+  ↳ db/schema.rb:41
+  [1m[35m (29.9ms)[0m  [1m[35mCREATE TABLE "parties" ("id" bigserial primary key, "capy_id" integer NOT NULL, "occasion" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:41
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE  INDEX  "index_parties_on_capy_id" ON "parties"  ("capy_id")[0m
+  ↳ db/schema.rb:41
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "test_models" CASCADE[0m
+  ↳ db/schema.rb:49
+  [1m[35m (19.8ms)[0m  [1m[35mCREATE TABLE "test_models" ("id" bigserial primary key, "name" character varying NOT NULL, "color" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:49
+  [1m[35m (18.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200917165527)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200917164608),
+(20200917165226),
+(20200917033753),
+(20200917165112);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (19.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-17 17:16:44.086456"], ["updated_at", "2020-09-17 17:16:44.086456"]]
+  ↳ db/schema.rb:13
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-09-17 17:16:44.095901"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5766594922055224740)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5766594922055224740)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
