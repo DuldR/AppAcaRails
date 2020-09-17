@@ -15,17 +15,36 @@ RSpec.describe Capy, type: :model do
     it { should validate_presence_of(:color) }
     it { should validate_uniqueness_of(:name) }
 
-    it "should validate presence of color"
-    it "should validate uniqueness of name"
-    it "should validate color is not green"
+    it "should validate color is not green" do
+      green_capy = Capy.new(name: "Dev", color: "green")
+      green_capy.valid?
+
+      expect(green_capy.errors[:color]).to eq(["cannot be green!!"])
+    end
   end
 
   describe "associations" do
     it { should have_many(:parties) }
     it { should have_many(:attendances) }
     it { should have_many(:parties_to_attend) }
-    it "should have many attendances"
-    it "should have many parties to attend"
+  end
+
+  describe "class methods" do
+    describe "::capys_of_the_rainbow" do
+      it "should return all capys of color rainbow" do
+        # Active Record Testing
+        # rainbow = Capy.create(name: "rainbow", color: "rainbow")
+        # not_rainbow = Capy.create(name: "not a rainbow", color: "sparkels")
+
+        # expect(Capy.capys_of_the_rainbow).to include(rainbow)
+        # expect(Capy.capys_of_the_rainbow).not_to include(not_rainbow)
+
+        expect(Capy.capys_of_the_rainbow.where_values_hash).to eq("color" => "rainbow")
+
+      end
+
+    end
+
   end
 
 end
