@@ -32,13 +32,18 @@ RSpec.describe CapysController, type: :controller do
 
     describe "POST #create" do
         context "with invalid params" do
-            it "renders the new template"
+            it "renders the new template" do
+                post :create, params: { capy: {name: "Kath"} }
+                expect(response).to render_template(:new)
+            end
 
         end
 
         context "with valid params" do
-            it "redirects to capy page on success"
-
+            it "redirects to capy page on success" do
+                post :create, params: { capy: {name: "Kath", color: "blue"} }
+                expect(response).to redirect_to(capy_url(Capy.find_by(name: "Kath")))
+            end
         end
 
 
