@@ -7,8 +7,9 @@ RSpec.describe Capy, type: :model do
     #   expect(capy.valid?).to be false
     # end
 
-    subject(:capy) { Capy.new(name: "Anus", color: "Brown") }
+    # subject(:capy) { Capy.new(name: "Anus", color: "Brown") }
 
+    subject(:capy) {FactoryBot.build(:capy) }
     #With a shoulda matcher
 
     it { should validate_presence_of(:name) }
@@ -16,7 +17,10 @@ RSpec.describe Capy, type: :model do
     it { should validate_uniqueness_of(:name) }
 
     it "should validate color is not green" do
-      green_capy = Capy.new(name: "Dev", color: "green")
+      # green_capy = Capy.new(name: "Dev", color: "green")
+      
+      green_capy = FactoryBot.build(:capy, color: "green" )
+      # FactoryBot.create to save instance to DB
       green_capy.valid?
 
       expect(green_capy.errors[:color]).to eq(["cannot be green!!"])
