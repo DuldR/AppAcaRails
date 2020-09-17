@@ -105,3 +105,10 @@ Migrating to CreateTestModels (20200917033753)
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[36mTestModel Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "test_models" WHERE "test_models"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
   [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapy Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "capies" WHERE "capies"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
