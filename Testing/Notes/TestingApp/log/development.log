@@ -693,3 +693,55 @@ Migrating to CreateCapies (20200917165527)
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
   [1m[36mCapy Load (1.0ms)[0m  [1m[34mSELECT "capies".* FROM "capies"[0m
+Started GET "/" for 127.0.0.1 at 2020-09-17 13:22:10 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/garrett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/garrett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/garrett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (1.8ms)
+Completed 200 OK in 9ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/capys" for 127.0.0.1 at 2020-09-17 13:22:18 -0500
+Processing by CapysController#index as HTML
+  Rendering capys/index.html.erb within layouts/application
+  [1m[36mCapy Load (0.4ms)[0m  [1m[34mSELECT "capies".* FROM "capies"[0m
+  ↳ app/views/capys/index.html.erb:4
+  Rendered capys/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 145ms (Views: 140.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/capys/new" for 127.0.0.1 at 2020-09-17 13:22:22 -0500
+Processing by CapysController#new as HTML
+  Rendering capys/new.html.erb within layouts/application
+  Rendered capys/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 18ms (Views: 10.8ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/capys" for 127.0.0.1 at 2020-09-17 13:22:27 -0500
+Processing by CapysController#create as HTML
+  Parameters: {"authenticity_token"=>"gKGzobL3bOucjM/GMlVwE4szlU5+2gLBoRWqQCkOGkkid2i33pEZUE92XpweTSUV1ygUr04z60TzP7APU+khJQ==", "capy"=>{"name"=>"Liz", "color"=>"Blue"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/capys_controller.rb:20
+  [1m[36mCapy Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "capies" WHERE "capies"."name" = $1 LIMIT $2[0m  [["name", "Liz"], ["LIMIT", 1]]
+  ↳ app/controllers/capys_controller.rb:20
+  [1m[36mCapy Create (0.4ms)[0m  [1m[32mINSERT INTO "capies" ("name", "color", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Liz"], ["color", "Blue"], ["created_at", "2020-09-17 18:22:27.321243"], ["updated_at", "2020-09-17 18:22:27.321243"]]
+  ↳ app/controllers/capys_controller.rb:20
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/capys_controller.rb:20
+Redirected to http://localhost:3000/capys/1
+Completed 302 Found in 7ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/capys/1" for 127.0.0.1 at 2020-09-17 13:22:27 -0500
+Processing by CapysController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCapy Load (0.2ms)[0m  [1m[34mSELECT  "capies".* FROM "capies" WHERE "capies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/capys_controller.rb:8
+  [1m[36mParty Load (0.3ms)[0m  [1m[34mSELECT "parties".* FROM "parties" WHERE "parties"."capy_id" = $1[0m  [["capy_id", 1]]
+  ↳ app/controllers/capys_controller.rb:8
+  Rendering capys/show.html.erb within layouts/application
+  Rendered capys/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 11.3ms | ActiveRecord: 2.5ms)
+
+

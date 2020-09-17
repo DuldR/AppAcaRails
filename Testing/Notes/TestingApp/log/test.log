@@ -1014,3 +1014,193 @@ Redirected to http://test.host/capys/27
 Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
   [1m[36mCapy Load (0.1ms)[0m  [1m[34mSELECT  "capies".* FROM "capies" WHERE "capies"."name" = $1 LIMIT $2[0m  [["name", "Kath"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/capys/new" for 127.0.0.1 at 2020-09-17 13:27:17 -0500
+Processing by CapysController#new as HTML
+  Rendering capys/new.html.erb within layouts/application
+  Rendered capys/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 103ms (Views: 91.7ms | ActiveRecord: 2.1ms)
+Started POST "/capys" for 127.0.0.1 at 2020-09-17 13:27:17 -0500
+Processing by CapysController#create as HTML
+  Parameters: {"authenticity_token"=>"4gMo5sRl7RIJZIhnFjBJS3QqjgxmuuQpiPWETydd0wsR1ztcoziT3OGuOn1TQt4uhYTCI2bDywccewDwAhPnlA==", "capy"=>{"name"=>"pam", "color"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCapy Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "capies" WHERE "capies"."name" = $1 LIMIT $2[0m  [["name", "pam"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering capys/new.html.erb within layouts/application
+  Rendered capys/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 117ms (Views: 0.8ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+Started GET "/capys/new" for 127.0.0.1 at 2020-09-17 13:27:18 -0500
+Processing by CapysController#new as HTML
+  Rendering capys/new.html.erb within layouts/application
+  Rendered capys/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/capys/new" for 127.0.0.1 at 2020-09-17 13:28:47 -0500
+Processing by CapysController#new as HTML
+  Rendering capys/new.html.erb within layouts/application
+  Rendered capys/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 78ms (Views: 67.2ms | ActiveRecord: 1.9ms)
+Started POST "/capys" for 127.0.0.1 at 2020-09-17 13:28:47 -0500
+Processing by CapysController#create as HTML
+  Parameters: {"authenticity_token"=>"dypFSbKYcQrRj3FUqdBpIlisqqmSC6iczYwUshvRP6xaPudKt9txHxawArW0ChWC6SXsdMsUvO5uauHwOFCHrA==", "capy"=>{"name"=>"pam", "color"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCapy Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "capies" WHERE "capies"."name" = $1 LIMIT $2[0m  [["name", "pam"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering capys/new.html.erb within layouts/application
+  Rendered capys/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 112ms (Views: 0.8ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/capys/new" for 127.0.0.1 at 2020-09-17 13:28:47 -0500
+Processing by CapysController#new as HTML
+  Rendering capys/new.html.erb within layouts/application
+  Rendered capys/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+Started POST "/capys" for 127.0.0.1 at 2020-09-17 13:28:47 -0500
+Processing by CapysController#create as HTML
+  Parameters: {"authenticity_token"=>"IfHIf2MnO/YpBb8wPmS/5d3p3CqxSQXh+swHt97K2ciUn+YQGlNQm/RPCYJtZ8Guj/xW+e5rJP11HH4fQ8MtOw==", "capy"=>{"name"=>"pam", "color"=>"pink"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCapy Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "capies" WHERE "capies"."name" = $1 LIMIT $2[0m  [["name", "pam"], ["LIMIT", 1]]
+  [1m[36mCapy Create (0.2ms)[0m  [1m[32mINSERT INTO "capies" ("name", "color", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "pam"], ["color", "pink"], ["created_at", "2020-09-17 18:28:47.770618"], ["updated_at", "2020-09-17 18:28:47.770618"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/capys/28
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
+Started GET "/capys/28" for 127.0.0.1 at 2020-09-17 13:28:47 -0500
+Processing by CapysController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mCapy Load (0.2ms)[0m  [1m[34mSELECT  "capies".* FROM "capies" WHERE "capies"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mParty Load (0.2ms)[0m  [1m[34mSELECT "parties".* FROM "parties" WHERE "parties"."capy_id" = $1[0m  [["capy_id", 28]]
+  Rendering capys/show.html.erb within layouts/application
+  Rendered capys/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 10ms (Views: 1.5ms | ActiveRecord: 1.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/capys/new" for 127.0.0.1 at 2020-09-17 13:30:10 -0500
+Processing by CapysController#new as HTML
+  Rendering capys/new.html.erb within layouts/application
+  Rendered capys/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 81ms (Views: 69.9ms | ActiveRecord: 2.1ms)
+Started POST "/capys" for 127.0.0.1 at 2020-09-17 13:30:10 -0500
+Processing by CapysController#create as HTML
+  Parameters: {"authenticity_token"=>"Ee+CfI0TgzOpXbMICqeUM8cGP511R9Is+J2fkgiwGg4jSZvBM6OP5erKmIBN1k/FH56vR3MwoIdvADlvaOM+aQ==", "capy"=>{"name"=>"pam", "color"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCapy Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "capies" WHERE "capies"."name" = $1 LIMIT $2[0m  [["name", "pam"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering capys/new.html.erb within layouts/application
+  Rendered capys/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 117ms (Views: 0.8ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/capys/new" for 127.0.0.1 at 2020-09-17 13:30:10 -0500
+Processing by CapysController#new as HTML
+  Rendering capys/new.html.erb within layouts/application
+  Rendered capys/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+Started POST "/capys" for 127.0.0.1 at 2020-09-17 13:30:10 -0500
+Processing by CapysController#create as HTML
+  Parameters: {"authenticity_token"=>"PUny3HDjfFZsofLG6QBZ5FuVXQiUhO1nb4JZI66j22rXv2To3icqpRvG7mTjs0kWUxLTBKi3z2vgeLf4iTtPfQ==", "capy"=>{"name"=>"pam", "color"=>"pink"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCapy Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "capies" WHERE "capies"."name" = $1 LIMIT $2[0m  [["name", "pam"], ["LIMIT", 1]]
+  [1m[36mCapy Create (0.3ms)[0m  [1m[32mINSERT INTO "capies" ("name", "color", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "pam"], ["color", "pink"], ["created_at", "2020-09-17 18:30:10.709843"], ["updated_at", "2020-09-17 18:30:10.709843"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/capys/29
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+Started GET "/capys/29" for 127.0.0.1 at 2020-09-17 13:30:10 -0500
+Processing by CapysController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mCapy Load (0.1ms)[0m  [1m[34mSELECT  "capies".* FROM "capies" WHERE "capies"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[36mParty Load (0.2ms)[0m  [1m[34mSELECT "parties".* FROM "parties" WHERE "parties"."capy_id" = $1[0m  [["capy_id", 29]]
+  Rendering capys/show.html.erb within layouts/application
+  Rendered capys/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 1.2ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/capys/new" for 127.0.0.1 at 2020-09-17 13:31:23 -0500
+Processing by CapysController#new as HTML
+  Rendering capys/new.html.erb within layouts/application
+  Rendered capys/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 80ms (Views: 69.2ms | ActiveRecord: 2.0ms)
+Started POST "/capys" for 127.0.0.1 at 2020-09-17 13:31:24 -0500
+Processing by CapysController#create as HTML
+  Parameters: {"authenticity_token"=>"JNOuHQEXrmTRA3Xx2KpUPg8XdOa/ML7QqyleeGfdwQEP4k5TWxM/H+mS/RUEOO7L90HAocVm8H+ryRz4/KWMYg==", "capy"=>{"name"=>"pam", "color"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCapy Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "capies" WHERE "capies"."name" = $1 LIMIT $2[0m  [["name", "pam"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering capys/new.html.erb within layouts/application
+  Rendered capys/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 116ms (Views: 1.0ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/capys/new" for 127.0.0.1 at 2020-09-17 13:31:24 -0500
+Processing by CapysController#new as HTML
+  Rendering capys/new.html.erb within layouts/application
+  Rendered capys/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+Started POST "/capys" for 127.0.0.1 at 2020-09-17 13:31:24 -0500
+Processing by CapysController#create as HTML
+  Parameters: {"authenticity_token"=>"YIJeb55vSge0jt3f8i5MNwDeWdW/jBHRaAgCOVuFrVoERxHZhSt9BwBoQJd1W210odFP7emD/HziZn9hB67J4g==", "capy"=>{"name"=>"pam", "color"=>"pink"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCapy Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "capies" WHERE "capies"."name" = $1 LIMIT $2[0m  [["name", "pam"], ["LIMIT", 1]]
+  [1m[36mCapy Create (0.2ms)[0m  [1m[32mINSERT INTO "capies" ("name", "color", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "pam"], ["color", "pink"], ["created_at", "2020-09-17 18:31:24.159695"], ["updated_at", "2020-09-17 18:31:24.159695"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/capys/30
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+Started GET "/capys/30" for 127.0.0.1 at 2020-09-17 13:31:24 -0500
+Processing by CapysController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mCapy Load (0.1ms)[0m  [1m[34mSELECT  "capies".* FROM "capies" WHERE "capies"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mParty Load (0.2ms)[0m  [1m[34mSELECT "parties".* FROM "parties" WHERE "parties"."capy_id" = $1[0m  [["capy_id", 30]]
+  Rendering capys/show.html.erb within layouts/application
+  Rendered capys/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 12ms (Views: 1.7ms | ActiveRecord: 1.2ms)
+  [1m[36mCapy Load (0.1ms)[0m  [1m[34mSELECT  "capies".* FROM "capies" WHERE "capies"."name" = $1 LIMIT $2[0m  [["name", "pam"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/capys/new" for 127.0.0.1 at 2020-09-17 13:34:52 -0500
+Processing by CapysController#new as HTML
+  Rendering capys/new.html.erb within layouts/application
+  Rendered capys/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 79ms (Views: 68.4ms | ActiveRecord: 1.9ms)
+Started POST "/capys" for 127.0.0.1 at 2020-09-17 13:34:52 -0500
+Processing by CapysController#create as HTML
+  Parameters: {"authenticity_token"=>"yGvGPQ87xLODbfQHuaHgro+fzbA13oV238rTO2WQkW4QuHJsOzvn7uuq9k+RIYz16LhhoAxxE4EzdLBnuQSDrg==", "capy"=>{"name"=>"pam", "color"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCapy Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "capies" WHERE "capies"."name" = $1 LIMIT $2[0m  [["name", "pam"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering capys/new.html.erb within layouts/application
+  Rendered capys/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 116ms (Views: 0.9ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/capys/new" for 127.0.0.1 at 2020-09-17 13:34:52 -0500
+Processing by CapysController#new as HTML
+  Rendering capys/new.html.erb within layouts/application
+  Rendered capys/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+Started POST "/capys" for 127.0.0.1 at 2020-09-17 13:34:52 -0500
+Processing by CapysController#create as HTML
+  Parameters: {"authenticity_token"=>"k8KG9A5iyZ3fYMXI4BKKacrfQ4KX+uxRvZjbphJ2pEXFOZaOUXWt++gqyNyT7NHRo6ojdqb15zuf9qU5hKRiKA==", "capy"=>{"name"=>"pam", "color"=>"pink"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCapy Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "capies" WHERE "capies"."name" = $1 LIMIT $2[0m  [["name", "pam"], ["LIMIT", 1]]
+  [1m[36mCapy Create (0.3ms)[0m  [1m[32mINSERT INTO "capies" ("name", "color", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "pam"], ["color", "pink"], ["created_at", "2020-09-17 18:34:52.630947"], ["updated_at", "2020-09-17 18:34:52.630947"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/capys/31
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+Started GET "/capys/31" for 127.0.0.1 at 2020-09-17 13:34:52 -0500
+Processing by CapysController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mCapy Load (0.1ms)[0m  [1m[34mSELECT  "capies".* FROM "capies" WHERE "capies"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mParty Load (0.2ms)[0m  [1m[34mSELECT "parties".* FROM "parties" WHERE "parties"."capy_id" = $1[0m  [["capy_id", 31]]
+  Rendering capys/show.html.erb within layouts/application
+  Rendered capys/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 1.5ms | ActiveRecord: 1.3ms)
+  [1m[36mCapy Load (0.1ms)[0m  [1m[34mSELECT  "capies".* FROM "capies" WHERE "capies"."name" = $1 LIMIT $2[0m  [["name", "pam"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
