@@ -16,6 +16,8 @@ ActiveRecord::Schema.define(version: 2020_09_17_033753) do
   enable_extension "plpgsql"
 
   create_table "test_models", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "color", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
