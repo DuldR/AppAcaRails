@@ -8,7 +8,6 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-
 require 'rails_helper'
 
 RSpec.describe Capy, type: :model do
@@ -40,11 +39,7 @@ RSpec.describe Capy, type: :model do
     it "should have many parties to attend"
   end
 
-  describe "class methods" do
-    describe "::capys_of_the_rainbow" do
-      it "should return all capys of color rainbow"
-    end
-  end
+
 
 
 end
