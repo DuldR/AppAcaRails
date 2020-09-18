@@ -1204,3 +1204,61 @@ Processing by CapysController#show as HTML
 Completed 200 OK in 11ms (Views: 1.5ms | ActiveRecord: 1.3ms)
   [1m[36mCapy Load (0.1ms)[0m  [1m[34mSELECT  "capies".* FROM "capies" WHERE "capies"."name" = $1 LIMIT $2[0m  [["name", "pam"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapy Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "capies" WHERE "capies"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapy Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "capies" WHERE "capies"."name" = $1 LIMIT $2[0m  [["name", "Buster Schultz"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapy Load (0.1ms)[0m  [1m[34mSELECT  "capies".* FROM "capies" ORDER BY "capies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCapy Create (0.4ms)[0m  [1m[32mINSERT INTO "capies" ("name", "color", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Freddie Mueller"], ["color", "#fc97f9"], ["created_at", "2020-09-18 20:28:42.020786"], ["updated_at", "2020-09-18 20:28:42.020786"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCapy Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "capies" WHERE "capies"."name" = $1 LIMIT $2[0m  [["name", "Freddie Mueller"], ["LIMIT", 1]]
+  [1m[36mCapy Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "capies" WHERE "capies"."name" = $1 LIMIT $2[0m  [["name", "fREDDIE mUELLER"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapy Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "capies" WHERE "capies"."name" = $1 LIMIT $2[0m  [["name", "Clora Kemmer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTestModel Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "test_models" WHERE "test_models"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapy Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "capies" WHERE "capies"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapy Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "capies" WHERE "capies"."name" = $1 LIMIT $2[0m  [["name", "Maira Champlin"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapy Load (0.1ms)[0m  [1m[34mSELECT  "capies".* FROM "capies" ORDER BY "capies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCapy Create (0.2ms)[0m  [1m[32mINSERT INTO "capies" ("name", "color", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Johnnie Kiehn IV"], ["color", "#e91361"], ["created_at", "2020-09-18 20:30:19.049356"], ["updated_at", "2020-09-18 20:30:19.049356"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCapy Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "capies" WHERE "capies"."name" = $1 LIMIT $2[0m  [["name", "Johnnie Kiehn IV"], ["LIMIT", 1]]
+  [1m[36mCapy Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "capies" WHERE "capies"."name" = $1 LIMIT $2[0m  [["name", "jOHNNIE kIEHN iv"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapy Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "capies" WHERE "capies"."name" = $1 LIMIT $2[0m  [["name", "Yesenia Osinski PhD"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTestModel Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "test_models" WHERE "test_models"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
