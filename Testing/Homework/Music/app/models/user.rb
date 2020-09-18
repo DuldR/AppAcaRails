@@ -9,6 +9,8 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #
+
+require 'bcrypt'
 class User < ApplicationRecord
 
     attr_reader :password
