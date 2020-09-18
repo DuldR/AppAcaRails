@@ -84,6 +84,10 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.7)
     crass (1.0.6)
+    database_cleaner (1.8.5)
+    database_cleaner-active_record (1.8.0)
+      activerecord
+      database_cleaner (~> 1.8.0)
     debug_inspector (0.0.3)
     diff-lcs (1.4.4)
     erubi (1.9.0)
@@ -278,6 +282,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  database_cleaner-active_record
   factory_bot_rails
   faker
   guard-rspec
