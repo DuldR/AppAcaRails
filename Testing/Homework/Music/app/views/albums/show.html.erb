@@ -1,0 +1,37 @@
+
+<section>
+    <h3 style="display: flex; justify-content: center; background-color: red;">
+        <%= @album.title %>
+        <br>
+        <%= @album.year %>
+        <br>
+        <%= @album.studio == false ? "Live Album" : "Studio Album" %>
+    </h3>
+
+    <h4 style="display: flex; justify-content: center; width:100%; background-color: yellow;">
+
+        <% @tracks.each do |track| %>
+            
+            Track #: <%= track.ord %>
+             <%= link_to track.title, track_url(track) %>
+            <%= track.bonus == true ? "Bonus Track" : "" %>
+            <br>
+        <% end %>
+
+    </h4>
+</section>
+
+    <form action="<%= album_url(@album) %>" method="post">
+
+        <input type="hidden" name="_method" value="delete">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="submit" value="Delete?">
+    </form>
+
+<br>
+
+<section>
+    <%= link_to "Add A Track", new_album_track_url(@album) %>
+    <%= link_to "Edit Album", edit_album_url(@album) %>
+    <%= link_to @album.band.name, band_url(@album.band_id) %>
+</section>
