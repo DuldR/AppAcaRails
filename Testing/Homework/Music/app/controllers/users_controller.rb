@@ -4,11 +4,12 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         @user.password = user_params[:password]
 
-        if @user.save!
+        if @user.save
             login!(@user)
-            render :new
+            redirect_to bands_url
         else
-            render :json => { :errors => @user.errors.full_messages }
+            render :new
+            flash.now[:errors] = @user.errors.full_messages
         end
     end
 
