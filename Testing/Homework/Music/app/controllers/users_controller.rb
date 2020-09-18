@@ -8,8 +8,9 @@ class UsersController < ApplicationController
             login!(@user)
             redirect_to bands_url
         else
-            render :new
+
             flash.now[:errors] = @user.errors.full_messages
+            render :new
         end
     end
 
