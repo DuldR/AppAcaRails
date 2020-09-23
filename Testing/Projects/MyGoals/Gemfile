@@ -33,7 +33,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# Reduces boot times through caching; required in config/boot.rb
+# Reduces boot times through caching; required in config/boot.r
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
@@ -42,6 +42,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem 'pry-rails'
+  gem 'bcrypt'
 end
 
 group :development do
