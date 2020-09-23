@@ -21,6 +21,8 @@ class User < ApplicationRecord
     validates :password_digest, presence: true
     validates :password, presence: { message: "Password can't be blank" }, :length => { minimum: 6 }, allow_nil: true
 
+    before_validation :ensure_session_token
+
 
     def self.find_by_credentials(username, password)
 
@@ -37,6 +39,10 @@ class User < ApplicationRecord
 
     end
 
+    def self.generate_session_token
+        SecureRandom::urlsafe_base64
+    end
+
     def is_password?(pass)
         check = BCrypt::Password.new(password_digest)
         check.is_password?(pass)
@@ -50,5 +56,11 @@ class User < ApplicationRecord
         self.password_digest = BCrypt::Password.create(pass)
     end
 
+
+    private
+
+    def ensure_session_token
+        self.session_token ||= User.generate_session_token
+    end
 
 end

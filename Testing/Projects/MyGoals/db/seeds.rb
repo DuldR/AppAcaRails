@@ -7,3 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 u = User.new(username: "coolguy420")
+u.password = "123456"
+u.save!
