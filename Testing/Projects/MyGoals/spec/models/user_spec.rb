@@ -28,11 +28,34 @@ RSpec.describe User, type: :model do
 
   describe "associations" do
 
-    it "should have many goals"
+    it { should have_many(:goals) }
+
 
   end
 
   describe "class methods" do
+
+    subject(:user) {FactoryBot.create(:user)}
+
+    it "should verify password is correct" do
+      expect(user.is_password?("123456")).to eq(true)
+      expect(user.is_password?("1")).to eq(false)
+
+    end
+
+    #  When testing class methods and factory bot, use subject.class to get it correctly
+    # it "should find correct user using password" do
+    #   user = User.new(username: "coolguy")
+    #   user.password = "123456"
+    #   user.save!
+
+    #   expect(User.find_by_credentials("coolguy", "123456")).to eq(user)
+    # end
+
+    it "should find correct user using password" do
+
+      expect(subject.class.find_by_credentials("coolguy", "123456")).to eq(user)
+    end
 
   end
 
