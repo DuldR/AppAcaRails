@@ -42,7 +42,7 @@ RSpec.describe UsersController, type: :controller do
         context "with invalid params" do
             it "renders the new template" do
                 post :create, params: { user: {username: "coolguy" } }
-                expect(response).to render_template(:new)
+                expect(response).to render_template(:index)
 
             end
         end
