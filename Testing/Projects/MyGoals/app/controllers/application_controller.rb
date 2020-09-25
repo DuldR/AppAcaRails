@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   
         unless logged_in?
-            redirect_to new_session_url
+            redirect_to new_user_url
         end
     end
 

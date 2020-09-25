@@ -9,6 +9,16 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <h1>
+
+    <% if current_user.nil? %>
+      <%= link_to "New User?", new_user_url %>
+    <% else %>
+      <%= current_user.username %>
+    <% end %>
+
+  </h1>
+
   <body>
     <%= yield %>
   </body>
