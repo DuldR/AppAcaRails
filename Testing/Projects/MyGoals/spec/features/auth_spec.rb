@@ -16,12 +16,16 @@ feature "user features", type: :feature do
 
         before(:each) do
             visit new_user_url
-            fill_in "username", :with => "coolguy"
-            fill_in "password", :with => "123456"
+            fill_in 'username', :with => "coolguy"
+            fill_in 'password', :with => "123456"
             click_on "Submit"
         end
 
-        scenario 'shows username on the homepage after signup'
+        scenario 'shows username on the homepage after signup' do
+
+            expect(page).to have_content 'coolguy'
+
+        end
 
     end
 
@@ -34,7 +38,8 @@ feature "user features", type: :feature do
     feature 'logging out' do
         scenario 'begins with a logged out state'
 
-        scenario 'doesn\'t show username on the homepage after logout'
+        scenario 'doesn\'t show username on the
+         homepage after logout'
 
     end
 end

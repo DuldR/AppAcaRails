@@ -56,8 +56,6 @@ class User < ApplicationRecord
         check.is_password?(pass)
     end
 
-    
-
 
     def password=(pass)
         @password = pass
