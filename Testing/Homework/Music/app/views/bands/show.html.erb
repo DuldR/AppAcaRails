@@ -1,0 +1,29 @@
+
+<section>
+    <h3 style="display: flex; justify-content: center; background-color: red;">
+        <%= @band.name %>
+    </h3>
+
+    <h5>
+        The Albums:
+        <% @albums.each do |album| %>
+            <div>
+                <%= link_to album.title, album_url(album) %>
+            </div>
+        <% end %>
+    </h5>
+
+    <form action="<%= band_url(@band) %>" method="post">
+
+        <input type="hidden" name="_method" value="delete">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="submit" value="Delete this Band?">
+    </form>
+
+    <!-- These can be rewritten with link to -->
+    <%= link_to "Add Album", new_band_album_url(@band) %>
+    <%= link_to "Edit " + @band.name, edit_band_url(@band) %>
+    <%= link_to "Back to Bands", bands_url %>
+
+
+</section>

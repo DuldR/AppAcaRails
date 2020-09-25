@@ -94,3 +94,13 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
+<<<<<<< HEAD
+=======
+
+def create_capy(name, color)
+  visit "/capys/new"
+  fill_in "name", with: name
+  fill_in "color", with: color
+  click_on "Create Capy"
+end
+>>>>>>> f956aea99950f4cf4af8ce96216486fd502b8e35

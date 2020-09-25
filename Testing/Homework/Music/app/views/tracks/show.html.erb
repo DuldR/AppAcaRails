@@ -1,0 +1,23 @@
+<section>
+
+    <%= @track.ord %>
+    <br>
+    <%= @track.title %>
+    <br>
+    <%= ugly_lyrics(@track.lyrics) %>
+    <br>
+    <%= @track.bonus == true ? "Bonus Track" : "" %>
+    <br>
+</section>
+
+<form action="<%= track_url(@track) %>" method="post">
+
+        <input type="hidden" name="_method" value="delete">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="submit" value="Delete?">
+    </form>
+
+<%= render "notes/note" %>
+<%= render "notes/form", :track => @track %>
+
+<%= link_to "Edit Track", edit_track_url(@track) %>
