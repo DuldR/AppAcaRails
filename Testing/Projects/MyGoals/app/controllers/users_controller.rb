@@ -9,10 +9,9 @@ class UsersController < ApplicationController
         @user = User.find_by(id: params[:id] )
 
         if @user.nil? == false
-            login!(@user)
-            render :show
+            render :index
         else
-            redirect_to users_url
+            redirect_to user_url(@user)
         end
 
     end
@@ -27,9 +26,10 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
 
         if @user.save == false
-            render :index
+            render :new
         else
-            redirect_to user_url(@user.id)
+            login!(@user)
+            redirect_to users_url       
         end
 
     end
