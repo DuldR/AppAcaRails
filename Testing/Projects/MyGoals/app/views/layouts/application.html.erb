@@ -13,8 +13,14 @@
 
     <% if current_user.nil? %>
       <%= link_to "New User?", new_user_url %>
+      <%= link_to "Log In?", new_session_url %>
     <% else %>
       <%= current_user.username %>
+      <form action="<%= session_url %>" method="POST">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="hidden" value="delete" name="_method">
+        <input type="submit" value="Logout">
+      </form>
     <% end %>
 
   </h1>

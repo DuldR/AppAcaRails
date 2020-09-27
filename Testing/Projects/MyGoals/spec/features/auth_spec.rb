@@ -31,7 +31,20 @@ feature "user features", type: :feature do
 
 
     feature 'logging in' do
-        scenario 'shows username on the homepage after login'
+
+        before(:each) do
+            visit new_user_url
+            fill_in 'username', :with => "coolguy"
+            fill_in 'password', :with => "123456"
+            click_on "Submit"
+        end
+
+        scenario 'shows username on the homepage after login' do
+            
+            visit users_url
+            expect(page).to have_content 'coolguy'
+            
+        end
 
     end
 
