@@ -32,14 +32,12 @@ feature "user features", type: :feature do
 
     feature 'logging in' do
 
+        subject(:user) {FactoryBot.create(:user)}
+        
 
         before(:each) do
-            visit new_user_url
-            fill_in 'username', :with => "coolguy"
-            fill_in 'password', :with => "123456"
-            click_on "Submit"
 
-            click_on "Logout"
+            user.save!
 
             visit new_session_url
             fill_in 'username', :with => "coolguy"
