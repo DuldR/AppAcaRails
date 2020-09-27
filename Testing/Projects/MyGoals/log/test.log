@@ -1475,3 +1475,681 @@ Processing by SessionsController#create as HTML
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coolguy"], ["LIMIT", 1]]
 Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
   [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:35:13 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 99ms (Views: 87.3ms | ActiveRecord: 2.8ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:35:13 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.2ms)
+  Rendered users/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2020-09-26 21:35:13 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"WAIk5qZyC+D19bI5nsV6zKxnIn7FxlOroHPQqrlksskn2Ryv19oA0+9oZUc0GO6W3SIxRXlh7da4ikpq9rlfyQ==", "user"=>{"username"=>"coolguy", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coolguy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "coolguy"], ["password_digest", "$2a$12$y6bpoBOsWq/XK7wZiBf/SO3VvRuVH6u/TytfGWOp8dalOF3tRNSJe"], ["session_token", "EM5P2Tq4ZDSneIdDCewGxQ"], ["created_at", "2020-09-27 02:35:14.124975"], ["updated_at", "2020-09-27 02:35:14.124975"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users
+Completed 302 Found in 205ms (ActiveRecord: 0.7ms)
+Started GET "/users" for 127.0.0.1 at 2020-09-26 21:35:14 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "EM5P2Tq4ZDSneIdDCewGxQ"], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/session/new" for 127.0.0.1 at 2020-09-26 21:35:14 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (0.4ms)
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+Started POST "/session" for 127.0.0.1 at 2020-09-26 21:35:14 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"FXV+kbFCFGExOPOaArK8HkZ8eaDHcPa0J+Niw1HYu7Voo3YyLrUZEQNEtrGqpzYUSfzWT6wp2wpfRTfJbX/q9Q==", "session"=>{"username"=>"coolguy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coolguy"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:35:35 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.6ms)
+  Rendered users/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 106ms (Views: 93.7ms | ActiveRecord: 2.7ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:35:35 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2020-09-26 21:35:35 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"C4A5iXw1Anq+aK6xkQeCAipaItMekXeBwf/QHsGGGFOKJMVv5mVI3gXK2ZOvO6wcmAmw9dmFstlB1n+1nB0JHg==", "user"=>{"username"=>"coolguy", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coolguy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "coolguy"], ["password_digest", "$2a$12$3zCkp6EJar1o.YALG9keO.Omk7lY4J.8PkPd1lMirB3nc7KQKbjRa"], ["session_token", "od4mPknMYoWLR8qMTqbLbg"], ["created_at", "2020-09-27 02:35:35.965186"], ["updated_at", "2020-09-27 02:35:35.965186"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users
+Completed 302 Found in 212ms (ActiveRecord: 0.8ms)
+Started GET "/users" for 127.0.0.1 at 2020-09-26 21:35:35 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "od4mPknMYoWLR8qMTqbLbg"], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/session/new" for 127.0.0.1 at 2020-09-26 21:35:35 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (0.4ms)
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started POST "/session" for 127.0.0.1 at 2020-09-26 21:35:35 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"9l2u6vUeZsmCL7bB/qGl+6e0VsKqm/2LQf2OKNiJITdSx20TxXjrGPE9XMCKr6WGc5Llwkx26uvj3+CB4DEsuA==", "session"=>{"username"=>"coolguy420", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coolguy420"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:38:39 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 97ms (Views: 85.3ms | ActiveRecord: 2.7ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:38:39 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.2ms)
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2020-09-26 21:38:39 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"T6+KY5oDwyc/Lls0gCTIocvxMqpglGnYksavPdwHMBLIejmvzAp1/PZoJ0aKKbul2Rc0XceEy8q7MhF2vbT3Og==", "user"=>{"username"=>"coolguy", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coolguy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "coolguy"], ["password_digest", "$2a$12$19ObbIkx1NSFZ6ZTSWDQoOvlKe.MakO/yeTx1wdA1qvJDBpDkfgkq"], ["session_token", "AW5v7sEtv6Fj3FfucjUX8Q"], ["created_at", "2020-09-27 02:38:39.964851"], ["updated_at", "2020-09-27 02:38:39.964851"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users
+Completed 302 Found in 196ms (ActiveRecord: 1.0ms)
+Started GET "/users" for 127.0.0.1 at 2020-09-26 21:38:39 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "AW5v7sEtv6Fj3FfucjUX8Q"], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/session/new" for 127.0.0.1 at 2020-09-26 21:38:39 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (0.4ms)
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started POST "/session" for 127.0.0.1 at 2020-09-26 21:38:39 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"wGEFT4uFvyoDI/eQ1TPjcPMmoJ/u89HJ84R/A61V7IewwPDxLgsCsYQ52b/G7Pdtb3RlIE/NgRrVg0vfGoA75g==", "session"=>{"username"=>"coolguy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coolguy"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:40:10 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 101ms (Views: 88.9ms | ActiveRecord: 2.7ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:40:10 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.2ms)
+  Rendered users/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2020-09-26 21:40:10 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"bIvylQELvqbJ2icdyFV+MSCUZpZW/xgo+hC2OZboB0vZb/cJofzbBxEzcCbI9lDu76jJx0W1T1YE5fLfSLqKxQ==", "user"=>{"username"=>"coolguy", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coolguy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "coolguy"], ["password_digest", "$2a$12$7/GAmqE4f2.gIaeiaQOy5O3BzbAH9Fy.Ir6tCFEbmbrzuyFrcCENq"], ["session_token", "J6dmPx7HaTIGNOAzT_-M5A"], ["created_at", "2020-09-27 02:40:10.791071"], ["updated_at", "2020-09-27 02:40:10.791071"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users
+Completed 302 Found in 203ms (ActiveRecord: 0.8ms)
+Started GET "/users" for 127.0.0.1 at 2020-09-26 21:40:10 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "J6dmPx7HaTIGNOAzT_-M5A"], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:40:10 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.2ms)
+  Rendered users/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2020-09-26 21:40:10 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"ehEphwfIs92tmQrwYjN9ZoqFb3RG40bo5dKnmcQ0QwMBzmhR0dtoEf6Nhnk7eoQb72K9bUjef9WERDNZck0G7Q==", "user"=>{"username"=>"coolguy", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coolguy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "coolguy"], ["password_digest", "$2a$12$0dbsTYOnA5gBJ.OkxJLSSOlvUNe74fQYfdSLUK5riuewoy5hZtVdW"], ["session_token", "l0K7UQdIvdw6piVLmqqRnQ"], ["created_at", "2020-09-27 02:40:11.007168"], ["updated_at", "2020-09-27 02:40:11.007168"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users
+Completed 302 Found in 202ms (ActiveRecord: 0.7ms)
+Started GET "/users" for 127.0.0.1 at 2020-09-26 21:40:11 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "l0K7UQdIvdw6piVLmqqRnQ"], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+Started GET "/session/new" for 127.0.0.1 at 2020-09-26 21:40:11 -0500
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "l0K7UQdIvdw6piVLmqqRnQ"], ["LIMIT", 1]]
+Redirected to http://www.example.com/users
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/users" for 127.0.0.1 at 2020-09-26 21:40:11 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "l0K7UQdIvdw6piVLmqqRnQ"], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:42:07 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 105ms (Views: 92.0ms | ActiveRecord: 3.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:42:07 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.2ms)
+  Rendered users/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2020-09-26 21:42:07 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"3KF/3iqHyRKmZop0RlvnKPBhzXVHUjqMAQurDRKacWx0hzh30376+gIREheXEt5VkRcOor9PFZsmG/KEnIoJsA==", "user"=>{"username"=>"coolguy", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coolguy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "coolguy"], ["password_digest", "$2a$12$VwvqljqE52EqD1ksE2sFwu8Hxt/nIKBEUxPaducqXRpgDbYDdpUEW"], ["session_token", "Zu5ezu0iVAqyh3KSefp8OQ"], ["created_at", "2020-09-27 02:42:07.948772"], ["updated_at", "2020-09-27 02:42:07.948772"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users
+Completed 302 Found in 210ms (ActiveRecord: 0.7ms)
+Started GET "/users" for 127.0.0.1 at 2020-09-26 21:42:07 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Zu5ezu0iVAqyh3KSefp8OQ"], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:42:07 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.2ms)
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2020-09-26 21:42:07 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"0K8rK06sQ0n4nSWEu1hOo3n6G3iSC5qRuFj8kvg+iVx5kXMfQjIYuAuvHoyY3GluLkPRoYNALlt3niQ+uvKELA==", "user"=>{"username"=>"coolguy", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coolguy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "coolguy"], ["password_digest", "$2a$12$eb79Mmmt2TRp/5E6WIP18.p4kmvcvXaUy.70YdOpzLGFxrJY2co3W"], ["session_token", "FgOBOJ7d3gHZrVIiUExL8g"], ["created_at", "2020-09-27 02:42:08.174414"], ["updated_at", "2020-09-27 02:42:08.174414"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users
+Completed 302 Found in 210ms (ActiveRecord: 0.6ms)
+Started GET "/users" for 127.0.0.1 at 2020-09-26 21:42:08 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FgOBOJ7d3gHZrVIiUExL8g"], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+Started GET "/session/new" for 127.0.0.1 at 2020-09-26 21:42:08 -0500
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FgOBOJ7d3gHZrVIiUExL8g"], ["LIMIT", 1]]
+Redirected to http://www.example.com/users
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/users" for 127.0.0.1 at 2020-09-26 21:42:08 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FgOBOJ7d3gHZrVIiUExL8g"], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:42:24 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 101ms (Views: 89.1ms | ActiveRecord: 2.8ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:42:24 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.2ms)
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2020-09-26 21:42:24 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"+RxQzSScTNTz0eYIeVjGbeHLPHYjFEzx9ajYQXrDZsx17bQ1dLm1gzDb4gEYdwtrxEOHppyXwFZVcmJRdXAKNg==", "user"=>{"username"=>"coolguy", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coolguy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "coolguy"], ["password_digest", "$2a$12$IYW1Q.EUuUxRY6RPTDrpS.qgY6VCxVJNn8Rod7TijHRfhmDPkVuRy"], ["session_token", "8TEgnHIedcKAF0YLZxMukQ"], ["created_at", "2020-09-27 02:42:24.784836"], ["updated_at", "2020-09-27 02:42:24.784836"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users
+Completed 302 Found in 205ms (ActiveRecord: 0.8ms)
+Started GET "/users" for 127.0.0.1 at 2020-09-26 21:42:24 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "8TEgnHIedcKAF0YLZxMukQ"], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:42:24 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2020-09-26 21:42:24 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"w5QiB9Kr56qXSEsRd9IQJGIDeFJKe81GU7z3qxofk9i5c/6RtyKQofKBzWo3GPbyRNl8r80pJVBRKSpKjwR1Vw==", "user"=>{"username"=>"coolguy", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coolguy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "coolguy"], ["password_digest", "$2a$12$SC3biKgm3Pftvaf9M/A/ouG82zdolEvCEtgQ7v4klWKKQQuN6KmYK"], ["session_token", "9Awg-UK3XgGRbaO8QyFBSg"], ["created_at", "2020-09-27 02:42:25.012260"], ["updated_at", "2020-09-27 02:42:25.012260"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users
+Completed 302 Found in 212ms (ActiveRecord: 0.8ms)
+Started GET "/users" for 127.0.0.1 at 2020-09-26 21:42:25 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "9Awg-UK3XgGRbaO8QyFBSg"], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+Started GET "/session/new" for 127.0.0.1 at 2020-09-26 21:42:25 -0500
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "9Awg-UK3XgGRbaO8QyFBSg"], ["LIMIT", 1]]
+Redirected to http://www.example.com/users
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/users" for 127.0.0.1 at 2020-09-26 21:42:25 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "9Awg-UK3XgGRbaO8QyFBSg"], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:43:40 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 103ms (Views: 90.8ms | ActiveRecord: 2.9ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:43:41 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.2ms)
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2020-09-26 21:43:41 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"Xp/Q5zNz1ilKSifvMrWCF8wdLT3afuvu9yxXaLEYTLOhoeCrNcLRala5vZ2aeM+JybT4mEREeW8VopmSNrg+XA==", "user"=>{"username"=>"coolguy", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coolguy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "coolguy"], ["password_digest", "$2a$12$IoNp4ZVs13/lH2wLvnjIrOEwTAeaLJxsXjRamqUVSRkK2jYMvN7g2"], ["session_token", "B567C1_o5KmzcekDLviKfQ"], ["created_at", "2020-09-27 02:43:41.279334"], ["updated_at", "2020-09-27 02:43:41.279334"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users
+Completed 302 Found in 206ms (ActiveRecord: 0.9ms)
+Started GET "/users" for 127.0.0.1 at 2020-09-26 21:43:41 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "B567C1_o5KmzcekDLviKfQ"], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:43:41 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.2ms)
+  Rendered users/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2020-09-26 21:43:41 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"xmk1gxoXfevhkVDzaFyXtXdb0I7QUhS580mlYfipSZL+x30iLICOD/FkRfSCf5xyl4fOOTJxspaVs62bqpuEzA==", "user"=>{"username"=>"coolguy", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coolguy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "coolguy"], ["password_digest", "$2a$12$5nei3qRAU3m.ymQUs9t29OLVsFhy0RgIbqAFr6msAvbQkMu1fNM8C"], ["session_token", "v2KNV54CBH4hQjg-3C-2dQ"], ["created_at", "2020-09-27 02:43:41.496671"], ["updated_at", "2020-09-27 02:43:41.496671"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users
+Completed 302 Found in 203ms (ActiveRecord: 0.5ms)
+Started GET "/users" for 127.0.0.1 at 2020-09-26 21:43:41 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "v2KNV54CBH4hQjg-3C-2dQ"], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+Started DELETE "/session" for 127.0.0.1 at 2020-09-26 21:43:41 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"E0LaxfA5K31pcGDagceOV2ughU+nNmk7svMFffOQyTwr7JJkxq7YmXmFdd1r5IWQi3yb+EUVzxTUCQ2HoaIEYg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "v2KNV54CBH4hQjg-3C-2dQ"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "coolguy"], ["id", 14], ["LIMIT", 1]]
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "jHUFPzXN0I-ZEC5K93KVbg"], ["updated_at", "2020-09-27 02:43:41.507394"], ["id", 14]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users
+Completed 302 Found in 3ms (ActiveRecord: 1.0ms)
+Started GET "/users" for 127.0.0.1 at 2020-09-26 21:43:41 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+Started GET "/session/new" for 127.0.0.1 at 2020-09-26 21:43:41 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (0.3ms)
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:43:59 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 101ms (Views: 88.1ms | ActiveRecord: 3.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:43:59 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.2ms)
+  Rendered users/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2020-09-26 21:43:59 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"vKzKhYufpiu03U5E6/OaSu6F5dN27g6viPTbwYHcQh3ulZuAzXUFNi5IbxERlbWdW1tMygaYfxRx3ik7nMk/sg==", "user"=>{"username"=>"coolguy", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coolguy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "coolguy"], ["password_digest", "$2a$12$TTDfaA.8HWId9r3/xyRn5Otp2kUgzVKY3.lW7mNLfNj.U7.rhN5wS"], ["session_token", "V-L0VM1rvK8uJYMWKPxqdA"], ["created_at", "2020-09-27 02:43:59.548515"], ["updated_at", "2020-09-27 02:43:59.548515"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users
+Completed 302 Found in 206ms (ActiveRecord: 0.9ms)
+Started GET "/users" for 127.0.0.1 at 2020-09-26 21:43:59 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "V-L0VM1rvK8uJYMWKPxqdA"], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:43:59 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2020-09-26 21:43:59 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"r/E/JkTTUWrdN+mGQwUZzME8kdEn11nnOjf5aaVoC/jApDor36ME2jdWOFdUmPZ4/xca7XwWZNhVTi6mpyM/Ag==", "user"=>{"username"=>"coolguy", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coolguy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "coolguy"], ["password_digest", "$2a$12$kihRhp/yxXS5k/Vg36ErZeYxR33BPOhOXZOJrxX0b.WRUAnITTpYS"], ["session_token", "en8SUtwCCLmYeO8XKVb_OA"], ["created_at", "2020-09-27 02:43:59.775651"], ["updated_at", "2020-09-27 02:43:59.775651"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users
+Completed 302 Found in 211ms (ActiveRecord: 0.6ms)
+Started GET "/users" for 127.0.0.1 at 2020-09-26 21:43:59 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "en8SUtwCCLmYeO8XKVb_OA"], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+Started DELETE "/session" for 127.0.0.1 at 2020-09-26 21:43:59 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UFVbLoS6/qvD20dV/AyCtBtEX/Bskzgsv/x5o2YOr5M/AF4jH8qrGym6loTrkW0AJW/UzDdSBRPQha5sZEWbaQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "en8SUtwCCLmYeO8XKVb_OA"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "coolguy"], ["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "p6Z8IoEJoc7yBvZyxdshFg"], ["updated_at", "2020-09-27 02:43:59.786473"], ["id", 16]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+Started GET "/users" for 127.0.0.1 at 2020-09-26 21:43:59 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+Started GET "/session/new" for 127.0.0.1 at 2020-09-26 21:43:59 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (0.3ms)
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:44:11 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 100ms (Views: 88.7ms | ActiveRecord: 2.7ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:44:11 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.2ms)
+  Rendered users/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2020-09-26 21:44:11 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"e0anbHdSGcHHv5h4kF//UH7uKBYbLNFwd4r9eNUbruoFmHeRgC90zTd8Oi97w7UUl5zgZQ8ofDHJgYWxiMVsrw==", "user"=>{"username"=>"coolguy", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coolguy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "coolguy"], ["password_digest", "$2a$12$vl7j4wsNUZdg/2kt9OBZue4TLOAdAky.XOhxxl2c/vpgaTml0LYFq"], ["session_token", "zKDvMTuj6r33lfY8-Z5O6g"], ["created_at", "2020-09-27 02:44:12.021792"], ["updated_at", "2020-09-27 02:44:12.021792"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users
+Completed 302 Found in 209ms (ActiveRecord: 0.8ms)
+Started GET "/users" for 127.0.0.1 at 2020-09-26 21:44:12 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zKDvMTuj6r33lfY8-Z5O6g"], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:44:12 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.2ms)
+  Rendered users/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2020-09-26 21:44:12 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"MwHbsQOYlrR+1CZlZn1Bc7TsKpmpAsWNjgKQXr3gLZ9nkQlV9QMy8o5yFU4oQObJ8HbxhQCxVKbx+eC8VfbWLA==", "user"=>{"username"=>"coolguy", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coolguy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "coolguy"], ["password_digest", "$2a$12$gjJ2Qhq/l4G4lBsn9zpkEurZM42k/Ywc/Z5Jvf5f94JUL8wE/aY1q"], ["session_token", "0JPr3PnTmpJTXHhnX8zWJQ"], ["created_at", "2020-09-27 02:44:12.244851"], ["updated_at", "2020-09-27 02:44:12.244851"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users
+Completed 302 Found in 209ms (ActiveRecord: 0.7ms)
+Started GET "/users" for 127.0.0.1 at 2020-09-26 21:44:12 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "0JPr3PnTmpJTXHhnX8zWJQ"], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+Started DELETE "/session" for 127.0.0.1 at 2020-09-26 21:44:12 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jJnOi9nFzUlsFLWH/hwOJHvXYUQ+h5NBuJcPEmipB7DYCRxvL15pD5yyhqywIameP026WJc0AmrHbH/wgL/8Aw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "0JPr3PnTmpJTXHhnX8zWJQ"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "coolguy"], ["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "CJWFtF7S0r-34wgQRsdH_w"], ["updated_at", "2020-09-27 02:44:12.254964"], ["id", 18]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+Started GET "/users" for 127.0.0.1 at 2020-09-26 21:44:12 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+Started GET "/session/new" for 127.0.0.1 at 2020-09-26 21:44:12 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (0.3ms)
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:44:24 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 106ms (Views: 93.9ms | ActiveRecord: 2.7ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:44:24 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2020-09-26 21:44:24 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"EI/edkoDS/fA67XFYjJMDUTUMALItMEt8m5MzQVLTvgKBca+EMEyafLQoFL1LG1qDKIwQwMMAs7aKpO0cF4mqw==", "user"=>{"username"=>"coolguy", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coolguy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "coolguy"], ["password_digest", "$2a$12$yumqWqZW3wdXh7OQjVl8Y.0GBsVg2e0o1SxiLyuDct2ybXPByksZS"], ["session_token", "4BNLMcVhIPKclymlIC1scA"], ["created_at", "2020-09-27 02:44:25.045519"], ["updated_at", "2020-09-27 02:44:25.045519"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users
+Completed 302 Found in 213ms (ActiveRecord: 0.9ms)
+Started GET "/users" for 127.0.0.1 at 2020-09-26 21:44:25 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "4BNLMcVhIPKclymlIC1scA"], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/new" for 127.0.0.1 at 2020-09-26 21:44:25 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.2ms)
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2020-09-26 21:44:25 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"ZBjLgfrLaCh3H/qEK6OLJq3PNgZIl1feMIs2cdFBevB+n//yN2tVq1C+gh/3bZGoNWsMNO71bVllHOXVvqMTkw==", "user"=>{"username"=>"coolguy", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coolguy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "coolguy"], ["password_digest", "$2a$12$kV2aNMm5tfbaIz8WvJW4juG2uh.pRt/lj2saik//4ATI47J.hLM3G"], ["session_token", "cwHsRVsIdrEpgHV6VxwLoA"], ["created_at", "2020-09-27 02:44:25.273725"], ["updated_at", "2020-09-27 02:44:25.273725"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users
+Completed 302 Found in 212ms (ActiveRecord: 0.8ms)
+Started GET "/users" for 127.0.0.1 at 2020-09-26 21:44:25 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "cwHsRVsIdrEpgHV6VxwLoA"], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+Started DELETE "/session" for 127.0.0.1 at 2020-09-26 21:44:25 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XBjlI2mB1OcTZg5uyrSoneJ7Yk10wugn1c2ljU5VB0xGn9FQpCHpZDTHdvUWerITet9Yf9Kg0qCAWnYpIbduLw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "cwHsRVsIdrEpgHV6VxwLoA"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "coolguy"], ["id", 20], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "AbxutvG8cJnFiPjtMKls8w"], ["updated_at", "2020-09-27 02:44:25.285460"], ["id", 20]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+Started GET "/users" for 127.0.0.1 at 2020-09-26 21:44:25 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+Started GET "/session/new" for 127.0.0.1 at 2020-09-26 21:44:25 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (0.3ms)
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+Started POST "/session" for 127.0.0.1 at 2020-09-26 21:44:25 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"siZGjXH0DE7bVk8GQGSWErHo3GHP//72ARkdZKCviwqooXL+vFQxzfz3N52cqoycKUzmU2mdxHFUjs7Az03iaQ==", "session"=>{"username"=>"coolguy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coolguy"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "coolguy"], ["id", 20], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "iAbkBRc_9mdj8lgFFt00VQ"], ["updated_at", "2020-09-27 02:44:25.507852"], ["id", 20]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users
+Completed 302 Found in 210ms (ActiveRecord: 0.9ms)
+Started GET "/users" for 127.0.0.1 at 2020-09-26 21:44:25 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iAbkBRc_9mdj8lgFFt00VQ"], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
