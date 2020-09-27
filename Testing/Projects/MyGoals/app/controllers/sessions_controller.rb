@@ -4,28 +4,29 @@ class SessionsController < ApplicationController
         if current_user.nil?
             render :new
         else
-            redirect_to bands_url
+            redirect_to users_url
         end
 
     end
 
     def create
 
-        user = User.find_by_credentials(sessions_params[:username], sessions_params[:password])
-        user.reset_session_token!
+        @user = User.find_by_credentials(sessions_params[:username], sessions_params[:password])
+        @user.reset_session_token!
 
-        if user.nil?
+        
+        if @user.nil? == true
             flash.alert = "User not found"
-            redirect_to bands_url
+            redirect_to users_url
         else
-            login!(user)
-            redirect_to bands_url
+            login!(@user)
+            redirect_to users_url
         end
     end
 
     def destroy
         logout!
-        redirect_to bands_url
+        redirect_to users_url
     end
 
     def sessions_params

@@ -33,7 +33,7 @@ feature "user features", type: :feature do
     feature 'logging in' do
 
         before(:each) do
-            visit new_user_url
+            visit new_session_url
             fill_in 'username', :with => "coolguy"
             fill_in 'password', :with => "123456"
             click_on "Submit"
@@ -43,7 +43,7 @@ feature "user features", type: :feature do
             
             visit users_url
             expect(page).to have_content 'coolguy'
-            
+
         end
 
     end
