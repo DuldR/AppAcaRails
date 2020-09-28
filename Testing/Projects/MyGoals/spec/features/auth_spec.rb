@@ -55,10 +55,29 @@ feature "user features", type: :feature do
     end
 
     feature 'logging out' do
-        scenario 'begins with a logged out state'
 
-        scenario 'doesn\'t show username on the
-         homepage after logout'
+        subject(:user) {FactoryBot.create(:user)}
+        
+
+        before(:each) do
+
+            user.save!
+
+            visit new_session_url
+            fill_in 'username', :with => "coolguy"
+            fill_in 'password', :with => "123456"
+            click_on "Submit"
+
+        end
+
+        scenario 'begins with a logged out state' do
+            expect(page).to have_selector(:link_or_button, "Logout")
+        end
+
+        scenario 'doesn\'t show username on the homepage after logout' do
+            click_on "Logout"
+            expect(page).to have_no_content("coolguy")
+        end
 
     end
 end
