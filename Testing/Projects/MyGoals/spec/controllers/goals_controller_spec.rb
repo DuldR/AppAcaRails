@@ -41,8 +41,6 @@ RSpec.describe GoalsController, type: :controller do
 
         context "with valid params" do
              it "gives 200 if given a GOOD id to show" do
-                user.save!
-                goal.save!
                 get :show, params: { goal: { id: 1 } }
                 expect(response.status).to eq(200)
             end 
@@ -51,8 +49,16 @@ RSpec.describe GoalsController, type: :controller do
     end
 
     describe "PUT #update" do
+
+        subject(:user) {FactoryBot.create(:user)}
+        subject(:goal) {FactoryBot.create(:goal)}
+
         describe "with invalid params" do
-            
+            it "renders the goal url and gives an error with NG updates" do
+                put :update, params: { goal: { id: 1, status: "NG"} }
+                expect(response).to render_template(goal_url(1))
+                expect(flash.now[:errors]).to be_present
+            end
         end
 
         describe "with valid params" do
