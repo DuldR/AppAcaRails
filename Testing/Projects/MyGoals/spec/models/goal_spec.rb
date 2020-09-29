@@ -59,7 +59,7 @@ RSpec.describe Goal, type: :model do
     describe "#closed" do
       it "set the goal as closed" do
         goal.closed
-        expect(goal.status).to eq("CLOSED")
+        expect(goal.staus).to eq("CLOSED")
       end
 
     end

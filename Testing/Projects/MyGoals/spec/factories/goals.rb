@@ -17,5 +17,6 @@ FactoryBot.define do
     title {"My Cool Goal"}
     body {"The Coolest Goal"}
     status {"OPEN"}
+    user_id { 1 }
   end
 end
