@@ -13,7 +13,7 @@
 #
 FactoryBot.define do
   factory :goal do
-    is_public {false}
+    is_public {true}
     title {"My Cool Goal"}
     body {"The Coolest Goal"}
     status {"Open"}

@@ -31,9 +31,40 @@ RSpec.describe Goal, type: :model do
 
 
   describe "associatons" do
+
+    it { should have_one(:user) }
   end
 
   describe "class methods" do
+    subject(:goal) {FactoryBot.build(:goal)}
+
+    describe "#make_private" do
+      it "should be private before testing" do
+        expect(goal.is_public).to be true
+      end
+
+      it "should set the goal to private" do
+        goal.make_private
+        expect(goal.is_public).to be false
+      end
+
+    end
+
+    describe "#complete?" do
+      it "should return true if closed" do
+        expect(goal.complete?).to be false
+      end
+    end
+
+    describe "#closed" do
+      it "set the goal as closed" do
+        goal.closed
+        expect(goal.staus).to eq("Closed")
+      end
+
+    end
+
+
 
   end
 
