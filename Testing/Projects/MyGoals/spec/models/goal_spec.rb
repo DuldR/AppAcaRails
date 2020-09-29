@@ -32,7 +32,7 @@ RSpec.describe Goal, type: :model do
 
   describe "associatons" do
 
-    it { should have_one(:user) }
+    it { should belong_to(:user) }
   end
 
   describe "class methods" do
@@ -59,7 +59,7 @@ RSpec.describe Goal, type: :model do
     describe "#closed" do
       it "set the goal as closed" do
         goal.closed
-        expect(goal.staus).to eq("Closed")
+        expect(goal.status).to eq("CLOSED")
       end
 
     end

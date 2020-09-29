@@ -16,6 +16,6 @@ FactoryBot.define do
     is_public {true}
     title {"My Cool Goal"}
     body {"The Coolest Goal"}
-    status {"Open"}
+    status {"OPEN"}
   end
 end
