@@ -8,14 +8,14 @@ RSpec.describe GoalsController, type: :controller do
     describe "POST #create" do
         context "with invalid params" do
             it "validates for user id, body" do
-                post :create, params: { goal: { title: "My favorite goal" } }
-                expect(response).to render_template('new')
+                post :create, params: { user_id: 1, goal: { title: "My favorite goal" } }
+                expect(response).to redirect_to(user_goals_url(user))
                 expect(flash.now[:errors]).to be_present  
             end
 
             it "validates for status inclusion" do
                 post :create, params: { goal: { user_id: 1, body: "Boy, I love this goal!", title: "My favorite goal", status: "OKGOOFFKING" } }
-                expect(response).to render_template('new')
+                expect(response).to redirect_to(goal_url(goal))
                 expect(flash.now[:errors]).to be_present  
             end
         end
