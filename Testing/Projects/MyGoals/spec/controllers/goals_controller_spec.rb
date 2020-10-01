@@ -1,29 +1,34 @@
 require 'rails_helper'
+require 'byebug'
 
 RSpec.describe GoalsController, type: :controller do
 
-    subject(:user) {FactoryBot.create(:user)}
-    subject(:goal) {FactoryBot.create(:goal)}
+    
     
     describe "POST #create" do
-        context "with invalid params" do
-            it "validates for user id, body" do
-                post :create, params: { id: 1, user_id: 1, goal: { title: "My favorite goal" } }
-                expect(response).to redirect_to(user_goals_url(1))
-                expect(flash.now[:errors]).to be_present  
-            end
 
-            it "validates for status inclusion" do
-                post :create, params: { id: 1, user_id: 1, goal: { user_id: 1, body: "Boy, I love this goal!", title: "My favorite goal", status: "OKGOOFFKING" } }
-                expect(response).to redirect_to(user_goals_url(1))
-                expect(flash.now[:errors]).to be_present  
-            end
-        end
+        subject(:user) {FactoryBot.create(:user)}
+        subject(:goal) {FactoryBot.create(:goal, user_id: user.id)}
+        # context "with invalid params" do
+        #     it "validates for user id, body" do
+        #         byebug
+        #         post :create, params: { goal: { title: "My favorite goal" } }
+        #         expect(response).to redirect_to(users_url)
+        #         expect(flash.now[:errors]).to be_present  
+        #     end
+
+        #     it "validates for status inclusion" do
+        #         post :create, params: { goal: { user_id: 1, body: "Boy, I love this goal!", title: "My favorite goal", status: "OKGOOFFKING" } }
+        #         expect(response).to redirect_to(users_url)
+        #         expect(flash.now[:errors]).to be_present  
+        #     end
+        # end
 
         context "with valid params" do
+
             it "redirects user to user url on success" do
-                post :create, params: { goal: { user_id: 1, body: "Boy, I love this goal!", title: "My favorite goal", status: "OPEN" } }
-                expect(response).to redirect_to(user_url(1))
+                post :create, params: {  goal: { user_id: user.id, body: "Boy, I love this goal!", title: "My favorite goal", status: "OPEN", is_public: false } }
+                expect(response).to redirect_to(goal_url(user.goals.last.id))
             end
             
         end

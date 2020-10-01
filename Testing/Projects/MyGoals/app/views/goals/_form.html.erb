@@ -1,0 +1,27 @@
+<section>
+    <form action="<%= user_goals_url %>" method="POST">
+
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <label for="title">Enter Your Title:</label>
+        <input type="text" name="goal[title]" id="title">
+
+        <br>
+
+        <label for="password">Enter Your Body:</label>
+        <input type="text" name="goal[body]" id="body">
+
+        <br>
+
+        <label for="password">Enter Your Status:</label>
+        <input type="text" name="goal[status]" id="status">
+
+        <br>
+        <label for="password">Enter Your User:</label>
+        <input type="text" name="goal[user_id]" id="user_id">
+
+        <br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+<section>

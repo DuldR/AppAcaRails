@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module MyGoals
   class Application < Rails::Application
+    
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
@@ -18,7 +19,7 @@ module MyGoals
 
     config.generators do |g|
       g.test_framework :rspec,
-        :fixutres => false,
+        :fixtures => false,
         :view_specs => false,
         :helper_specs => false,
         :routing_specs => false,

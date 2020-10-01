@@ -12,6 +12,8 @@
 #  status     :string           not null
 #
 FactoryBot.define do
+
+
   factory :goal do
     is_public {true}
     title {"My Cool Goal"}

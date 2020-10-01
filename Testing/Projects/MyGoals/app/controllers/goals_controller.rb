@@ -1,13 +1,14 @@
 class GoalsController < ApplicationController
+    require 'byebug'
 
     def create
         @goal = Goal.new(goal_params)
-
-        if @goal.save == false
-            flash.now[:errors] = "Could not save goal."
-            redirect_to user_goals_url(params[:id])
-        else
+    
+        if @goal.save
             redirect_to goal_url(@goal)
+        else
+            flash.now[:errors] = "Could not save goal."
+            redirect_to users_url
         end
 
     end
@@ -16,6 +17,12 @@ class GoalsController < ApplicationController
         render :show
     end
 
+    def index
+        @user = User.find_by(params[:id])
+        @goals = @user.goals
+
+        render :index
+    end
     def update
     end
 
