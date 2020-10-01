@@ -9,20 +9,20 @@ RSpec.describe GoalsController, type: :controller do
 
         subject(:user) {FactoryBot.create(:user)}
         subject(:goal) {FactoryBot.create(:goal, user_id: user.id)}
-        # context "with invalid params" do
-        #     it "validates for user id, body" do
-        #         byebug
-        #         post :create, params: { goal: { title: "My favorite goal" } }
-        #         expect(response).to redirect_to(users_url)
-        #         expect(flash.now[:errors]).to be_present  
-        #     end
 
-        #     it "validates for status inclusion" do
-        #         post :create, params: { goal: { user_id: 1, body: "Boy, I love this goal!", title: "My favorite goal", status: "OKGOOFFKING" } }
-        #         expect(response).to redirect_to(users_url)
-        #         expect(flash.now[:errors]).to be_present  
-        #     end
-        # end
+        context "with invalid params" do
+            it "validates for user id, body" do
+                post :create, params: { goal: { title: "My favorite goal" } }
+                expect(response).to redirect_to(users_url)
+                expect(flash.now[:errors]).to be_present  
+            end
+
+            it "validates for status inclusion" do
+                post :create, params: { goal: { user_id: 1, body: "Boy, I love this goal!", title: "My favorite goal", status: "OKGOOFFKING" } }
+                expect(response).to redirect_to(users_url)
+                expect(flash.now[:errors]).to be_present  
+            end
+        end
 
         context "with valid params" do
 
