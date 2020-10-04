@@ -5,10 +5,10 @@ RSpec.describe UsersController, type: :controller do
 
 
     describe "GET #show" do
+
+        subject(:user) {FactoryBot.create(:user)}
+
         it "render the show template" do
-            user = User.new(username: "coolguy")
-            user.password = "123456"
-            user.save!
 
             get :show, params: { id: user.id }
             expect(response).to render_template(:show)
@@ -42,7 +42,7 @@ RSpec.describe UsersController, type: :controller do
         context "with invalid params" do
             it "renders the new template" do
                 post :create, params: { user: {username: "coolguy" } }
-                expect(response).to render_template(:index)
+                expect(response).to render_template(:new)
 
             end
         end
@@ -51,7 +51,7 @@ RSpec.describe UsersController, type: :controller do
 
             it "redirects to new user url" do
                 post :create, params: { user: { username: "coolguy", password: "123456" } }
-                expect(response).to redirect_to(user_url(User.find_by(username: "coolguy")))
+                expect(response).to redirect_to(users_url)
             end
         end
     end

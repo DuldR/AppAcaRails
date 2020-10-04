@@ -9,7 +9,7 @@ class UsersController < ApplicationController
         @user = User.find_by(id: params[:id] )
 
         if @user.nil? == false
-            render :index
+            render :show
         else
             redirect_to user_url(@user)
         end
