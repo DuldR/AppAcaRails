@@ -3794,3 +3794,90 @@ RuntimeError - :
   app/controllers/goals_controller.rb:6:in `create'
 
 Started POST "/__better_errors/230ca895a830a601/variables" for 127.0.0.1 at 2020-09-30 20:37:19 -0500
+Started GET "/" for 127.0.0.1 at 2020-10-03 18:55:22 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/garrett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/garrett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/garrett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (2.5ms)
+Completed 200 OK in 10ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goals" for 127.0.0.1 at 2020-10-03 18:55:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/goals"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/goals/1" for 127.0.0.1 at 2020-10-03 18:55:36 -0500
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGoal Load (0.6ms)[0m  [1m[34mSELECT  "goals".* FROM "goals" WHERE (1) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/goals_controller.rb:17
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 2.1ms)
+
+
+
+ActiveRecord::StatementInvalid - PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT  "goals".* FROM "goals" WHERE (1) LIMIT $1
+                                              ^
+: SELECT  "goals".* FROM "goals" WHERE (1) LIMIT $1:
+  app/controllers/goals_controller.rb:17:in `show'
+
+Started POST "/__better_errors/f554d23a26b6fbae/variables" for 127.0.0.1 at 2020-10-03 18:55:36 -0500
+Started GET "/goals/1" for 127.0.0.1 at 2020-10-03 18:56:57 -0500
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGoal Load (0.8ms)[0m  [1m[34mSELECT  "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/goals_controller.rb:17
+  Rendering goals/show.html.erb within layouts/application
+  Rendered goals/_form.html.erb (192.8ms)
+  Rendered goals/show.html.erb within layouts/application (193.7ms)
+Completed 500 Internal Server Error in 207ms (ActiveRecord: 4.0ms)
+
+
+
+NameError - undefined local variable or method `user_goals_url' for #<#<Class:0x00007ff5b027feb8>:0x00007ff5b027e450>
+Did you mean?  user_url:
+  app/views/goals/_form.html.erb:2:in `_app_views_goals__form_html_erb__4104348697705221377_70346599495540'
+  app/views/goals/show.html.erb:1:in `_app_views_goals_show_html_erb___3733779400386477758_70346599556680'
+  app/controllers/goals_controller.rb:22:in `show'
+
+Started POST "/__better_errors/980c4adf0082e4f2/variables" for 127.0.0.1 at 2020-10-03 18:56:57 -0500
+Started POST "/__better_errors/980c4adf0082e4f2/variables" for 127.0.0.1 at 2020-10-03 18:57:07 -0500
+Started GET "/goals/1" for 127.0.0.1 at 2020-10-03 18:57:38 -0500
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGoal Load (0.3ms)[0m  [1m[34mSELECT  "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/goals_controller.rb:17
+  Rendering goals/show.html.erb within layouts/application
+  Rendered goals/_form.html.erb (0.6ms)
+  Rendered goals/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 131ms (Views: 129.2ms | ActiveRecord: 0.3ms)
+
+

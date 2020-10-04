@@ -39,15 +39,15 @@ RSpec.describe GoalsController, type: :controller do
 
         context "with invalid params" do
             it "gives 404 if given a NG id to show" do
-                get :show, params: { goal: { id: -1 } }
+                get :show, params: { id: -1  }
                 expect(response.status).to eq(404)
             end
         end
 
         context "with valid params" do
              it "gives 200 if given a GOOD id to show" do
-                get :show, params: { goal: { id: 1 } }
-                expect(response.status).to eq(200)
+                get :show, params: {  id: 1 }
+                expect(response).to render_template('show')
             end 
         end
 
