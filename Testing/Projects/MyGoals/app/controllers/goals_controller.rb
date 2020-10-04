@@ -28,15 +28,29 @@ class GoalsController < ApplicationController
         @goal = Goal.find_by(id: params[:id])
 
         if @goal.nil?
-            flash.now[:errors] = "Enter a usable name clown."
+            flash.now[:errors] = "Cannot be update."
             redirect_to goal_url(params[:id])
         else
-            @goal.update_attributes(goal_params)
-            redirect_to goal_url(@goal)
+            if @goal.update_attributes(goal_params)
+                redirect_to goal_url(@goal)
+            else
+                flash.now[:errors] = "Make sure you update correctly."
+                redirect_to goal_url(@goal)
+            end
         end
     end
 
-    def delete
+    def destroy
+        @goal = Goal.find_by(id: params[:id])
+
+        if @goal.nil?
+            flash.now[:errors] = "Not a valid goal to be deleted."
+            redirect_to users_url
+        else
+            @goal.destroy
+            redirect_to users_url
+        end
+
 
     end
 

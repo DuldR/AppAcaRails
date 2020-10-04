@@ -75,16 +75,16 @@ RSpec.describe GoalsController, type: :controller do
 
         describe "with invalid params" do
             it "renders user page if NG id" do
-                delete :delete, params: { goal: { id: -1 } }
-                expect(response).to render_template('show')
+                delete :destroy, params: { id: -1 }
                 expect(flash.now[:errors]).to be_present
+                expect(response).to redirect_to(users_url)
             end
         end
 
         describe "with valid params" do
             it "renders user page if GOOD id" do
-                delete :delete, params: { goal: { id: 1 } }
-                expect(response).to redirect_to(user_url(1))
+                delete :destroy, params: { id: 1 }
+                expect(response).to redirect_to(users_url)
             end
             
         end
