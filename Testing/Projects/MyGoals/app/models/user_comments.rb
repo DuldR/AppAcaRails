@@ -1,3 +1,0 @@
-class UserComments < ApplicationRecord
-
-end

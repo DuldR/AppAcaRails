@@ -9,3 +9,8 @@
 u = User.new(username: "coolguy420")
 u.password = "123456"
 u.save!
+
+Goal.create(body: "What a goal!", title: "my goal", status: "OPEN", user_id: 1)
+
+UserComment.create(body: "420 Eveyrday.", user_id: 1)
+GoalComment.create(body: "Yay!", goal_id: 1)
