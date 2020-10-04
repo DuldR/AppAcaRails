@@ -24,13 +24,16 @@ class GoalsController < ApplicationController
 
     end
 
-    def index
-        @user = User.find_by(params[:id])
-        @goals = @user.goals
-
-        render :index
-    end
     def update
+        @goal = Goal.find_by(id: params[:id])
+
+        if @goal.nil?
+            flash.now[:errors] = "Enter a usable name clown."
+            redirect_to goal_url(params[:id])
+        else
+            @goal.update_attributes(goal_params)
+            redirect_to goal_url(@goal)
+        end
     end
 
     def delete

@@ -57,15 +57,15 @@ RSpec.describe GoalsController, type: :controller do
 
         describe "with invalid params" do
             it "renders the goal url and gives an error with NG updates" do
-                put :update, params: { goal: { id: 1, status: "NG"} }
-                expect(response).to render_template('edit')
+                put :update, params: { id: 1, goal: { status: "NG"} }
                 expect(flash.now[:errors]).to be_present
+                expect(response).to redirect_to(goal_url(1))
             end
         end
 
         describe "with valid params" do
             it "redirects to the given id's show page" do
-                put :update, params: { goal: { id: 1, status: "CLOSED"} }
+                put :update, params: { id: 1, goal: { status: "CLOSED"} }
                 expect(response).to redirect_to(goal_url(1))
             end
         end
