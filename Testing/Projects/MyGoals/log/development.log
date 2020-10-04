@@ -4297,3 +4297,27 @@ Migrating to FixGoalCommentTable (20201004005706)
   [1m[36mGoalComment Load (0.3ms)[0m  [1m[34mSELECT "goal_comments".* FROM "goal_comments"[0m
   [1m[36mGoalComment Load (0.2ms)[0m  [1m[34mSELECT  "goal_comments".* FROM "goal_comments" ORDER BY "goal_comments"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mGoal Load (0.3ms)[0m  [1m[34mSELECT  "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/garrett/.rbenv/versions/2.5.1/bin/annotate:23
+Started GET "/user_comments/1" for 127.0.0.1 at 2020-10-03 20:04:13 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/garrett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by UserCommentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserComment Load (0.3ms)[0m  [1m[34mSELECT  "user_comments".* FROM "user_comments" WHERE "user_comments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_comments_controller.rb:25
+  Rendering user_comments/show.html.erb within layouts/application
+  Rendered user_comments/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 140ms (Views: 125.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/user_comments/1" for 127.0.0.1 at 2020-10-03 20:04:41 -0500
+Processing by UserCommentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserComment Load (0.2ms)[0m  [1m[34mSELECT  "user_comments".* FROM "user_comments" WHERE "user_comments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_comments_controller.rb:25
+  Rendering user_comments/show.html.erb within layouts/application
+  Rendered user_comments/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.3ms)
+
+
