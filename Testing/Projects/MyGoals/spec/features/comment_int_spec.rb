@@ -10,6 +10,8 @@ feature "comment features", type: :feature do
     subject(:user_comment) { UserComment.create(body: "Hello user!", user_id: user.id, )}
     subject(:goal_comment) { GoalComment.create(body: "Hello goal!", goal_id: goal.id, )}
 
+
+
     feature "shows user comment on page" do
         scenario "shows comment with valid params" do
             visit user_comment_url(user_comment.id)
@@ -36,7 +38,7 @@ feature "comment features", type: :feature do
 
             fill_in 'body', :with => "Good user!"
             fill_in 'user', :with => "1"
-            click_in "Submit"
+            click_on "Submit"
 
         end
 
@@ -50,18 +52,83 @@ feature "comment features", type: :feature do
 
     end
 
-    feature "updating comment" do
+    feature "make a new goal comment" do
 
-        scenario "shows updated comment" do
+        before(:each) do
+            visit new_goal_comment_url
+
+            fill_in 'body', :with => "Good goal!"
+            fill_in 'goal', :with => "1"
+            click_on "Submit"
+        end
+
+        scenario "shows goal comment after inputting" do
+            visit goal_url(1)
+            expect(page).to have_content "Good goal!"
+        end
+
+
+    end
+
+    feature "updating user comment" do
+
+        before(:each) do
+            visit edit_user_comment_url(user_comment)
+            fill_in 'body', :with => "New user!"
+            click_on "Submit"
+        end
+
+        scenario "shows updated user comment" do
+            expect(page).to have_content "New user!"
+        end
+
+
+    end
+
+    feature "updating goal comment" do
+
+        before(:each) do
+            visit edit_goal_comment_url(goal_comment)
+            fill_in 'body', :with => "New goal!"
+            click_on "Submit"
+        end
+
+        scenario "shows updated user comment" do
+            expect(page).to have_content "New goal!"
+        end
+
+
+    end
+
+    feature "deleting user comment" do
+
+        before(:each) do
+            visit user_comment_url(user_comment)
+            click_on "Delete"
+        end
+
+        scenario "deletes user comment" do
+
+            visit user_url(user)
+            expect(page).to_not have_content "Hello user!"
 
         end
 
 
     end
 
-    feature "deleting comment" do
 
-        scenario "deletes comment" do
+    feature "deleting goal comment" do
+
+        before(:each) do
+            visit goal_comment_url(goal_comment)
+            click_on "Delete"
+        end
+
+        scenario "deletes user comment" do
+
+            visit goal_url(goal)
+            expect(page).to_not have_content "Hello goal!"
 
         end
 
