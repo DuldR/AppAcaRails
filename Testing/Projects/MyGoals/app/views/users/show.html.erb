@@ -1,0 +1,9 @@
+<%= link_to "Add A Comment?", new_user_comment_url %>
+
+<br>
+
+
+<% @user.user_comments.each do |comm| %>
+    <%= comm.body %>
+    <%= link_to "Edit Comment?", edit_user_comment_url(comm.id) %>
+<% end %>

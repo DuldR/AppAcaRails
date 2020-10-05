@@ -17,10 +17,10 @@ class UserCommentsController < ApplicationController
         @usercomment = UserComment.new(usercomment_params)
 
         if @usercomment.save
-            redirect_to user_comment_url(@usercomment)
+            redirect_to user_url(1)
         else
             flash.now[:errors] = "Could not save comment."
-            redirect_to user_url(@usercomment.user_id)
+            redirect_to user_url(1)
         end
 
     end
@@ -41,14 +41,14 @@ class UserCommentsController < ApplicationController
         @usercomment = UserComment.find_by(id: params[:id])
 
         if @usercomment.nil?
-            flash.now[:errors] = "Cannot be update."
+            flash.now[:errors] = "Cannot be updated."
             redirect_to user_comment_url(params[:id])
         else
             if @usercomment.update_attributes(usercomment_params)
-                redirect_to user_comment_url(@usercomment)
+                redirect_to user_url(@usercomment)
             else
                 flash.now[:errors] = "Make sure you update correctly."
-                redirect_to user_comment_url(@usercomment)
+                redirect_to user_url(@usercomment)
             end
         end
     end

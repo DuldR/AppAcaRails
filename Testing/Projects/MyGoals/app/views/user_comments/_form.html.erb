@@ -1,5 +1,6 @@
-<% action_url = user_comment.persisted? ? user_comment_url(user_comment) : user_comments_url %>
+<% action_url = user_comment.persisted? ? user_comment_url(user_comment.user_id) : user_comments_url %>
 <% http_method = user_comment.persisted? ? "PATCH" : "POST" %>
+<% user_id = user_comment.persisted? ? "#{user_comment.user_id}" : "" %>
 <% button_text = user_comment.persisted? ? "Update User Comment" : "Create User Comment" %>
 <% label_text = user_comment.persisted? ? "Edit the Comment " : "Add a Comment " %>
 
@@ -10,7 +11,7 @@
         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
         <label for="name">User?</label>
-        <input type="text" name="user_comment[user_id]" id="body" value="<%= user_comment.user.id %>">
+        <input type="text" name="user_comment[user_id]" id="body" value="<%= user_id %>">
 
         <br>
 
