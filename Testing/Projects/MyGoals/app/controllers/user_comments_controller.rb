@@ -55,15 +55,15 @@ class UserCommentsController < ApplicationController
     end
 
     def destroy
-        # @usercomment = usercomment.find_by(id: params[:id])
+        @usercomment = UserComment.find_by(id: params[:id])
 
-        # if @usercomment.nil?
-        #     flash.now[:errors] = "Not a valid usercomment to be deleted."
-        #     redirect_to users_url
-        # else
-        #     @usercomment.destroy
-        #     redirect_to users_url
-        # end
+        if @usercomment.nil?
+            flash.now[:errors] = "Not a valid usercomment to be deleted."
+            redirect_to users_url
+        else
+            @usercomment.destroy
+            redirect_to user_url(@usercomment.user_id)
+        end
 
 
     end

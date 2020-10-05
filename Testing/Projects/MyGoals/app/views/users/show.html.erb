@@ -7,5 +7,11 @@
     <%= comm.body %>
     <br>
     <%= link_to "Edit Comment?", edit_user_comment_url(comm.id) %>
+    <form action="<%= user_comment_url(comm) %>" method="post">
+
+        <input type="hidden" name="_method" value="delete">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="submit" value="Delete">
+    </form>
     <br>
 <% end %>

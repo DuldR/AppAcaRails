@@ -7448,3 +7448,212 @@ SystemExit - exit:
   app/controllers/user_comments_controller.rb:45:in `update'
 
 Started POST "/__better_errors/2233ec0d888a4b23/variables" for ::1 at 2020-10-05 13:58:21 -0500
+Started GET "/users/1" for ::1 at 2020-10-05 15:07:41 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (16.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserComment Load (17.5ms)[0m  [1m[34mSELECT "user_comments".* FROM "user_comments" WHERE "user_comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (201.0ms)
+Completed 200 OK in 839ms (Views: 513.6ms | ActiveRecord: 157.2ms)
+
+
+Started DELETE "/users/1" for ::1 at 2020-10-05 15:07:48 -0500
+  
+ActionController::RoutingError (No route matches [DELETE] "/users/1"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/1" for ::1 at 2020-10-05 15:08:17 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserComment Load (6.3ms)[0m  [1m[34mSELECT "user_comments".* FROM "user_comments" WHERE "user_comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (48.3ms)
+Completed 200 OK in 366ms (Views: 340.4ms | ActiveRecord: 7.3ms)
+
+
+Started DELETE "/user_comments/2" for ::1 at 2020-10-05 15:08:20 -0500
+Processing by UserCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"445GZDo58i0i/dtga27n12mQOI0BTosQOH9CondC3ck1ML+34LWV9SyYQwo1bM3bGkrT0ApZutlP/h5zv2Z2IA==", "id"=>"2"}
+No template found for UserCommentsController#destroy, rendering head :no_content
+Completed 204 No Content in 176ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for ::1 at 2020-10-05 15:08:23 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserComment Load (1.0ms)[0m  [1m[34mSELECT "user_comments".* FROM "user_comments" WHERE "user_comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (49.4ms)
+Completed 200 OK in 375ms (Views: 347.3ms | ActiveRecord: 2.4ms)
+
+
+Started DELETE "/user_comments/2" for ::1 at 2020-10-05 15:08:25 -0500
+Processing by UserCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"U8Wjrki3NWp2kx8ji/v3iNBJTkZ2TzaZDUj29TvU6XiFe1p9kjtSsnj2h0nV+d2Eo5OlG31YB1B6yaok8/BCkQ==", "id"=>"2"}
+No template found for UserCommentsController#destroy, rendering head :no_content
+Completed 204 No Content in 169ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for ::1 at 2020-10-05 15:14:14 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserComment Load (2.6ms)[0m  [1m[34mSELECT "user_comments".* FROM "user_comments" WHERE "user_comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (284.7ms)
+Completed 200 OK in 745ms (Views: 543.4ms | ActiveRecord: 30.7ms)
+
+
+Started DELETE "/user_comments/2" for ::1 at 2020-10-05 15:14:19 -0500
+Processing by UserCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NvIaALZpHkzLCNTWEcqYiKc5+0PNuPDjIi239wixDazgTOPTbOV5lMVtTLxPyLKE1OMQHsavwSpVrOsmwJWmRQ==", "id"=>"2"}
+  [1m[36mUserComment Load (1.0ms)[0m  [1m[34mSELECT  "user_comments".* FROM "user_comments" WHERE "user_comments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user_comments_controller.rb:58
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_comments_controller.rb:64
+  [1m[36mUserComment Destroy (1.2ms)[0m  [1m[31mDELETE FROM "user_comments" WHERE "user_comments"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/user_comments_controller.rb:64
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_comments_controller.rb:64
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 65ms (ActiveRecord: 12.0ms)
+
+
+Started GET "/users/1" for ::1 at 2020-10-05 15:14:19 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserComment Load (1.0ms)[0m  [1m[34mSELECT "user_comments".* FROM "user_comments" WHERE "user_comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 305ms (Views: 280.7ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/user_comments/1" for ::1 at 2020-10-05 15:14:21 -0500
+Processing by UserCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PmTvL1KSL5wvjJwgdCkOq7n2xPflVUu6iYP5DnHSjIPo2hb8iB5IRCHpBEoqKySnyiwvqu5CenP+AqXfufYnag==", "id"=>"1"}
+  [1m[36mUserComment Load (1.0ms)[0m  [1m[34mSELECT  "user_comments".* FROM "user_comments" WHERE "user_comments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_comments_controller.rb:58
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_comments_controller.rb:64
+  [1m[36mUserComment Destroy (1.6ms)[0m  [1m[31mDELETE FROM "user_comments" WHERE "user_comments"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/user_comments_controller.rb:64
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_comments_controller.rb:64
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 57ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/users/1" for ::1 at 2020-10-05 15:14:21 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserComment Load (1.0ms)[0m  [1m[34mSELECT "user_comments".* FROM "user_comments" WHERE "user_comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 303ms (Views: 280.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/user_comments/new" for ::1 at 2020-10-05 15:14:23 -0500
+Processing by UserCommentsController#new as HTML
+  Rendering user_comments/new.html.erb within layouts/application
+  Rendered user_comments/_form.html.erb (11.0ms)
+  Rendered user_comments/new.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 277ms (Views: 270.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_comments" for ::1 at 2020-10-05 15:14:26 -0500
+Processing by UserCommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"u+Gsj+F0jGXL1C5MjvL4Kd2UUVqvmKcsbJCR97YaSUdtX1VcO/jrvcWxtibQ8NIlrk66B6SPluUbEc0mfj7irg==", "user_comment"=>{"user_id"=>"1", "body"=>"sdfsdf"}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_comments_controller.rb:19
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_comments_controller.rb:19
+  [1m[36mUserComment Create (1.1ms)[0m  [1m[32mINSERT INTO "user_comments" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "sdfsdf"], ["user_id", 1], ["created_at", "2020-10-05 20:14:26.255171"], ["updated_at", "2020-10-05 20:14:26.255171"]]
+  ↳ app/controllers/user_comments_controller.rb:19
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_comments_controller.rb:19
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 90ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/users/1" for ::1 at 2020-10-05 15:14:26 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserComment Load (1.1ms)[0m  [1m[34mSELECT "user_comments".* FROM "user_comments" WHERE "user_comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 310ms (Views: 284.0ms | ActiveRecord: 2.1ms)
+
+
+Started DELETE "/user_comments/3" for ::1 at 2020-10-05 15:14:27 -0500
+Processing by UserCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/78m8HK6rA/z3P+8rhxg+sAZt5cLoWZ4OPpvSSHx/qQpAd8jqDbL1/25Z9bwHkr2s8NcygC2V7FPezOY6dVVTQ==", "id"=>"3"}
+  [1m[36mUserComment Load (0.9ms)[0m  [1m[34mSELECT  "user_comments".* FROM "user_comments" WHERE "user_comments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/user_comments_controller.rb:58
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_comments_controller.rb:64
+  [1m[36mUserComment Destroy (1.1ms)[0m  [1m[31mDELETE FROM "user_comments" WHERE "user_comments"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/user_comments_controller.rb:64
+  [1m[35m (14.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_comments_controller.rb:64
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 71ms (ActiveRecord: 18.0ms)
+
+
+Started GET "/users/1" for ::1 at 2020-10-05 15:14:28 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserComment Load (1.0ms)[0m  [1m[34mSELECT "user_comments".* FROM "user_comments" WHERE "user_comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (38.6ms)
+Completed 200 OK in 445ms (Views: 416.0ms | ActiveRecord: 2.3ms)
+
+

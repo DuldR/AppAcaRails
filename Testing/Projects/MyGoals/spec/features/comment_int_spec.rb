@@ -7,7 +7,7 @@ feature "comment features", type: :feature do
 
     subject(:user) { FactoryBot.create(:user) }
     subject(:goal) { FactoryBot.create(:goal, user_id: user.id) }
-    subject(:user_comment) { UserComment.create(body: "Hello user!", user_id: user.id, )}
+    let!(:user_comment) { UserComment.create(body: "Hello user!", user_id: user.id, )}
     subject(:goal_comment) { GoalComment.create(body: "Hello goal!", goal_id: goal.id, )}
 
 
@@ -102,7 +102,7 @@ feature "comment features", type: :feature do
     feature "deleting user comment" do
 
         before(:each) do
-            visit user_comment_url(user_comment)
+            visit user_url(user)
             click_on "Delete"
         end
 
