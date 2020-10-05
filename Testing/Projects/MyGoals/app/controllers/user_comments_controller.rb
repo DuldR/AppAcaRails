@@ -17,10 +17,10 @@ class UserCommentsController < ApplicationController
         @usercomment = UserComment.new(usercomment_params)
 
         if @usercomment.save
-            redirect_to user_url(1)
+            redirect_to user_url(@usercomment.user_id)
         else
             flash.now[:errors] = "Could not save comment."
-            redirect_to user_url(1)
+            redirect_to users_url
         end
 
     end

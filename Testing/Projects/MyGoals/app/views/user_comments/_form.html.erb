@@ -10,12 +10,12 @@
         <input type="hidden" name="_method" value="<%= http_method %>">
         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
-        <label for="name">User?</label>
-        <input type="text" name="user_comment[user_id]" id="body" value="<%= user_id %>">
+        <label for="user_id">User?</label>
+        <input type="text" name="user_comment[user_id]" id="user_id" value="<%= user_id %>">
 
         <br>
 
-        <label for="name"><%= label_text %></label>
+        <label for="body"><%= label_text %></label>
         <input type="text" name="user_comment[body]" id="body" value="<%= user_comment.body %>">
         
         <br>

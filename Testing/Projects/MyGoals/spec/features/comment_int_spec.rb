@@ -36,15 +36,14 @@ feature "comment features", type: :feature do
 
             visit new_user_comment_url
 
-            fill_in 'body', :with => "Good user!"
-            fill_in 'user', :with => "1"
-            click_on "Submit"
+            fill_in 'Add a Comment', :with => "Good user!"
+            fill_in 'User?', :with => user.id
+            click_on "Create User Comment"
 
         end
 
         scenario "shows user comment after inputting" do
 
-            visit user_url(1)
             expect(page).to have_content "Good user!"
 
         end
