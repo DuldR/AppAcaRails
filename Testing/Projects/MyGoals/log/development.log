@@ -6993,3 +6993,458 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 379ms (Views: 349.8ms | ActiveRecord: 3.0ms)
 
 
+Started GET "/users/1" for ::1 at 2020-10-05 13:26:41 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserComment Load (1.0ms)[0m  [1m[34mSELECT "user_comments".* FROM "user_comments" WHERE "user_comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (76.1ms)
+Completed 200 OK in 361ms (Views: 340.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/users/1" for ::1 at 2020-10-05 13:26:51 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserComment Load (0.9ms)[0m  [1m[34mSELECT "user_comments".* FROM "user_comments" WHERE "user_comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (80.6ms)
+Completed 200 OK in 377ms (Views: 356.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/user_comments/2/edit" for ::1 at 2020-10-05 13:26:56 -0500
+Processing by UserCommentsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUserComment Load (1.1ms)[0m  [1m[34mSELECT  "user_comments".* FROM "user_comments" WHERE "user_comments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user_comments_controller.rb:12
+  Rendering user_comments/edit.html.erb within layouts/application
+  Rendered user_comments/_form.html.erb (6.4ms)
+  Rendered user_comments/edit.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 278ms (Views: 259.0ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/user_comments/1" for ::1 at 2020-10-05 13:27:00 -0500
+Processing by UserCommentsController#update as HTML
+  Parameters: {"authenticity_token"=>"2jEyZ/+OJF6vZMqKHeyO2xJHJpsgfuYOVEtPa9yMRiUMj8u0JQJDhqEBUuBD7qTXYZ3Nxitp18cjyhO6FKjtzA==", "user_comment"=>{"user_id"=>"1", "body"=>"Round 69"}, "id"=>"1"}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_comments_controller.rb:50
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_comments_controller.rb:50
+  [1m[36mUserComment Create (1.0ms)[0m  [1m[32mINSERT INTO "user_comments" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Round 69"], ["user_id", 1], ["created_at", "2020-10-05 18:27:01.038014"], ["updated_at", "2020-10-05 18:27:01.038014"]]
+  ↳ app/controllers/user_comments_controller.rb:50
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_comments_controller.rb:50
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 87ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/users/1" for ::1 at 2020-10-05 13:27:01 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserComment Load (1.1ms)[0m  [1m[34mSELECT "user_comments".* FROM "user_comments" WHERE "user_comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (94.8ms)
+Completed 200 OK in 380ms (Views: 359.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/user_comments/2/edit" for ::1 at 2020-10-05 13:27:06 -0500
+Processing by UserCommentsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUserComment Load (1.0ms)[0m  [1m[34mSELECT  "user_comments".* FROM "user_comments" WHERE "user_comments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user_comments_controller.rb:12
+  Rendering user_comments/edit.html.erb within layouts/application
+  Rendered user_comments/_form.html.erb (6.7ms)
+  Rendered user_comments/edit.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 285ms (Views: 268.2ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/user_comments/1" for ::1 at 2020-10-05 13:27:09 -0500
+Processing by UserCommentsController#update as HTML
+  Parameters: {"authenticity_token"=>"D9vsH/W2u6+3AzOeH3z/JI15M4hcaunzCDg4S6ZmjkzZZRXMLzrcd7lmq/RBftUo/qPY1Vd92Dp/uWSabkIlpQ==", "user_comment"=>{"user_id"=>"1", "body"=>"Round 3"}, "id"=>"1"}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_comments_controller.rb:50
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_comments_controller.rb:50
+  [1m[36mUserComment Create (1.2ms)[0m  [1m[32mINSERT INTO "user_comments" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Round 3"], ["user_id", 1], ["created_at", "2020-10-05 18:27:09.401582"], ["updated_at", "2020-10-05 18:27:09.401582"]]
+  ↳ app/controllers/user_comments_controller.rb:50
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_comments_controller.rb:50
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 88ms (ActiveRecord: 11.8ms)
+
+
+Started GET "/users/1" for ::1 at 2020-10-05 13:27:09 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserComment Load (1.1ms)[0m  [1m[34mSELECT "user_comments".* FROM "user_comments" WHERE "user_comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (86.4ms)
+Completed 200 OK in 360ms (Views: 336.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/user_comments/new" for ::1 at 2020-10-05 13:27:12 -0500
+Processing by UserCommentsController#new as HTML
+  Rendering user_comments/new.html.erb within layouts/application
+  Rendered user_comments/_form.html.erb (6.1ms)
+  Rendered user_comments/new.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 275ms (Views: 268.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_comments" for ::1 at 2020-10-05 13:27:16 -0500
+Processing by UserCommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"HXLlu6oNRO0EkVBUFAHxe92nMlkfV7ZzXXlznm1Yje3LzBxocIEjNQr0yD5KA9t3rn3ZBBRAh7oq+C9PpXwmBA==", "user_comment"=>{"user_id"=>"1", "body"=>"OK"}}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_comments_controller.rb:19
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_comments_controller.rb:19
+  [1m[36mUserComment Create (1.1ms)[0m  [1m[32mINSERT INTO "user_comments" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "OK"], ["user_id", 1], ["created_at", "2020-10-05 18:27:16.869958"], ["updated_at", "2020-10-05 18:27:16.869958"]]
+  ↳ app/controllers/user_comments_controller.rb:19
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_comments_controller.rb:19
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 82ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/users/1" for ::1 at 2020-10-05 13:27:16 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserComment Load (1.1ms)[0m  [1m[34mSELECT "user_comments".* FROM "user_comments" WHERE "user_comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (95.9ms)
+Completed 200 OK in 373ms (Views: 347.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/user_comments/16/edit" for ::1 at 2020-10-05 13:27:20 -0500
+Processing by UserCommentsController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mUserComment Load (1.1ms)[0m  [1m[34mSELECT  "user_comments".* FROM "user_comments" WHERE "user_comments"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/user_comments_controller.rb:12
+  Rendering user_comments/edit.html.erb within layouts/application
+  Rendered user_comments/_form.html.erb (11.0ms)
+  Rendered user_comments/edit.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 320ms (Views: 298.6ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/user_comments/1" for ::1 at 2020-10-05 13:27:22 -0500
+Processing by UserCommentsController#update as HTML
+  Parameters: {"authenticity_token"=>"a9i5pc+Bik2bL+Knc1PAUDNOJtI8a/Bfiie9lVz5sRK9ZkB2FQ3tlZVKes0tUepcQJTNjzd8wZb9puFElN0a+w==", "user_comment"=>{"user_id"=>"1", "body"=>"dsafffffff"}, "id"=>"1"}
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_comments_controller.rb:50
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_comments_controller.rb:50
+  [1m[36mUserComment Create (1.6ms)[0m  [1m[32mINSERT INTO "user_comments" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "dsafffffff"], ["user_id", 1], ["created_at", "2020-10-05 18:27:23.050046"], ["updated_at", "2020-10-05 18:27:23.050046"]]
+  ↳ app/controllers/user_comments_controller.rb:50
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_comments_controller.rb:50
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 90ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/users/1" for ::1 at 2020-10-05 13:27:23 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserComment Load (0.9ms)[0m  [1m[34mSELECT "user_comments".* FROM "user_comments" WHERE "user_comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (97.8ms)
+Completed 200 OK in 373ms (Views: 353.8ms | ActiveRecord: 2.0ms)
+
+
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE DATABASE "MyGoals_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "MyGoals_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (14.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35mSQL (3.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (48.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "goal_comments" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (57.8ms)[0m  [1m[35mCREATE TABLE "goal_comments" ("id" bigserial primary key, "body" character varying NOT NULL, "goal_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (34.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "goals" CASCADE[0m
+  ↳ db/schema.rb:25
+  [1m[35m (23.1ms)[0m  [1m[35mCREATE TABLE "goals" ("id" bigserial primary key, "body" character varying NOT NULL, "user_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "title" character varying NOT NULL, "is_public" boolean DEFAULT FALSE, "status" character varying NOT NULL)[0m
+  ↳ db/schema.rb:25
+  [1m[35m (15.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_comments" CASCADE[0m
+  ↳ db/schema.rb:35
+  [1m[35m (21.3ms)[0m  [1m[35mCREATE TABLE "user_comments" ("id" bigserial primary key, "body" character varying NOT NULL, "user_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:35
+  [1m[35m (20.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:42
+  [1m[35m (18.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:42
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35mSQL (0.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (28.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "goal_comments" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (82.6ms)[0m  [1m[35mCREATE TABLE "goal_comments" ("id" bigserial primary key, "body" character varying NOT NULL, "goal_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (16.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "goals" CASCADE[0m
+  ↳ db/schema.rb:25
+  [1m[35m (18.7ms)[0m  [1m[35mCREATE TABLE "goals" ("id" bigserial primary key, "body" character varying NOT NULL, "user_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "title" character varying NOT NULL, "is_public" boolean DEFAULT FALSE, "status" character varying NOT NULL)[0m
+  ↳ db/schema.rb:25
+  [1m[35m (15.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_comments" CASCADE[0m
+  ↳ db/schema.rb:35
+  [1m[35m (28.0ms)[0m  [1m[35mCREATE TABLE "user_comments" ("id" bigserial primary key, "body" character varying NOT NULL, "user_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:35
+  [1m[35m (14.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:42
+  [1m[35m (21.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:42
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (14.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2020-10-05 18:28:13.244621"], ["key", "environment"]]
+  ↳ db/schema.rb:13
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-10-05 18:28:13.250467"], ["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Exists (9.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coolguy420"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "coolguy420"], ["password_digest", "$2a$12$Wj2aJF855CyOQDyO04/22.ut8AEdxoRJiWXlnCwDtDgI343VZI0xS"], ["session_token", "s2ljjBmNjgOTzqZslrus_A"], ["created_at", "2020-10-05 18:28:13.534475"], ["updated_at", "2020-10-05 18:28:13.534475"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mGoal Create (7.0ms)[0m  [1m[32mINSERT INTO "goals" ("body", "user_id", "created_at", "updated_at", "title", "status") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["body", "What a goal!"], ["user_id", 1], ["created_at", "2020-10-05 18:28:13.570691"], ["updated_at", "2020-10-05 18:28:13.570691"], ["title", "my goal"], ["status", "OPEN"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUserComment Create (7.7ms)[0m  [1m[32mINSERT INTO "user_comments" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "420 Eveyrday."], ["user_id", 1], ["created_at", "2020-10-05 18:28:13.593860"], ["updated_at", "2020-10-05 18:28:13.593860"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mGoal Load (0.3ms)[0m  [1m[34mSELECT  "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mGoalComment Create (7.4ms)[0m  [1m[32mINSERT INTO "goal_comments" ("body", "goal_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Yay!"], ["goal_id", 1], ["created_at", "2020-10-05 18:28:13.619134"], ["updated_at", "2020-10-05 18:28:13.619134"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+Started GET "/users/1" for ::1 at 2020-10-05 13:28:21 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserComment Load (2.6ms)[0m  [1m[34mSELECT "user_comments".* FROM "user_comments" WHERE "user_comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 383ms (Views: 358.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/user_comments/1/edit" for ::1 at 2020-10-05 13:28:23 -0500
+Processing by UserCommentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserComment Load (1.4ms)[0m  [1m[34mSELECT  "user_comments".* FROM "user_comments" WHERE "user_comments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_comments_controller.rb:12
+  Rendering user_comments/edit.html.erb within layouts/application
+  Rendered user_comments/_form.html.erb (6.3ms)
+  Rendered user_comments/edit.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 309ms (Views: 290.2ms | ActiveRecord: 1.4ms)
+
+
+Started PATCH "/user_comments/1" for ::1 at 2020-10-05 13:28:25 -0500
+Processing by UserCommentsController#update as HTML
+  Parameters: {"authenticity_token"=>"oEQL7yiCV8fPWpHTXr8LZaKyz+d527QtcjKjGaCjZAZ2+vI88g4wH8E/CbkAvSFp0WgkunLMheQFs//IaIfP7w==", "user_comment"=>{"user_id"=>"1", "body"=>"sdf"}, "id"=>"1"}
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_comments_controller.rb:50
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_comments_controller.rb:50
+  [1m[36mUserComment Create (1.1ms)[0m  [1m[32mINSERT INTO "user_comments" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "sdf"], ["user_id", 1], ["created_at", "2020-10-05 18:28:25.881144"], ["updated_at", "2020-10-05 18:28:25.881144"]]
+  ↳ app/controllers/user_comments_controller.rb:50
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_comments_controller.rb:50
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 107ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/users/1" for ::1 at 2020-10-05 13:28:25 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserComment Load (5.2ms)[0m  [1m[34mSELECT "user_comments".* FROM "user_comments" WHERE "user_comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (43.5ms)
+Completed 200 OK in 345ms (Views: 311.8ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/users/1" for ::1 at 2020-10-05 13:29:02 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserComment Load (1.9ms)[0m  [1m[34mSELECT "user_comments".* FROM "user_comments" WHERE "user_comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (180.1ms)
+Completed 200 OK in 615ms (Views: 453.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/user_comments/1/edit" for ::1 at 2020-10-05 13:29:06 -0500
+Processing by UserCommentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserComment Load (1.0ms)[0m  [1m[34mSELECT  "user_comments".* FROM "user_comments" WHERE "user_comments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_comments_controller.rb:12
+  Rendering user_comments/edit.html.erb within layouts/application
+  Rendered user_comments/_form.html.erb (10.5ms)
+  Rendered user_comments/edit.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 340ms (Views: 312.4ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/user_comments/1" for ::1 at 2020-10-05 13:29:08 -0500
+Processing by UserCommentsController#update as HTML
+  Parameters: {"authenticity_token"=>"jLLr4zxB2vLds/+1TbxN/wW6VpXDZ4looggkzT1ZITJaDBIw5s29KtPWZ98TvmfzdmC9yMhwuKHViXgc9X2K2w==", "user_comment"=>{"user_id"=>"1", "body"=>"fffffffff"}, "id"=>"1"}
+  [1m[36mUserComment Load (1.4ms)[0m  [1m[34mSELECT  "user_comments".* FROM "user_comments" WHERE "user_comments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_comments_controller.rb:43
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_comments_controller.rb:50
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_comments_controller.rb:50
+  [1m[36mUserComment Update (1.2ms)[0m  [1m[33mUPDATE "user_comments" SET "body" = $1, "updated_at" = $2 WHERE "user_comments"."id" = $3[0m  [["body", "fffffffff"], ["updated_at", "2020-10-05 18:29:08.272122"], ["id", 1]]
+  ↳ app/controllers/user_comments_controller.rb:50
+  [1m[35m (9.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_comments_controller.rb:50
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 146ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/users/1" for ::1 at 2020-10-05 13:29:08 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserComment Load (1.1ms)[0m  [1m[34mSELECT "user_comments".* FROM "user_comments" WHERE "user_comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 351ms (Views: 325.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/user_comments/2/edit" for ::1 at 2020-10-05 13:54:33 -0500
+Processing by UserCommentsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUserComment Load (2.0ms)[0m  [1m[34mSELECT  "user_comments".* FROM "user_comments" WHERE "user_comments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user_comments_controller.rb:12
+  Rendering user_comments/edit.html.erb within layouts/application
+  Rendered user_comments/_form.html.erb (15.9ms)
+  Rendered user_comments/edit.html.erb within layouts/application (34.2ms)
+Completed 200 OK in 550ms (Views: 372.3ms | ActiveRecord: 32.6ms)
+
+
+Started PATCH "/user_comments/1" for ::1 at 2020-10-05 13:54:39 -0500
+Processing by UserCommentsController#update as HTML
+  Parameters: {"authenticity_token"=>"i+6YAjEcr6J5XyeccT5uPuolE2GfXm1SWDk3JtPmyfNdUGHR65DIenc6v/YvPEQymf/4PJRJXJsvuGv3G8JiGg==", "user_comment"=>{"user_id"=>"1", "body"=>"New Edit"}, "id"=>"1"}
+  [1m[36mUserComment Load (4.3ms)[0m  [1m[34mSELECT  "user_comments".* FROM "user_comments" WHERE "user_comments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_comments_controller.rb:42
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 4.3ms)
+
+
+
+SystemExit - exit:
+  (byebug):1:in `update'
+  app/controllers/user_comments_controller.rb:45:in `update'
+
+Started POST "/__better_errors/6e63660baa2f3dd8/variables" for ::1 at 2020-10-05 13:54:40 -0500
+Started GET "/users/1" for ::1 at 2020-10-05 13:57:59 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserComment Load (1.0ms)[0m  [1m[34mSELECT "user_comments".* FROM "user_comments" WHERE "user_comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (92.4ms)
+Completed 200 OK in 516ms (Views: 366.7ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/user_comments/2/edit" for ::1 at 2020-10-05 13:58:01 -0500
+Processing by UserCommentsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUserComment Load (1.1ms)[0m  [1m[34mSELECT  "user_comments".* FROM "user_comments" WHERE "user_comments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user_comments_controller.rb:12
+  Rendering user_comments/edit.html.erb within layouts/application
+  Rendered user_comments/_form.html.erb (10.9ms)
+  Rendered user_comments/edit.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 297ms (Views: 278.7ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/user_comments/1" for ::1 at 2020-10-05 13:58:07 -0500
+Processing by UserCommentsController#update as HTML
+  Parameters: {"authenticity_token"=>"6QNGeVC1ZVmc7r1n2RjuL0W/GPQ6QeAOYL9+cn71G8E/vb+qijkCgZKLJQ2HGsQjNmXzqTFW0ccXPiKjttGwKA==", "user_comment"=>{"user_id"=>"1", "body"=>"sdf"}, "id"=>"1"}
+  [1m[36mUserComment Load (1.7ms)[0m  [1m[34mSELECT  "user_comments".* FROM "user_comments" WHERE "user_comments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_comments_controller.rb:42
+Completed 500 Internal Server Error in 14329ms (ActiveRecord: 1.7ms)
+
+
+
+SystemExit - exit:
+  (byebug):1:in `update'
+  app/controllers/user_comments_controller.rb:45:in `update'
+
+Started POST "/__better_errors/2233ec0d888a4b23/variables" for ::1 at 2020-10-05 13:58:21 -0500

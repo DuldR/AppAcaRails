@@ -1,4 +1,4 @@
-<% action_url = user_comment.persisted? ? user_comment_url(user_comment.user_id) : user_comments_url %>
+<% action_url = user_comment.persisted? ? user_comment_url(user_comment) : user_comments_url %>
 <% http_method = user_comment.persisted? ? "PATCH" : "POST" %>
 <% user_id = user_comment.persisted? ? "#{user_comment.user_id}" : "" %>
 <% button_text = user_comment.persisted? ? "Update User Comment" : "Create User Comment" %>

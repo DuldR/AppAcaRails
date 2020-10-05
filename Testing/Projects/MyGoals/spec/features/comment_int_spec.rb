@@ -72,7 +72,7 @@ feature "comment features", type: :feature do
     feature "updating user comment" do
 
         before(:each) do
-            visit edit_user_comment_url(user_comment.id)
+            visit edit_user_comment_url(user_comment)
             fill_in 'body', :with => "New user!"
             click_on "Update User Comment"
         end

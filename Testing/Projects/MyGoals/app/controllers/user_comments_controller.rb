@@ -39,9 +39,7 @@ class UserCommentsController < ApplicationController
 
     def update
 
-
-        @usercomment = UserComment.new(usercomment_params)
-
+        @usercomment = UserComment.find_by(id: params[:id])
 
         if @usercomment.nil?
             flash.now[:errors] = "Cannot be updated."
