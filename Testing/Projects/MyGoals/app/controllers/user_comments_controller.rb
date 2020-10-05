@@ -9,7 +9,7 @@ class UserCommentsController < ApplicationController
     end
 
     def edit
-        @usercomment = UserComment.find(params[:id])
+        @usercomment = UserComment.find_by(id: params[:id])
         render :edit
     end
 
@@ -28,7 +28,7 @@ class UserCommentsController < ApplicationController
     def show
 
         @usercomment = UserComment.find_by(id: params[:id])
-
+       
         if @usercomment.nil?
             render :status => 404
         else
@@ -38,17 +38,20 @@ class UserCommentsController < ApplicationController
     end
 
     def update
-        @usercomment = UserComment.find_by(id: params[:id])
+
+
+        @usercomment = UserComment.new(usercomment_params)
+
 
         if @usercomment.nil?
             flash.now[:errors] = "Cannot be updated."
             redirect_to user_comment_url(params[:id])
         else
             if @usercomment.update_attributes(usercomment_params)
-                redirect_to user_url(@usercomment)
+                redirect_to user_url(@usercomment.user_id)
             else
                 flash.now[:errors] = "Make sure you update correctly."
-                redirect_to user_url(@usercomment)
+                redirect_to user_url(@usercomment.user_id)
             end
         end
     end
