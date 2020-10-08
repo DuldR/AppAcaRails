@@ -30,7 +30,7 @@ class User < ApplicationRecord
     before_validation :ensure_session_token
 
     has_many :goals
-    has_many :user_comments
+    has_many :comments, as: :commentable
 
 
     def self.find_by_credentials(username, password)

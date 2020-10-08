@@ -19,7 +19,7 @@ class Goal < ApplicationRecord
     validates :body, :user_id, :title, presence: true
     validates :status, inclusion: { in: %w(OPEN CLOSED) }
     belongs_to :user
-    has_many :goal_comments
+    has_many :comments, as: :commentable
 
 
 
