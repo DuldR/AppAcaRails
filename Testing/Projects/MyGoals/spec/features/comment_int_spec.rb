@@ -7,14 +7,15 @@ feature "comment features", type: :feature do
 
     subject(:user) { FactoryBot.create(:user) }
     subject(:goal) { FactoryBot.create(:goal, user_id: user.id) }
-    let!(:user_comment) { UserComment.create(body: "Hello user!", user_id: user.id, )}
-    let!(:goal_comment) { GoalComment.create(body: "Hello goal!", goal_id: goal.id, )}
+    let!(:user_comment) { Comment.create(body: "Hello user!", title: "User Comment", commentable_type: "User", commentable_id: user.id )}
+    let!(:goal_comment) { Comment.create(body: "Hello goal!", title: "Goal Comment", commentable_type: "Goal", commentable_id: goal.id )}
+
 
 
 
     feature "shows user comment on page" do
         scenario "shows comment with valid params" do
-            visit user_comment_url(user_comment.id)
+            visit comment_url(user_comment.id)
             expect(page).to have_content 'Hello user!'
 
         end
@@ -23,7 +24,8 @@ feature "comment features", type: :feature do
 
     feature "shows goal comment on page" do
         scenario "shows comment with valid params" do
-            visit goal_comment_url(goal_comment.id)
+ 
+            visit comment_url(goal_comment.id)
             expect(page).to have_content 'Hello goal!'
 
         end
@@ -34,16 +36,16 @@ feature "comment features", type: :feature do
 
         before(:each) do
 
-            visit new_user_comment_url
+            visit new_comment_url
 
             fill_in 'Add a Comment', :with => "Good user!"
-            fill_in 'User?', :with => user.id
-            click_on "Create User Comment"
+            fill_in 'Title', :with => "My user comment"
+            fill_in 'Id?', :with => user.id
+            click_on "Create Comment"
 
         end
 
         scenario "shows user comment after inputting" do
-
             expect(page).to have_content "Good user!"
 
         end
@@ -54,11 +56,11 @@ feature "comment features", type: :feature do
     feature "make a new goal comment" do
 
         before(:each) do
-            visit new_goal_comment_url
+            visit new_comment_url
 
             fill_in 'body', :with => "Good goal!"
-            fill_in 'goal_id', :with => goal.id
-            click_on "Create Goal Comment"
+            fill_in 'Id?', :with => goal.id
+            click_on "Create Comment"
         end
 
         scenario "shows goal comment after inputting" do
@@ -71,9 +73,9 @@ feature "comment features", type: :feature do
     feature "updating user comment" do
 
         before(:each) do
-            visit edit_user_comment_url(user_comment)
+            visit edit_comment_url(user_comment)
             fill_in 'body', :with => "New user!"
-            click_on "Update User Comment"
+            click_on "Update Comment"
         end
 
         scenario "shows updated user comment" do
@@ -86,9 +88,9 @@ feature "comment features", type: :feature do
     feature "updating goal comment" do
 
         before(:each) do
-            visit edit_goal_comment_url(goal_comment)
+            visit edit_comment_url(goal_comment)
             fill_in 'body', :with => "New goal!"
-            click_on "Update Goal Comment"
+            click_on "Update Comment"
         end
 
         scenario "shows updated goal comment" do

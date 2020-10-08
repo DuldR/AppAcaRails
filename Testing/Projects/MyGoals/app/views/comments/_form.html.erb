@@ -1,0 +1,31 @@
+<% action_url = comment.persisted? ? comment_url(comment) : comments_url %>
+<% http_method = comment.persisted? ? "PATCH" : "POST" %>
+<% id = comment.persisted? ? "#{comment.commentable_id}" : "" %>
+<% label_text = comment.persisted? ? "Edit the Comment " : "Add a Comment " %>
+<% button_text = comment.persisted? ? "Update Comment" : "Create Comment" %>
+
+
+<section> 
+    <form action="<%= action_url %>" method="POST">
+
+        <input type="hidden" name="_method" value="<%= http_method %>">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+        <label for="id">Id?</label>
+        <input type="text" name="comment[commentable_id]" id="id" value="<%= id %>">
+
+        <br>
+
+        <label for="id">Title</label>
+        <input type="text" name="comment[title]" id="title" value="<%= comment.title %>">
+
+        <br>
+
+        <label for="body"><%= label_text %></label>
+        <input type="text" name="comment[body]" id="body" value="<%= comment.body %>">
+        
+        <br>
+
+        <input type="submit" value="<%= button_text %>">
+    </form>
+</section>
