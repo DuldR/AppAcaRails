@@ -12,5 +12,5 @@ u.save!
 
 Goal.create(body: "What a goal!", title: "my goal", status: "OPEN", user_id: 1)
 
-UserComment.create(body: "420 Eveyrday.", user_id: 1)
-GoalComment.create(body: "Yay!", goal_id: 1)
+Comment.create(title: "User Comment", body: "User has joind your channel", commentable_type: "User", commentable_id: 1)
+Comment.create(title: "Goal Comment", body: "Goal has joind your channel", commentable_type: "Goal", commentable_id: 1)

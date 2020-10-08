@@ -1,13 +1,13 @@
-<%= link_to "Add A Comment?", new_goal_comment_url %>
+<%= link_to "Add A Comment?", new_comment_url %>
 
 <br>
 
 
-<% @goal.goal_comments.each do |comm| %>
+<% @goal.comments.each do |comm| %>
     <%= comm.body %>
     <br>
-    <%= link_to "Edit Comment?", edit_goal_comment_url(comm.id) %>
-    <form action="<%= goal_comment_url(comm) %>" method="post">
+    <%= link_to "Edit Comment?", edit_comment_url(comm.id) %>
+    <form action="<%= comment_url(comm) %>" method="post">
 
         <input type="hidden" name="_method" value="delete">
         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
