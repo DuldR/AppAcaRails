@@ -38,9 +38,13 @@ feature "comment features", type: :feature do
 
             visit new_comment_url
 
+
             fill_in 'Add a Comment', :with => "Good user!"
             fill_in 'Title', :with => "My user comment"
+            fill_in 'For?', :with => "User"
             fill_in 'Id?', :with => user.id
+
+
             click_on "Create Comment"
 
         end
@@ -58,8 +62,12 @@ feature "comment features", type: :feature do
         before(:each) do
             visit new_comment_url
 
-            fill_in 'body', :with => "Good goal!"
+            fill_in 'Add a Comment', :with => "Good goal!"
+            fill_in 'Title', :with => "My goal comment"
+            fill_in 'For?', :with => "Goal"
             fill_in 'Id?', :with => goal.id
+
+
             click_on "Create Comment"
         end
 

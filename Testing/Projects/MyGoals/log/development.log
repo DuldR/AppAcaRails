@@ -8128,3 +8128,124 @@ Processing by GoalsController#show as HTML
 Completed 200 OK in 29ms (Views: 12.3ms | ActiveRecord: 4.6ms)
 
 
+Started GET "/comments/new" for 127.0.0.1 at 2020-10-08 15:01:04 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/_form.html.erb (0.8ms)
+  Rendered comments/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 23ms (Views: 11.2ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/comments" for 127.0.0.1 at 2020-10-08 15:01:12 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"A+bWBx8zzub90Br2u4gUkNaQ+90rxYrm+E0/y15OX3j7go718WTpDgXLyZsGIj11V6dOtUU+059LhqJM0DrOxA==", "comment"=>{"commentable_id"=>"1", "commentable_type"=>"User", "title"=>"fdg", "body"=>"sdgfgdf"}}
+Completed 500 Internal Server Error in 9276ms (ActiveRecord: 0.0ms)
+
+
+
+SystemExit - exit:
+  (byebug):1:in `create'
+  app/controllers/comments_controller.rb:20:in `create'
+
+Started POST "/__better_errors/312940714266cc40/variables" for 127.0.0.1 at 2020-10-08 15:01:21 -0500
+Started POST "/comments" for 127.0.0.1 at 2020-10-08 15:01:49 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"A+bWBx8zzub90Br2u4gUkNaQ+90rxYrm+E0/y15OX3j7go718WTpDgXLyZsGIj11V6dOtUU+059LhqJM0DrOxA==", "comment"=>{"commentable_id"=>"1", "commentable_type"=>"User", "title"=>"fdg", "body"=>"sdgfgdf"}}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:19
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:19
+  [1m[36mComment Create (1.2ms)[0m  [1m[32mINSERT INTO "comments" ("title", "body", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "fdg"], ["body", "sdgfgdf"], ["commentable_type", "User"], ["commentable_id", 1], ["created_at", "2020-10-08 20:01:50.117490"], ["updated_at", "2020-10-08 20:01:50.117490"]]
+  ↳ app/controllers/comments_controller.rb:19
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:19
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 225ms (ActiveRecord: 12.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2020-10-08 15:01:50 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 1], ["commentable_type", "User"]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (61.6ms)
+Completed 200 OK in 251ms (Views: 227.4ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/comments/3" for 127.0.0.1 at 2020-10-08 15:02:00 -0500
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WpXGcXj4SiRYj9H3d3bGKX7oDToS2IaCq71iH0GaaRKi8Z6Dlq9tzKCUAprK3O/M/9+4Unwj3/sYdv+Yz+74rg==", "id"=>"3"}
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:66
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:72
+  [1m[36mComment Destroy (0.8ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/comments_controller.rb:72
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:72
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 43ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2020-10-08 15:02:00 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mComment Load (1.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 1], ["commentable_type", "User"]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 217ms (Views: 199.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/comments/new" for 127.0.0.1 at 2020-10-08 15:04:56 -0500
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/_form.html.erb (6.1ms)
+  Rendered comments/new.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 305ms (Views: 206.8ms | ActiveRecord: 8.6ms)
+
+
+Started POST "/comments" for 127.0.0.1 at 2020-10-08 15:06:44 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"MWcEFXs0asr2a/+0WemqaXgkxQMBlEfj0gxVHBA6C8TJA1znlWNNIg5wLNnkQ4OM+RNwa29vHpphx8ibnk6aeA==", "comment"=>{"commentable_id"=>"1", "commentable_type"=>"User", "title"=>"Ok", "body"=>"RAT"}}
+Completed 500 Internal Server Error in 18406ms (ActiveRecord: 0.0ms)
+
+
+
+SystemExit - exit:
+  (byebug):1:in `create'
+  app/controllers/comments_controller.rb:19:in `create'
+
+Started POST "/__better_errors/82d12ec55b2ffde7/variables" for 127.0.0.1 at 2020-10-08 15:07:02 -0500
+Started POST "/comments" for 127.0.0.1 at 2020-10-08 15:07:04 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"MWcEFXs0asr2a/+0WemqaXgkxQMBlEfj0gxVHBA6C8TJA1znlWNNIg5wLNnkQ4OM+RNwa29vHpphx8ibnk6aeA==", "comment"=>{"commentable_id"=>"1", "commentable_type"=>"User", "title"=>"Ok", "body"=>"RAT"}}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:19
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:19
+  [1m[36mComment Create (1.0ms)[0m  [1m[32mINSERT INTO "comments" ("title", "body", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Ok"], ["body", "RAT"], ["commentable_type", "User"], ["commentable_id", 1], ["created_at", "2020-10-08 20:07:05.753493"], ["updated_at", "2020-10-08 20:07:05.753493"]]
+  ↳ app/controllers/comments_controller.rb:19
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:19
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 290ms (ActiveRecord: 12.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2020-10-08 15:07:05 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 1], ["commentable_type", "User"]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (63.4ms)
+Completed 200 OK in 293ms (Views: 271.1ms | ActiveRecord: 5.9ms)
+
+

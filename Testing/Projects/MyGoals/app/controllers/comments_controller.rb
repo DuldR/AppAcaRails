@@ -15,8 +15,7 @@ class CommentsController < ApplicationController
 
     def create
         @comment = Comment.new(comment_params)
-
-        byebug
+        
         if @comment.save
             if @comment.commentable_type == "User"
                 redirect_to user_url(@comment.commentable_id)
