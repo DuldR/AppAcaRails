@@ -14,5 +14,6 @@ class GoalComment < ApplicationRecord
     validates :goal_id, presence: true
 
     belongs_to :goal
+    has_many :goal_comments
 
 end

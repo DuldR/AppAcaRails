@@ -1,0 +1,25 @@
+<% action_url = goal_comment.persisted? ? goal_comment_url(goal_comment) : goal_comments_url %>
+<% http_method = goal_comment.persisted? ? "PATCH" : "POST" %>
+<% goal_id = goal_comment.persisted? ? "#{goal_comment.goal_id}" : "" %>
+<% button_text = goal_comment.persisted? ? "Update Goal Comment" : "Create Goal Comment" %>
+<% label_text = goal_comment.persisted? ? "Edit the Comment " : "Add a Comment " %>
+
+<section> 
+    <form action="<%= action_url %>" method="POST">
+
+        <input type="hidden" name="_method" value="<%= http_method %>">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+        <label for="goal_id">User?</label>
+        <input type="text" name="goal_comment[goal_id]" id="goal_id" value="<%= goal_id %>">
+
+        <br>
+
+        <label for="body"><%= label_text %></label>
+        <input type="text" name="goal_comment[body]" id="body" value="<%= goal_comment.body %>">
+        
+        <br>
+
+        <input type="submit" value="<%= button_text %>">
+    </form>
+</section>

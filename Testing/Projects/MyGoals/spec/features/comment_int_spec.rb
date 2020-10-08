@@ -8,7 +8,7 @@ feature "comment features", type: :feature do
     subject(:user) { FactoryBot.create(:user) }
     subject(:goal) { FactoryBot.create(:goal, user_id: user.id) }
     let!(:user_comment) { UserComment.create(body: "Hello user!", user_id: user.id, )}
-    subject(:goal_comment) { GoalComment.create(body: "Hello goal!", goal_id: goal.id, )}
+    let!(:goal_comment) { GoalComment.create(body: "Hello goal!", goal_id: goal.id, )}
 
 
 
@@ -57,12 +57,11 @@ feature "comment features", type: :feature do
             visit new_goal_comment_url
 
             fill_in 'body', :with => "Good goal!"
-            fill_in 'goal', :with => "1"
-            click_on "Submit"
+            fill_in 'goal_id', :with => goal.id
+            click_on "Create Goal Comment"
         end
 
         scenario "shows goal comment after inputting" do
-            visit goal_url(1)
             expect(page).to have_content "Good goal!"
         end
 
@@ -89,10 +88,10 @@ feature "comment features", type: :feature do
         before(:each) do
             visit edit_goal_comment_url(goal_comment)
             fill_in 'body', :with => "New goal!"
-            click_on "Submit"
+            click_on "Update Goal Comment"
         end
 
-        scenario "shows updated user comment" do
+        scenario "shows updated goal comment" do
             expect(page).to have_content "New goal!"
         end
 
@@ -120,11 +119,11 @@ feature "comment features", type: :feature do
     feature "deleting goal comment" do
 
         before(:each) do
-            visit goal_comment_url(goal_comment)
+            visit goal_url(goal)
             click_on "Delete"
         end
 
-        scenario "deletes user comment" do
+        scenario "deletes goal comment" do
 
             visit goal_url(goal)
             expect(page).to_not have_content "Hello goal!"

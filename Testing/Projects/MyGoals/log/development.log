@@ -7657,3 +7657,212 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 445ms (Views: 416.0ms | ActiveRecord: 2.3ms)
 
 
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "MyGoals_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "MyGoals_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (5.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "goal_comments" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (11.2ms)[0m  [1m[35mCREATE TABLE "goal_comments" ("id" bigserial primary key, "body" character varying NOT NULL, "goal_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "goals" CASCADE[0m
+  ↳ db/schema.rb:25
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "goals" ("id" bigserial primary key, "body" character varying NOT NULL, "user_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "title" character varying NOT NULL, "is_public" boolean DEFAULT FALSE, "status" character varying NOT NULL)[0m
+  ↳ db/schema.rb:25
+  [1m[35m (2.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_comments" CASCADE[0m
+  ↳ db/schema.rb:35
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "user_comments" ("id" bigserial primary key, "body" character varying NOT NULL, "user_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:35
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:42
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:42
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (4.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "goal_comments" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "goal_comments" ("id" bigserial primary key, "body" character varying NOT NULL, "goal_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "goals" CASCADE[0m
+  ↳ db/schema.rb:25
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "goals" ("id" bigserial primary key, "body" character varying NOT NULL, "user_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "title" character varying NOT NULL, "is_public" boolean DEFAULT FALSE, "status" character varying NOT NULL)[0m
+  ↳ db/schema.rb:25
+  [1m[35m (1.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_comments" CASCADE[0m
+  ↳ db/schema.rb:35
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "user_comments" ("id" bigserial primary key, "body" character varying NOT NULL, "user_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:35
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:42
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:42
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2020-10-08 02:26:07.012546"], ["key", "environment"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-10-08 02:26:07.016416"], ["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coolguy420"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "coolguy420"], ["password_digest", "$2a$12$UB.yo2566mRxwKV2Q4btdO4NYleBekeqswrqYL3X7.3PjhWFqpTce"], ["session_token", "iE-DJ8dmK3c46eUaYmg9nA"], ["created_at", "2020-10-08 02:26:07.257106"], ["updated_at", "2020-10-08 02:26:07.257106"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mGoal Create (0.3ms)[0m  [1m[32mINSERT INTO "goals" ("body", "user_id", "created_at", "updated_at", "title", "status") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["body", "What a goal!"], ["user_id", 1], ["created_at", "2020-10-08 02:26:07.283208"], ["updated_at", "2020-10-08 02:26:07.283208"], ["title", "my goal"], ["status", "OPEN"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUserComment Create (0.4ms)[0m  [1m[32mINSERT INTO "user_comments" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "420 Eveyrday."], ["user_id", 1], ["created_at", "2020-10-08 02:26:07.294148"], ["updated_at", "2020-10-08 02:26:07.294148"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT  "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mGoalComment Create (0.4ms)[0m  [1m[32mINSERT INTO "goal_comments" ("body", "goal_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Yay!"], ["goal_id", 1], ["created_at", "2020-10-08 02:26:07.305518"], ["updated_at", "2020-10-08 02:26:07.305518"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+Started GET "/goal_comments/1" for 127.0.0.1 at 2020-10-07 21:41:05 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/garrett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by GoalCommentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGoalComment Load (0.3ms)[0m  [1m[34mSELECT  "goal_comments".* FROM "goal_comments" WHERE "goal_comments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/goal_comments_controller.rb:30
+  Rendering goal_comments/show.html.erb within layouts/application
+  Rendered goal_comments/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 155ms (Views: 139.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/goals/1" for 127.0.0.1 at 2020-10-07 21:41:11 -0500
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT  "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/goals_controller.rb:17
+Completed 500 Internal Server Error in 5869ms (ActiveRecord: 3.9ms)
+
+
+
+SystemExit - exit:
+  (byebug):1:in `show'
+  app/controllers/goals_controller.rb:19:in `show'
+
+Started POST "/__better_errors/9ceec4dbf09420d4/variables" for 127.0.0.1 at 2020-10-07 21:41:17 -0500
+Started GET "/goals/1" for 127.0.0.1 at 2020-10-07 21:41:36 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/garrett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGoal Load (0.3ms)[0m  [1m[34mSELECT  "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/goals_controller.rb:17
+  Rendering goals/show.html.erb within layouts/application
+  [1m[36mGoalComment Load (0.2ms)[0m  [1m[34mSELECT "goal_comments".* FROM "goal_comments" WHERE "goal_comments"."goal_id" = $1[0m  [["goal_id", 1]]
+  ↳ app/views/goals/show.html.erb:6
+  Rendered goals/show.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 130ms (Views: 111.0ms | ActiveRecord: 5.3ms)
+
+
+Started DELETE "/goal_comments/1" for 127.0.0.1 at 2020-10-07 21:47:59 -0500
+Processing by GoalCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xgDZT594HNKun9Yvnezr/+KLdobHQzCNikpijDfdiZKDiw+nILD/18D3ask/SKj8mGGrhbg16xZCbrLvjx4J3w==", "id"=>"1"}
+  [1m[36mGoalComment Load (0.3ms)[0m  [1m[34mSELECT  "goal_comments".* FROM "goal_comments" WHERE "goal_comments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/goal_comments_controller.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/goal_comments_controller.rb:64
+  [1m[36mGoalComment Destroy (0.3ms)[0m  [1m[31mDELETE FROM "goal_comments" WHERE "goal_comments"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/goal_comments_controller.rb:64
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/goal_comments_controller.rb:64
+Redirected to http://localhost:3000/goals/1
+Completed 302 Found in 14ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/goals/1" for 127.0.0.1 at 2020-10-07 21:47:59 -0500
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT  "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/goals_controller.rb:17
+  Rendering goals/show.html.erb within layouts/application
+  [1m[36mGoalComment Load (0.2ms)[0m  [1m[34mSELECT "goal_comments".* FROM "goal_comments" WHERE "goal_comments"."goal_id" = $1[0m  [["goal_id", 1]]
+  ↳ app/views/goals/show.html.erb:6
+  Rendered goals/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 37ms (Views: 12.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-10-07 21:48:03 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 11.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2020-10-07 21:48:03 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (0.5ms)
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-10-07 21:48:04 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+

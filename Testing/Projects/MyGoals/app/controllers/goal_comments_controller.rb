@@ -1,29 +1,34 @@
 class GoalCommentsController < ApplicationController
     require 'byebug'
 
+    def new
+
+        @goalcomment = GoalComment.new
+        render :new
+
+    end
+
+    def edit
+        @goalcomment = GoalComment.find_by(id: params[:id])
+        render :edit
+    end
+
     def create
-        # @goal = Goal.new(goal_params)
-    
-        # if @goal.save
-        #     redirect_to goal_url(@goal)
-        # else
-        #     flash.now[:errors] = "Could not save goal."
-        #     redirect_to Goals_url
-        # end
+        @goalcomment = GoalComment.new(goalcomment_params)
+  
+        if @goalcomment.save
+            redirect_to goal_url(@goalcomment.goal_id)
+        else
+            flash.now[:errors] = "Could not save comment."
+            redirect_to users_url
+        end
 
     end
 
     def show
-        # @goal = Goal.find_by(id: params[:id])
-        
-        # if @goal.nil?
-        #     render :status => 404
-        # else
-        #     render :show
-        # end
 
         @goalcomment = GoalComment.find_by(id: params[:id])
-
+ 
         if @goalcomment.nil?
             render :status => 404
         else
@@ -33,31 +38,32 @@ class GoalCommentsController < ApplicationController
     end
 
     def update
-        # @goal = Goal.find_by(id: params[:id])
 
-        # if @goal.nil?
-        #     flash.now[:errors] = "Cannot be update."
-        #     redirect_to goal_url(params[:id])
-        # else
-        #     if @goal.update_attributes(goal_params)
-        #         redirect_to goal_url(@goal)
-        #     else
-        #         flash.now[:errors] = "Make sure you update correctly."
-        #         redirect_to goal_url(@goal)
-        #     end
-        # end
+        @goalcomment = GoalComment.find_by(id: params[:id])
+
+        if @goalcomment.nil?
+            flash.now[:errors] = "Cannot be updated."
+            redirect_to goal_comment_url(params[:id])
+        else
+            if @goalcomment.update_attributes(goalcomment_params)
+                redirect_to goal_url(@goalcomment.goal_id)
+            else
+                flash.now[:errors] = "Make sure you update correctly."
+                redirect_to goal_url(@goalcomment.goal_id)
+            end
+        end
     end
 
     def destroy
-        # @goal = Goal.find_by(id: params[:id])
+        @goalcomment = GoalComment.find_by(id: params[:id])
 
-        # if @goal.nil?
-        #     flash.now[:errors] = "Not a valid goal to be deleted."
-        #     redirect_to Goals_url
-        # else
-        #     @goal.destroy
-        #     redirect_to Goals_url
-        # end
+        if @goalcomment.nil?
+            flash.now[:errors] = "Not a valid GoalComment to be deleted."
+            redirect_to goals_url
+        else
+            @goalcomment.destroy
+            redirect_to goal_url(@goalcomment.goal_id)
+        end
 
 
     end

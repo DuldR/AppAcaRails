@@ -15,7 +15,7 @@ class GoalsController < ApplicationController
 
     def show
         @goal = Goal.find_by(id: params[:id])
-        
+
         if @goal.nil?
             render :status => 404
         else
