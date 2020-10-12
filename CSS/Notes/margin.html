@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin Gotcha</title>
+
+    <style>
+
+        .box {
+            background: blue;
+            width: 400px;
+            height: 400px;
+            padding: 1px;
+            /* border: 10px solid red; */
+        }
+
+        .little-box {
+            background: yellow;
+            width: 200px;
+            height: 200px;
+            margin: 100px;
+        }
+
+        /* .a {
+            display: block;
+            background: red;
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+        }
+
+        .b {
+            display: block;
+            background: orange;
+            width: 100px;
+            height: 100px;
+            margin: 100px;
+        } */
+        
+    </style>
+</head>
+<body>
+<!-- 
+    <div class="a">A</div>
+    <div class="b">B</div> -->
+
+    <div class="box">
+
+        <div class="little-box"></div>
+    </div>
+    
+</body>
+</html>
