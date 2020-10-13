@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glasses</title>
+
+    <style>
+
+        html,body ,h1, figure, figcaption, img {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font: inherit;
+            text-align: inherit;
+            text-decoration: inherit;
+            color: inherit;
+            background: transparent;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        body {
+
+            font-family: sans-serif;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 60px;
+        }
+
+        figure {
+            position: relative;
+            border: 10px solid black;
+            width: 800px;
+            margin: 50px auto;
+        }
+
+        figcaption {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            padding: 10px 20px;
+            background: green;
+            color: white;
+        }
+
+        .img-glasses {
+            display: block;
+            position: absolute;
+            left: 280px;
+            bottom: 220px;
+            width: 220px;
+            transform: rotate(-10deg)
+
+        }
+
+        .img-glasses:hover {
+            display: none;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <h1>Glasses</h1>
+    
+    <figure>
+        <figcaption>Happy Cat</figcaption>
+        <img src="cat.jpg" alt="Cat">
+        <img src="glasses.png" alt="Glasses" class="img-glasses">
+</body>
+</html>
