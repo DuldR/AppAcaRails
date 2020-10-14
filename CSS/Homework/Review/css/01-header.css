@@ -3,16 +3,31 @@
 body {
   /* Write your css here... */
 
+  font-family: sans-serif;
+  font-weight: 400, 700;
+  font-size: 24px, 16px, 14px;
+
+  background: #eee;
+
 }
 
 .header {
+  background: #f00;
+  border-bottom: 1px solid #eee;
+  
 
 }
 
 .header a {
+  display: block;
+  padding: 10px 20px 10px 20px;
 
 }
 
 .header-nav {
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  margin: auto;
+  width: 900px;
 
 }
