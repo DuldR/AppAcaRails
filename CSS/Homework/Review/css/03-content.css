@@ -1,14 +1,21 @@
 /* PHASE 3: Content */
 
 .content {
+    margin: auto;
+    width: 900px;
+    background: #fff;
 
 }
 
 .content-sidebar {
+    width: 240px;
+    float: left;
 
 }
 
 .content-main {
+    width: 660px;
+    float: left;
 
 }
 
