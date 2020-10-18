@@ -3,23 +3,28 @@
   background: yellow;
   display: flex;
   justify-content: space-between;
-  padding: 5px;
+
 
 }
+
 
 .left-nav > ul,
 .right-nav > ul {
+  display: flex;
+  align-items: center;
 }
+
+
 
 .left-nav {
 
+
   > ul {
     > li {
-      display: inline;
       font-family: serif;
       font-size: 12px;
       background-color: green;
-      margin: auto;
+
 
     }
   }
@@ -31,26 +36,23 @@
 
 .right-nav  {
 
+
+
   > ul {
 
     > li {
-
-      display: inline;
       font-family: serif;
       font-size: 12px;
       background-color: green;
-      margin: auto;
   
     }
 
     > li:last-of-type {
-      font-size: 24px;
   
     }
   }
   
   i {
-
   }
 }
 
