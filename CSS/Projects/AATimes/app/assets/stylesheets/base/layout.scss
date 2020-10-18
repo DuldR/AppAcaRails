@@ -13,9 +13,9 @@ body {
 }
 
 button {
-	background-color: blue;
-	border-color: black;
-	color: white;
+	background-color: $light-blue;
+	border-color: $blue;
+	color: $lightest-gray;
 	font-weight: bold;
 	padding: 5px;
 	border-radius: 5px;
@@ -27,8 +27,8 @@ button {
 }
 
 button:hover {
-	background-color: black;
-	border-color: white;
+	background-color: $dark-blue;
+	border-color: $dark-blue;
 }
 
 /*
