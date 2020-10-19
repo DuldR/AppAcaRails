@@ -49,10 +49,17 @@
 	font-size: 11px;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	list-style: none;
+
 
 	li {
-		margin-left: 10px;
+		padding: 0 10px 0 10px;
 		border-right: 1px solid $light-gray;
+		text-align: center;
+	}
+
+	li:last-of-type {
+		border-right: none;
 	}
 
 	button {
@@ -68,14 +75,11 @@
 	}
 
 	a,
-	button, 
 	time {
-		margin-right: 10px;
+		margin-left: 2.5px;
+		text-decoration: underline;
 	}
 
-	i {
-		margin-right: 5px;
-	}
 
 	strong {
 		color: green;
