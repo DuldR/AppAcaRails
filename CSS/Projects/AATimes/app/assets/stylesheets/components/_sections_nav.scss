@@ -1,0 +1,30 @@
+.section-nav {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5px 0 2.5px 0;
+  border-bottom: 1px solid $dark-gray;
+  font-size: 12px;
+  font-family: $serif;
+
+
+}
+
+.section-nav {
+
+    nav {
+        margin: 0 auto;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    li {
+        padding: 10px;
+    }
+
+    li:hover
+}
