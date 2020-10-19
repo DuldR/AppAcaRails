@@ -1046,3 +1046,542 @@ Started GET "/assets/application.self-f05d18db20e329566662bf6512e1947bb7f69bd595
 Started GET "/assets/application.self-f05d18db20e329566662bf6512e1947bb7f69bd5950ccaff98a42aab6772c376.css?body=1&livereload=1603065672676&livereload=1603065327923" for 127.0.0.1 at 2020-10-18 19:01:12 -0500
 Started GET "/assets/application.self-f05d18db20e329566662bf6512e1947bb7f69bd5950ccaff98a42aab6772c376.css?body=1&livereload=1603065696289&livereload=1603065327923" for 127.0.0.1 at 2020-10-18 19:01:36 -0500
 Started GET "/assets/application.self-f05d18db20e329566662bf6512e1947bb7f69bd5950ccaff98a42aab6772c376.css?body=1&livereload=1603065696288&livereload=1603065327923" for 127.0.0.1 at 2020-10-18 19:01:36 -0500
+Started GET "/" for 127.0.0.1 at 2020-10-18 19:06:31 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.2ms)
+  Rendered shared/_masthead.html.erb (0.2ms)
+  Rendered shared/_sections_nav.html.erb (0.1ms)
+  Rendered shared/_search_modal.html.erb (0.1ms)
+  Rendered shared/_main_content.html.erb (0.1ms)
+  Rendered static_pages/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1" for 127.0.0.1 at 2020-10-18 19:06:32 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2020-10-18 19:06:32 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2020-10-18 19:06:32 -0500
+Started GET "/assets/components/modal.self-52188644dbb47def5ee35ae02e69eb567ca9b664472357a8a5789dd39032a265.js?body=1" for 127.0.0.1 at 2020-10-18 19:06:32 -0500
+Started GET "/assets/components/sidebar.self-2a1277f850a6fa21e1a974ef5152f177ac05516477d5081d593bb137b3d6808b.js?body=1" for 127.0.0.1 at 2020-10-18 19:06:32 -0500
+Started GET "/assets/application.self-f571b9db02bf4ed04c38a6a29072ac382f7d4f47db1fab9817aeadb0d8665235.js?body=1" for 127.0.0.1 at 2020-10-18 19:06:32 -0500
+Started GET "/" for 127.0.0.1 at 2020-10-18 19:10:50 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.2ms)
+  Rendered shared/_masthead.html.erb (0.2ms)
+  Rendered shared/_sections_nav.html.erb (0.2ms)
+  Rendered shared/_search_modal.html.erb (0.1ms)
+  Rendered shared/_main_content.html.erb (0.1ms)
+  Rendered static_pages/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-18 19:17:06 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.2ms)
+  Rendered shared/_masthead.html.erb (0.2ms)
+  Rendered shared/_sections_nav.html.erb (0.1ms)
+  Rendered shared/_search_modal.html.erb (0.1ms)
+  Rendered shared/_main_content.html.erb (0.1ms)
+  Rendered static_pages/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-18 19:17:06 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.2ms)
+  Rendered shared/_masthead.html.erb (0.2ms)
+  Rendered shared/_sections_nav.html.erb (0.2ms)
+  Rendered shared/_search_modal.html.erb (0.2ms)
+  Rendered shared/_main_content.html.erb (0.2ms)
+  Rendered static_pages/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2020-10-18 19:17:06 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2020-10-18 19:17:06 -0500
+Started GET "/assets/components/modal.self-52188644dbb47def5ee35ae02e69eb567ca9b664472357a8a5789dd39032a265.js?body=1" for 127.0.0.1 at 2020-10-18 19:17:06 -0500
+Started GET "/assets/components/sidebar.self-2a1277f850a6fa21e1a974ef5152f177ac05516477d5081d593bb137b3d6808b.js?body=1" for 127.0.0.1 at 2020-10-18 19:17:06 -0500
+Started GET "/assets/application.self-f571b9db02bf4ed04c38a6a29072ac382f7d4f47db1fab9817aeadb0d8665235.js?body=1" for 127.0.0.1 at 2020-10-18 19:17:06 -0500
+Started GET "/assets/components/modal.self-52188644dbb47def5ee35ae02e69eb567ca9b664472357a8a5789dd39032a265.js?body=1" for 127.0.0.1 at 2020-10-18 19:17:06 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2020-10-18 19:17:06 -0500
+Started GET "/assets/components/sidebar.self-2a1277f850a6fa21e1a974ef5152f177ac05516477d5081d593bb137b3d6808b.js?body=1" for 127.0.0.1 at 2020-10-18 19:17:06 -0500
+Started GET "/assets/application.self-f571b9db02bf4ed04c38a6a29072ac382f7d4f47db1fab9817aeadb0d8665235.js?body=1" for 127.0.0.1 at 2020-10-18 19:17:06 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2020-10-18 19:17:06 -0500
+Started GET "/" for 127.0.0.1 at 2020-10-18 19:17:34 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.2ms)
+  Rendered shared/_masthead.html.erb (0.2ms)
+  Rendered shared/_sections_nav.html.erb (0.1ms)
+  Rendered shared/_search_modal.html.erb (0.1ms)
+  Rendered shared/_main_content.html.erb (0.1ms)
+  Rendered static_pages/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-18 19:17:34 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.3ms)
+  Rendered shared/_masthead.html.erb (0.3ms)
+  Rendered shared/_sections_nav.html.erb (0.3ms)
+  Rendered shared/_search_modal.html.erb (0.3ms)
+  Rendered shared/_main_content.html.erb (0.3ms)
+  Rendered static_pages/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2020-10-18 19:17:34 -0500
+Started GET "/assets/application.self-f571b9db02bf4ed04c38a6a29072ac382f7d4f47db1fab9817aeadb0d8665235.js?body=1" for 127.0.0.1 at 2020-10-18 19:17:34 -0500
+Started GET "/assets/components/sidebar.self-2a1277f850a6fa21e1a974ef5152f177ac05516477d5081d593bb137b3d6808b.js?body=1" for 127.0.0.1 at 2020-10-18 19:17:34 -0500
+Started GET "/assets/components/modal.self-52188644dbb47def5ee35ae02e69eb567ca9b664472357a8a5789dd39032a265.js?body=1" for 127.0.0.1 at 2020-10-18 19:17:34 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2020-10-18 19:17:34 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2020-10-18 19:17:34 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2020-10-18 19:17:34 -0500
+Started GET "/assets/components/sidebar.self-2a1277f850a6fa21e1a974ef5152f177ac05516477d5081d593bb137b3d6808b.js?body=1" for 127.0.0.1 at 2020-10-18 19:17:34 -0500
+Started GET "/assets/application.self-f571b9db02bf4ed04c38a6a29072ac382f7d4f47db1fab9817aeadb0d8665235.js?body=1" for 127.0.0.1 at 2020-10-18 19:17:34 -0500
+Started GET "/assets/components/modal.self-52188644dbb47def5ee35ae02e69eb567ca9b664472357a8a5789dd39032a265.js?body=1" for 127.0.0.1 at 2020-10-18 19:17:34 -0500
+Started GET "/" for 127.0.0.1 at 2020-10-18 19:18:58 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.1ms)
+  Rendered shared/_masthead.html.erb (0.2ms)
+  Rendered shared/_sections_nav.html.erb (0.1ms)
+  Rendered shared/_search_modal.html.erb (0.1ms)
+  Rendered shared/_main_content.html.erb (0.1ms)
+  Rendered static_pages/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-18 19:18:58 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.2ms)
+  Rendered shared/_masthead.html.erb (0.2ms)
+  Rendered shared/_sections_nav.html.erb (0.2ms)
+  Rendered shared/_search_modal.html.erb (0.2ms)
+  Rendered shared/_main_content.html.erb (0.2ms)
+  Rendered static_pages/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2020-10-18 19:18:58 -0500
+Started GET "/assets/components/modal.self-52188644dbb47def5ee35ae02e69eb567ca9b664472357a8a5789dd39032a265.js?body=1" for 127.0.0.1 at 2020-10-18 19:18:58 -0500
+Started GET "/assets/components/sidebar.self-2a1277f850a6fa21e1a974ef5152f177ac05516477d5081d593bb137b3d6808b.js?body=1" for 127.0.0.1 at 2020-10-18 19:18:58 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2020-10-18 19:18:58 -0500
+Started GET "/assets/application.self-f571b9db02bf4ed04c38a6a29072ac382f7d4f47db1fab9817aeadb0d8665235.js?body=1" for 127.0.0.1 at 2020-10-18 19:18:58 -0500
+Started GET "/assets/components/sidebar.self-2a1277f850a6fa21e1a974ef5152f177ac05516477d5081d593bb137b3d6808b.js?body=1" for 127.0.0.1 at 2020-10-18 19:18:58 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2020-10-18 19:18:58 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2020-10-18 19:18:58 -0500
+Started GET "/assets/components/modal.self-52188644dbb47def5ee35ae02e69eb567ca9b664472357a8a5789dd39032a265.js?body=1" for 127.0.0.1 at 2020-10-18 19:18:58 -0500
+Started GET "/assets/application.self-f571b9db02bf4ed04c38a6a29072ac382f7d4f47db1fab9817aeadb0d8665235.js?body=1" for 127.0.0.1 at 2020-10-18 19:18:58 -0500
+Started GET "/" for 127.0.0.1 at 2020-10-18 19:20:00 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.1ms)
+  Rendered shared/_masthead.html.erb (0.1ms)
+  Rendered shared/_sections_nav.html.erb (0.1ms)
+  Rendered shared/_search_modal.html.erb (0.1ms)
+  Rendered shared/_main_content.html.erb (0.1ms)
+  Rendered static_pages/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-18 19:20:00 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.2ms)
+  Rendered shared/_masthead.html.erb (0.2ms)
+  Rendered shared/_sections_nav.html.erb (0.2ms)
+  Rendered shared/_search_modal.html.erb (0.2ms)
+  Rendered shared/_main_content.html.erb (0.2ms)
+  Rendered static_pages/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2020-10-18 19:20:00 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2020-10-18 19:20:00 -0500
+Started GET "/assets/application.self-f571b9db02bf4ed04c38a6a29072ac382f7d4f47db1fab9817aeadb0d8665235.js?body=1" for 127.0.0.1 at 2020-10-18 19:20:00 -0500
+Started GET "/assets/components/modal.self-52188644dbb47def5ee35ae02e69eb567ca9b664472357a8a5789dd39032a265.js?body=1" for 127.0.0.1 at 2020-10-18 19:20:00 -0500
+Started GET "/assets/components/sidebar.self-2a1277f850a6fa21e1a974ef5152f177ac05516477d5081d593bb137b3d6808b.js?body=1" for 127.0.0.1 at 2020-10-18 19:20:00 -0500
+Started GET "/assets/AA_Times_Logo.png" for 127.0.0.1 at 2020-10-18 19:20:00 -0500
+Started GET "/assets/AA_Times_Logo.png" for 127.0.0.1 at 2020-10-18 19:20:00 -0500
+Started GET "/assets/application.self-f571b9db02bf4ed04c38a6a29072ac382f7d4f47db1fab9817aeadb0d8665235.js?body=1" for 127.0.0.1 at 2020-10-18 19:20:00 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2020-10-18 19:20:00 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2020-10-18 19:20:00 -0500
+Started GET "/assets/components/sidebar.self-2a1277f850a6fa21e1a974ef5152f177ac05516477d5081d593bb137b3d6808b.js?body=1" for 127.0.0.1 at 2020-10-18 19:20:00 -0500
+Started GET "/assets/components/modal.self-52188644dbb47def5ee35ae02e69eb567ca9b664472357a8a5789dd39032a265.js?body=1" for 127.0.0.1 at 2020-10-18 19:20:00 -0500
+Started GET "/" for 127.0.0.1 at 2020-10-18 19:32:14 -0500
+Started GET "/" for 127.0.0.1 at 2020-10-18 19:32:14 -0500
+Processing by StaticPagesController#index as HTML
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.2ms)
+  Rendered shared/_main_nav.html.erb (0.0ms)
+  Rendered shared/_masthead.html.erb (0.4ms)
+  Rendered shared/_masthead.html.erb (0.0ms)
+  Rendered shared/_sections_nav.html.erb (0.2ms)
+  Rendered shared/_sections_nav.html.erb (0.0ms)
+  Rendered shared/_search_modal.html.erb (0.2ms)
+  Rendered shared/_search_modal.html.erb (0.0ms)
+  Rendered shared/_main_content.html.erb (0.1ms)
+  Rendered static_pages/index.html.erb within layouts/application (6.4ms)
+  Rendered shared/_main_content.html.erb (0.0ms)
+  Rendered static_pages/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2020-10-18 19:32:14 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2020-10-18 19:32:14 -0500
+Started GET "/assets/components/modal.self-52188644dbb47def5ee35ae02e69eb567ca9b664472357a8a5789dd39032a265.js?body=1" for 127.0.0.1 at 2020-10-18 19:32:14 -0500
+Started GET "/assets/application.self-f571b9db02bf4ed04c38a6a29072ac382f7d4f47db1fab9817aeadb0d8665235.js?body=1" for 127.0.0.1 at 2020-10-18 19:32:14 -0500
+Started GET "/assets/components/sidebar.self-2a1277f850a6fa21e1a974ef5152f177ac05516477d5081d593bb137b3d6808b.js?body=1" for 127.0.0.1 at 2020-10-18 19:32:14 -0500
+Started GET "/assets/components/modal.self-52188644dbb47def5ee35ae02e69eb567ca9b664472357a8a5789dd39032a265.js?body=1" for 127.0.0.1 at 2020-10-18 19:32:15 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2020-10-18 19:32:15 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2020-10-18 19:32:15 -0500
+Started GET "/assets/application.self-f571b9db02bf4ed04c38a6a29072ac382f7d4f47db1fab9817aeadb0d8665235.js?body=1" for 127.0.0.1 at 2020-10-18 19:32:15 -0500
+Started GET "/assets/components/sidebar.self-2a1277f850a6fa21e1a974ef5152f177ac05516477d5081d593bb137b3d6808b.js?body=1" for 127.0.0.1 at 2020-10-18 19:32:15 -0500
+Started GET "/assets/AA_Times_Logo.png" for 127.0.0.1 at 2020-10-18 19:32:15 -0500
+Started GET "/assets/AA_Times_Logo.png" for 127.0.0.1 at 2020-10-18 19:32:15 -0500
+Started GET "/" for 127.0.0.1 at 2020-10-18 19:32:35 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.2ms)
+  Rendered shared/_masthead.html.erb (0.2ms)
+  Rendered shared/_sections_nav.html.erb (0.1ms)
+  Rendered shared/_search_modal.html.erb (0.2ms)
+  Rendered shared/_main_content.html.erb (0.2ms)
+  Rendered static_pages/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-18 19:32:35 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.2ms)
+  Rendered shared/_masthead.html.erb (0.3ms)
+  Rendered shared/_sections_nav.html.erb (0.2ms)
+  Rendered shared/_search_modal.html.erb (0.3ms)
+  Rendered shared/_main_content.html.erb (0.2ms)
+  Rendered static_pages/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/components/sidebar.self-2a1277f850a6fa21e1a974ef5152f177ac05516477d5081d593bb137b3d6808b.js?body=1" for 127.0.0.1 at 2020-10-18 19:32:35 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2020-10-18 19:32:35 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2020-10-18 19:32:35 -0500
+Started GET "/assets/components/modal.self-52188644dbb47def5ee35ae02e69eb567ca9b664472357a8a5789dd39032a265.js?body=1" for 127.0.0.1 at 2020-10-18 19:32:35 -0500
+Started GET "/assets/application.self-f571b9db02bf4ed04c38a6a29072ac382f7d4f47db1fab9817aeadb0d8665235.js?body=1" for 127.0.0.1 at 2020-10-18 19:32:35 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2020-10-18 19:32:35 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2020-10-18 19:32:35 -0500
+Started GET "/assets/application.self-f571b9db02bf4ed04c38a6a29072ac382f7d4f47db1fab9817aeadb0d8665235.js?body=1" for 127.0.0.1 at 2020-10-18 19:32:35 -0500
+Started GET "/assets/components/modal.self-52188644dbb47def5ee35ae02e69eb567ca9b664472357a8a5789dd39032a265.js?body=1" for 127.0.0.1 at 2020-10-18 19:32:35 -0500
+Started GET "/assets/components/sidebar.self-2a1277f850a6fa21e1a974ef5152f177ac05516477d5081d593bb137b3d6808b.js?body=1" for 127.0.0.1 at 2020-10-18 19:32:35 -0500
+Started GET "/assets/AA_Times_Logo.png" for 127.0.0.1 at 2020-10-18 19:32:35 -0500
+Started GET "/assets/AA_Times_Logo.png" for 127.0.0.1 at 2020-10-18 19:32:36 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1" for 127.0.0.1 at 2020-10-18 19:32:36 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067592195" for 127.0.0.1 at 2020-10-18 19:33:12 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067592196" for 127.0.0.1 at 2020-10-18 19:33:12 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067592201" for 127.0.0.1 at 2020-10-18 19:33:12 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067592199" for 127.0.0.1 at 2020-10-18 19:33:12 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067592203" for 127.0.0.1 at 2020-10-18 19:33:12 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067592205" for 127.0.0.1 at 2020-10-18 19:33:12 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067592646" for 127.0.0.1 at 2020-10-18 19:33:12 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067592649" for 127.0.0.1 at 2020-10-18 19:33:12 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067592653" for 127.0.0.1 at 2020-10-18 19:33:12 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067592656" for 127.0.0.1 at 2020-10-18 19:33:12 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067592654" for 127.0.0.1 at 2020-10-18 19:33:12 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067592650" for 127.0.0.1 at 2020-10-18 19:33:12 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067592652" for 127.0.0.1 at 2020-10-18 19:33:12 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067592646" for 127.0.0.1 at 2020-10-18 19:33:12 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067592653" for 127.0.0.1 at 2020-10-18 19:33:19 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067592653" for 127.0.0.1 at 2020-10-18 19:33:19 -0500
+Started GET "/" for 127.0.0.1 at 2020-10-18 19:33:19 -0500
+Processing by StaticPagesController#index as */*
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.3ms)
+  Rendered shared/_masthead.html.erb (0.3ms)
+  Rendered shared/_sections_nav.html.erb (0.2ms)
+  Rendered shared/_search_modal.html.erb (0.2ms)
+  Rendered shared/_main_content.html.erb (0.2ms)
+  Rendered static_pages/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 46ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067641757" for 127.0.0.1 at 2020-10-18 19:34:01 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067641763" for 127.0.0.1 at 2020-10-18 19:34:01 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067641773" for 127.0.0.1 at 2020-10-18 19:34:01 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067641768" for 127.0.0.1 at 2020-10-18 19:34:01 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067641764" for 127.0.0.1 at 2020-10-18 19:34:01 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067641769" for 127.0.0.1 at 2020-10-18 19:34:01 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067641774" for 127.0.0.1 at 2020-10-18 19:34:02 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067641757" for 127.0.0.1 at 2020-10-18 19:34:02 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067654109" for 127.0.0.1 at 2020-10-18 19:34:14 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067654118" for 127.0.0.1 at 2020-10-18 19:34:14 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067654125" for 127.0.0.1 at 2020-10-18 19:34:14 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067654128" for 127.0.0.1 at 2020-10-18 19:34:14 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067654124" for 127.0.0.1 at 2020-10-18 19:34:14 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067654110" for 127.0.0.1 at 2020-10-18 19:34:14 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067654133" for 127.0.0.1 at 2020-10-18 19:34:14 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067654140" for 127.0.0.1 at 2020-10-18 19:34:14 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067671237" for 127.0.0.1 at 2020-10-18 19:34:31 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067671254" for 127.0.0.1 at 2020-10-18 19:34:31 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067671248" for 127.0.0.1 at 2020-10-18 19:34:31 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067671263" for 127.0.0.1 at 2020-10-18 19:34:31 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067671261" for 127.0.0.1 at 2020-10-18 19:34:31 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067671264" for 127.0.0.1 at 2020-10-18 19:34:31 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067671270" for 127.0.0.1 at 2020-10-18 19:34:31 -0500
+Started GET "/assets/application.self-c700a18b742035752eb7c1b8d42cbb0b9b57616363988ab7381ba3a1769dce29.css?body=1&livereload=1603067671266" for 127.0.0.1 at 2020-10-18 19:34:31 -0500
+Started GET "/" for 127.0.0.1 at 2020-10-18 19:35:06 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.1ms)
+  Rendered shared/_masthead.html.erb (0.1ms)
+  Rendered shared/_sections_nav.html.erb (0.1ms)
+  Rendered shared/_search_modal.html.erb (0.1ms)
+  Rendered shared/_main_content.html.erb (0.1ms)
+  Rendered static_pages/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-18 19:35:06 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.2ms)
+  Rendered shared/_masthead.html.erb (0.2ms)
+  Rendered shared/_sections_nav.html.erb (0.2ms)
+  Rendered shared/_search_modal.html.erb (0.4ms)
+  Rendered shared/_main_content.html.erb (0.3ms)
+  Rendered static_pages/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-77d1fac5f22a1d7f18bf1daa70df6dd77db454aad4c058b55cd0e191f29cfee2.css?body=1" for 127.0.0.1 at 2020-10-18 19:35:06 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2020-10-18 19:35:06 -0500
+Started GET "/assets/components/modal.self-52188644dbb47def5ee35ae02e69eb567ca9b664472357a8a5789dd39032a265.js?body=1" for 127.0.0.1 at 2020-10-18 19:35:06 -0500
+Started GET "/assets/components/sidebar.self-2a1277f850a6fa21e1a974ef5152f177ac05516477d5081d593bb137b3d6808b.js?body=1" for 127.0.0.1 at 2020-10-18 19:35:06 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2020-10-18 19:35:06 -0500
+Started GET "/assets/application.self-f571b9db02bf4ed04c38a6a29072ac382f7d4f47db1fab9817aeadb0d8665235.js?body=1" for 127.0.0.1 at 2020-10-18 19:35:06 -0500
+Started GET "/assets/application.self-77d1fac5f22a1d7f18bf1daa70df6dd77db454aad4c058b55cd0e191f29cfee2.css?body=1" for 127.0.0.1 at 2020-10-18 19:35:06 -0500
+Started GET "/assets/components/modal.self-52188644dbb47def5ee35ae02e69eb567ca9b664472357a8a5789dd39032a265.js?body=1" for 127.0.0.1 at 2020-10-18 19:35:06 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2020-10-18 19:35:06 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2020-10-18 19:35:06 -0500
+Started GET "/assets/application.self-f571b9db02bf4ed04c38a6a29072ac382f7d4f47db1fab9817aeadb0d8665235.js?body=1" for 127.0.0.1 at 2020-10-18 19:35:06 -0500
+Started GET "/assets/components/sidebar.self-2a1277f850a6fa21e1a974ef5152f177ac05516477d5081d593bb137b3d6808b.js?body=1" for 127.0.0.1 at 2020-10-18 19:35:06 -0500
+Started GET "/assets/AA_Times_Logo.png" for 127.0.0.1 at 2020-10-18 19:35:06 -0500
+Started GET "/assets/AA_Times_Logo.png" for 127.0.0.1 at 2020-10-18 19:35:07 -0500
+Started GET "/assets/application.self-77d1fac5f22a1d7f18bf1daa70df6dd77db454aad4c058b55cd0e191f29cfee2.css?body=1&livereload=1603067871765" for 127.0.0.1 at 2020-10-18 19:37:51 -0500
+Started GET "/assets/application.self-77d1fac5f22a1d7f18bf1daa70df6dd77db454aad4c058b55cd0e191f29cfee2.css?body=1&livereload=1603067871769" for 127.0.0.1 at 2020-10-18 19:37:51 -0500
+Started GET "/assets/application.self-77d1fac5f22a1d7f18bf1daa70df6dd77db454aad4c058b55cd0e191f29cfee2.css?body=1&livereload=1603067871775" for 127.0.0.1 at 2020-10-18 19:37:51 -0500
+Started GET "/assets/application.self-77d1fac5f22a1d7f18bf1daa70df6dd77db454aad4c058b55cd0e191f29cfee2.css?body=1&livereload=1603067871771" for 127.0.0.1 at 2020-10-18 19:37:51 -0500
+Started GET "/assets/application.self-77d1fac5f22a1d7f18bf1daa70df6dd77db454aad4c058b55cd0e191f29cfee2.css?body=1&livereload=1603067871774" for 127.0.0.1 at 2020-10-18 19:37:51 -0500
+Started GET "/assets/application.self-77d1fac5f22a1d7f18bf1daa70df6dd77db454aad4c058b55cd0e191f29cfee2.css?body=1&livereload=1603067871777" for 127.0.0.1 at 2020-10-18 19:37:51 -0500
+Started GET "/assets/application.self-77d1fac5f22a1d7f18bf1daa70df6dd77db454aad4c058b55cd0e191f29cfee2.css?body=1&livereload=1603067871778" for 127.0.0.1 at 2020-10-18 19:37:51 -0500
+Started GET "/" for 127.0.0.1 at 2020-10-18 19:38:04 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.3ms)
+  Rendered shared/_masthead.html.erb (0.2ms)
+  Rendered shared/_sections_nav.html.erb (0.1ms)
+  Rendered shared/_search_modal.html.erb (0.1ms)
+  Rendered shared/_main_content.html.erb (0.1ms)
+  Rendered static_pages/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 17ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-18 19:38:04 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.2ms)
+  Rendered shared/_masthead.html.erb (0.2ms)
+  Rendered shared/_sections_nav.html.erb (0.2ms)
+  Rendered shared/_search_modal.html.erb (0.2ms)
+  Rendered shared/_main_content.html.erb (0.2ms)
+  Rendered static_pages/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-818cf9ba5ff08f95cc26c9a2aab9d3d22c9d78253ddbc0607aad8ce35aaf3b51.css?body=1" for 127.0.0.1 at 2020-10-18 19:38:04 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2020-10-18 19:38:04 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2020-10-18 19:38:04 -0500
+Started GET "/assets/components/modal.self-52188644dbb47def5ee35ae02e69eb567ca9b664472357a8a5789dd39032a265.js?body=1" for 127.0.0.1 at 2020-10-18 19:38:04 -0500
+Started GET "/assets/application.self-f571b9db02bf4ed04c38a6a29072ac382f7d4f47db1fab9817aeadb0d8665235.js?body=1" for 127.0.0.1 at 2020-10-18 19:38:04 -0500
+Started GET "/assets/components/sidebar.self-2a1277f850a6fa21e1a974ef5152f177ac05516477d5081d593bb137b3d6808b.js?body=1" for 127.0.0.1 at 2020-10-18 19:38:04 -0500
+Started GET "/assets/application.self-818cf9ba5ff08f95cc26c9a2aab9d3d22c9d78253ddbc0607aad8ce35aaf3b51.css?body=1" for 127.0.0.1 at 2020-10-18 19:38:05 -0500
+Started GET "/assets/components/sidebar.self-2a1277f850a6fa21e1a974ef5152f177ac05516477d5081d593bb137b3d6808b.js?body=1" for 127.0.0.1 at 2020-10-18 19:38:05 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2020-10-18 19:38:05 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2020-10-18 19:38:05 -0500
+Started GET "/assets/components/modal.self-52188644dbb47def5ee35ae02e69eb567ca9b664472357a8a5789dd39032a265.js?body=1" for 127.0.0.1 at 2020-10-18 19:38:05 -0500
+Started GET "/assets/application.self-f571b9db02bf4ed04c38a6a29072ac382f7d4f47db1fab9817aeadb0d8665235.js?body=1" for 127.0.0.1 at 2020-10-18 19:38:05 -0500
+Started GET "/assets/AA_Times_Logo.png" for 127.0.0.1 at 2020-10-18 19:38:05 -0500
+Started GET "/assets/AA_Times_Logo.png" for 127.0.0.1 at 2020-10-18 19:38:05 -0500
+Started GET "/assets/application.self-818cf9ba5ff08f95cc26c9a2aab9d3d22c9d78253ddbc0607aad8ce35aaf3b51.css?body=1&livereload=1603067921408" for 127.0.0.1 at 2020-10-18 19:38:41 -0500
+Started GET "/assets/application.self-818cf9ba5ff08f95cc26c9a2aab9d3d22c9d78253ddbc0607aad8ce35aaf3b51.css?body=1&livereload=1603067921414" for 127.0.0.1 at 2020-10-18 19:38:41 -0500
+Started GET "/assets/application.self-818cf9ba5ff08f95cc26c9a2aab9d3d22c9d78253ddbc0607aad8ce35aaf3b51.css?body=1&livereload=1603067921418" for 127.0.0.1 at 2020-10-18 19:38:41 -0500
+Started GET "/assets/application.self-818cf9ba5ff08f95cc26c9a2aab9d3d22c9d78253ddbc0607aad8ce35aaf3b51.css?body=1&livereload=1603067921420" for 127.0.0.1 at 2020-10-18 19:38:41 -0500
+Started GET "/assets/application.self-818cf9ba5ff08f95cc26c9a2aab9d3d22c9d78253ddbc0607aad8ce35aaf3b51.css?body=1&livereload=1603067921421" for 127.0.0.1 at 2020-10-18 19:38:41 -0500
+Started GET "/assets/application.self-818cf9ba5ff08f95cc26c9a2aab9d3d22c9d78253ddbc0607aad8ce35aaf3b51.css?body=1&livereload=1603067921423" for 127.0.0.1 at 2020-10-18 19:38:41 -0500
+Started GET "/assets/application.self-818cf9ba5ff08f95cc26c9a2aab9d3d22c9d78253ddbc0607aad8ce35aaf3b51.css?body=1&livereload=1603067921408" for 127.0.0.1 at 2020-10-18 19:38:41 -0500
+Started GET "/assets/application.self-818cf9ba5ff08f95cc26c9a2aab9d3d22c9d78253ddbc0607aad8ce35aaf3b51.css?body=1&livereload=1603067921414" for 127.0.0.1 at 2020-10-18 19:38:41 -0500
+Started GET "/assets/application.self-818cf9ba5ff08f95cc26c9a2aab9d3d22c9d78253ddbc0607aad8ce35aaf3b51.css?body=1&livereload=1603067939252" for 127.0.0.1 at 2020-10-18 19:38:59 -0500
+Started GET "/assets/application.self-818cf9ba5ff08f95cc26c9a2aab9d3d22c9d78253ddbc0607aad8ce35aaf3b51.css?body=1&livereload=1603067939254" for 127.0.0.1 at 2020-10-18 19:38:59 -0500
+Started GET "/assets/application.self-818cf9ba5ff08f95cc26c9a2aab9d3d22c9d78253ddbc0607aad8ce35aaf3b51.css?body=1&livereload=1603067939257" for 127.0.0.1 at 2020-10-18 19:38:59 -0500
+Started GET "/assets/application.self-818cf9ba5ff08f95cc26c9a2aab9d3d22c9d78253ddbc0607aad8ce35aaf3b51.css?body=1&livereload=1603067939258" for 127.0.0.1 at 2020-10-18 19:38:59 -0500
+Started GET "/assets/application.self-818cf9ba5ff08f95cc26c9a2aab9d3d22c9d78253ddbc0607aad8ce35aaf3b51.css?body=1&livereload=1603067939256" for 127.0.0.1 at 2020-10-18 19:38:59 -0500
+Started GET "/assets/application.self-818cf9ba5ff08f95cc26c9a2aab9d3d22c9d78253ddbc0607aad8ce35aaf3b51.css?body=1&livereload=1603067939252" for 127.0.0.1 at 2020-10-18 19:38:59 -0500
+Started GET "/assets/application.self-818cf9ba5ff08f95cc26c9a2aab9d3d22c9d78253ddbc0607aad8ce35aaf3b51.css?body=1&livereload=1603067939254" for 127.0.0.1 at 2020-10-18 19:38:59 -0500
+Started GET "/assets/application.self-818cf9ba5ff08f95cc26c9a2aab9d3d22c9d78253ddbc0607aad8ce35aaf3b51.css?body=1&livereload=1603067939256" for 127.0.0.1 at 2020-10-18 19:38:59 -0500
+Started GET "/assets/application.self-818cf9ba5ff08f95cc26c9a2aab9d3d22c9d78253ddbc0607aad8ce35aaf3b51.css?body=1&livereload=1603067956648" for 127.0.0.1 at 2020-10-18 19:39:16 -0500
+Started GET "/assets/application.self-818cf9ba5ff08f95cc26c9a2aab9d3d22c9d78253ddbc0607aad8ce35aaf3b51.css?body=1&livereload=1603067956657" for 127.0.0.1 at 2020-10-18 19:39:16 -0500
+Started GET "/assets/application.self-818cf9ba5ff08f95cc26c9a2aab9d3d22c9d78253ddbc0607aad8ce35aaf3b51.css?body=1&livereload=1603067956671" for 127.0.0.1 at 2020-10-18 19:39:16 -0500
+Started GET "/assets/application.self-818cf9ba5ff08f95cc26c9a2aab9d3d22c9d78253ddbc0607aad8ce35aaf3b51.css?body=1&livereload=1603067956666" for 127.0.0.1 at 2020-10-18 19:39:16 -0500
+Started GET "/assets/application.self-818cf9ba5ff08f95cc26c9a2aab9d3d22c9d78253ddbc0607aad8ce35aaf3b51.css?body=1&livereload=1603067956665" for 127.0.0.1 at 2020-10-18 19:39:16 -0500
+Started GET "/assets/application.self-818cf9ba5ff08f95cc26c9a2aab9d3d22c9d78253ddbc0607aad8ce35aaf3b51.css?body=1&livereload=1603067956659" for 127.0.0.1 at 2020-10-18 19:39:16 -0500
+Started GET "/assets/application.self-818cf9ba5ff08f95cc26c9a2aab9d3d22c9d78253ddbc0607aad8ce35aaf3b51.css?body=1&livereload=1603067956648" for 127.0.0.1 at 2020-10-18 19:39:16 -0500
+Started GET "/assets/application.self-818cf9ba5ff08f95cc26c9a2aab9d3d22c9d78253ddbc0607aad8ce35aaf3b51.css?body=1&livereload=1603067956671" for 127.0.0.1 at 2020-10-18 19:39:16 -0500
+Started GET "/" for 127.0.0.1 at 2020-10-18 19:39:21 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.2ms)
+Started GET "/" for 127.0.0.1 at 2020-10-18 19:39:21 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.2ms)
+  Rendered shared/_masthead.html.erb (0.2ms)
+  Rendered shared/_sections_nav.html.erb (0.1ms)
+  Rendered shared/_search_modal.html.erb (0.1ms)
+  Rendered shared/_masthead.html.erb (0.2ms)
+  Rendered shared/_main_content.html.erb (0.2ms)
+  Rendered static_pages/index.html.erb within layouts/application (4.4ms)
+  Rendered shared/_sections_nav.html.erb (0.2ms)
+  Rendered shared/_search_modal.html.erb (0.1ms)
+  Rendered shared/_main_content.html.erb (0.2ms)
+  Rendered static_pages/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 43ms (Views: 42.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1" for 127.0.0.1 at 2020-10-18 19:39:21 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2020-10-18 19:39:21 -0500
+Started GET "/assets/components/sidebar.self-2a1277f850a6fa21e1a974ef5152f177ac05516477d5081d593bb137b3d6808b.js?body=1" for 127.0.0.1 at 2020-10-18 19:39:21 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2020-10-18 19:39:21 -0500
+Started GET "/assets/application.self-f571b9db02bf4ed04c38a6a29072ac382f7d4f47db1fab9817aeadb0d8665235.js?body=1" for 127.0.0.1 at 2020-10-18 19:39:21 -0500
+Started GET "/assets/components/modal.self-52188644dbb47def5ee35ae02e69eb567ca9b664472357a8a5789dd39032a265.js?body=1" for 127.0.0.1 at 2020-10-18 19:39:21 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1" for 127.0.0.1 at 2020-10-18 19:39:21 -0500
+Started GET "/assets/components/modal.self-52188644dbb47def5ee35ae02e69eb567ca9b664472357a8a5789dd39032a265.js?body=1" for 127.0.0.1 at 2020-10-18 19:39:21 -0500
+Started GET "/assets/components/sidebar.self-2a1277f850a6fa21e1a974ef5152f177ac05516477d5081d593bb137b3d6808b.js?body=1" for 127.0.0.1 at 2020-10-18 19:39:21 -0500
+Started GET "/assets/application.self-f571b9db02bf4ed04c38a6a29072ac382f7d4f47db1fab9817aeadb0d8665235.js?body=1" for 127.0.0.1 at 2020-10-18 19:39:21 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2020-10-18 19:39:21 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2020-10-18 19:39:21 -0500
+Started GET "/assets/AA_Times_Logo.png" for 127.0.0.1 at 2020-10-18 19:39:22 -0500
+Started GET "/assets/AA_Times_Logo.png" for 127.0.0.1 at 2020-10-18 19:39:22 -0500
+Started GET "/" for 127.0.0.1 at 2020-10-18 19:39:41 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.2ms)
+  Rendered shared/_masthead.html.erb (0.2ms)
+  Rendered shared/_sections_nav.html.erb (0.1ms)
+  Rendered shared/_search_modal.html.erb (0.1ms)
+  Rendered shared/_main_content.html.erb (0.1ms)
+  Rendered static_pages/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-18 19:39:41 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.2ms)
+  Rendered shared/_masthead.html.erb (0.2ms)
+  Rendered shared/_sections_nav.html.erb (0.1ms)
+  Rendered shared/_search_modal.html.erb (0.2ms)
+  Rendered shared/_main_content.html.erb (0.2ms)
+  Rendered static_pages/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2020-10-18 19:39:41 -0500
+Started GET "/assets/components/modal.self-52188644dbb47def5ee35ae02e69eb567ca9b664472357a8a5789dd39032a265.js?body=1" for 127.0.0.1 at 2020-10-18 19:39:41 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2020-10-18 19:39:41 -0500
+Started GET "/assets/components/sidebar.self-2a1277f850a6fa21e1a974ef5152f177ac05516477d5081d593bb137b3d6808b.js?body=1" for 127.0.0.1 at 2020-10-18 19:39:41 -0500
+Started GET "/assets/application.self-f571b9db02bf4ed04c38a6a29072ac382f7d4f47db1fab9817aeadb0d8665235.js?body=1" for 127.0.0.1 at 2020-10-18 19:39:41 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2020-10-18 19:39:41 -0500
+Started GET "/assets/components/sidebar.self-2a1277f850a6fa21e1a974ef5152f177ac05516477d5081d593bb137b3d6808b.js?body=1" for 127.0.0.1 at 2020-10-18 19:39:41 -0500
+Started GET "/assets/application.self-f571b9db02bf4ed04c38a6a29072ac382f7d4f47db1fab9817aeadb0d8665235.js?body=1" for 127.0.0.1 at 2020-10-18 19:39:41 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2020-10-18 19:39:41 -0500
+Started GET "/assets/components/modal.self-52188644dbb47def5ee35ae02e69eb567ca9b664472357a8a5789dd39032a265.js?body=1" for 127.0.0.1 at 2020-10-18 19:39:41 -0500
+Started GET "/assets/AA_Times_Logo.png" for 127.0.0.1 at 2020-10-18 19:39:41 -0500
+Started GET "/assets/AA_Times_Logo.png" for 127.0.0.1 at 2020-10-18 19:39:42 -0500
+Started GET "/" for 127.0.0.1 at 2020-10-18 19:40:14 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.2ms)
+  Rendered shared/_masthead.html.erb (0.2ms)
+  Rendered shared/_sections_nav.html.erb (0.1ms)
+  Rendered shared/_search_modal.html.erb (0.2ms)
+  Rendered shared/_main_content.html.erb (0.1ms)
+  Rendered static_pages/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-18 19:40:14 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_main_nav.html.erb (0.2ms)
+  Rendered shared/_masthead.html.erb (0.6ms)
+  Rendered shared/_sections_nav.html.erb (0.2ms)
+  Rendered shared/_search_modal.html.erb (0.2ms)
+  Rendered shared/_main_content.html.erb (0.2ms)
+  Rendered static_pages/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/components/sidebar.self-2a1277f850a6fa21e1a974ef5152f177ac05516477d5081d593bb137b3d6808b.js?body=1" for 127.0.0.1 at 2020-10-18 19:40:14 -0500
+Started GET "/assets/application.self-f571b9db02bf4ed04c38a6a29072ac382f7d4f47db1fab9817aeadb0d8665235.js?body=1" for 127.0.0.1 at 2020-10-18 19:40:14 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2020-10-18 19:40:14 -0500
+Started GET "/assets/components/modal.self-52188644dbb47def5ee35ae02e69eb567ca9b664472357a8a5789dd39032a265.js?body=1" for 127.0.0.1 at 2020-10-18 19:40:14 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2020-10-18 19:40:14 -0500
+Started GET "/assets/application.self-f571b9db02bf4ed04c38a6a29072ac382f7d4f47db1fab9817aeadb0d8665235.js?body=1" for 127.0.0.1 at 2020-10-18 19:40:14 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2020-10-18 19:40:14 -0500
+Started GET "/assets/components/modal.self-52188644dbb47def5ee35ae02e69eb567ca9b664472357a8a5789dd39032a265.js?body=1" for 127.0.0.1 at 2020-10-18 19:40:14 -0500
+Started GET "/assets/components/sidebar.self-2a1277f850a6fa21e1a974ef5152f177ac05516477d5081d593bb137b3d6808b.js?body=1" for 127.0.0.1 at 2020-10-18 19:40:14 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2020-10-18 19:40:14 -0500
+Started GET "/assets/AA_Times_Logo.png" for 127.0.0.1 at 2020-10-18 19:40:14 -0500
+Started GET "/assets/AA_Times_Logo.png" for 127.0.0.1 at 2020-10-18 19:40:14 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068052819" for 127.0.0.1 at 2020-10-18 19:40:52 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068052836" for 127.0.0.1 at 2020-10-18 19:40:52 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068052842" for 127.0.0.1 at 2020-10-18 19:40:52 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068052828" for 127.0.0.1 at 2020-10-18 19:40:52 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068052819" for 127.0.0.1 at 2020-10-18 19:40:52 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068052836" for 127.0.0.1 at 2020-10-18 19:40:52 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068052842" for 127.0.0.1 at 2020-10-18 19:40:53 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068130959" for 127.0.0.1 at 2020-10-18 19:42:11 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068130962" for 127.0.0.1 at 2020-10-18 19:42:11 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068130966" for 127.0.0.1 at 2020-10-18 19:42:11 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068130969" for 127.0.0.1 at 2020-10-18 19:42:11 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068130964" for 127.0.0.1 at 2020-10-18 19:42:11 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068130959" for 127.0.0.1 at 2020-10-18 19:42:11 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068130964" for 127.0.0.1 at 2020-10-18 19:42:11 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068130966" for 127.0.0.1 at 2020-10-18 19:42:11 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068137538" for 127.0.0.1 at 2020-10-18 19:42:17 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068137540" for 127.0.0.1 at 2020-10-18 19:42:17 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068137543" for 127.0.0.1 at 2020-10-18 19:42:17 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068137545" for 127.0.0.1 at 2020-10-18 19:42:17 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068137542" for 127.0.0.1 at 2020-10-18 19:42:17 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068137547" for 127.0.0.1 at 2020-10-18 19:42:17 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068185961" for 127.0.0.1 at 2020-10-18 19:43:06 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068185943" for 127.0.0.1 at 2020-10-18 19:43:06 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068185965" for 127.0.0.1 at 2020-10-18 19:43:06 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068185954" for 127.0.0.1 at 2020-10-18 19:43:06 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068185969" for 127.0.0.1 at 2020-10-18 19:43:06 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068185943" for 127.0.0.1 at 2020-10-18 19:43:06 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068185954" for 127.0.0.1 at 2020-10-18 19:43:06 -0500
+Started GET "/assets/application.self-246cb18f0b67df4c385e4025540a763c542ff4ee5b3f2de8983bce170e0adc43.css?body=1&livereload=1603068185965" for 127.0.0.1 at 2020-10-18 19:43:06 -0500

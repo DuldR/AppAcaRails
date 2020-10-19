@@ -27,12 +27,21 @@
 	ul {
 		display: flex;
 	}
+
+	li:first-of-type {
+		font-weight: bold;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
 }
 
 .logo {
 	max-width: 400px;
 	margin-top: 10px;
 }
+
 
 .masthead-links {
 	display: flex;
