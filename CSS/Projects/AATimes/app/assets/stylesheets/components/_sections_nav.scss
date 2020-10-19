@@ -26,5 +26,9 @@
         padding: 10px;
     }
 
-    li:hover
+    li:hover {
+
+        background-color: $light-gray;
+        text-decoration: underline;
+    }
 }
